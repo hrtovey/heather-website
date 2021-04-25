@@ -15,7 +15,6 @@ module.exports = {
   },
   plugins: [
     'gridsome-plugin-robots',
-    'gridsome-plugin-tailwindcss',
     {
       use: 'gridsome-plugin-pwa',
       options: {
