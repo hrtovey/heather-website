@@ -1,0 +1,28 @@
+// All the Sass code handling the layout, which is the container and grid systems
+.layout {
+  max-width: 100%;
+}
+
+.page-width {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.page-width--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  margin-bottom: 20px;
+  padding: 2em 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

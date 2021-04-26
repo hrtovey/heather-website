@@ -1,0 +1,1633 @@
+<style>
+/* CSS Root Variables */
+:root {
+  --positive: #4bb05d;
+  --negative: #ff596a;
+  --dark: #191919;
+  --medium: #e1e1e1;
+  --light: #ffffff;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Basic Form Styles */
+
+.plugin-config-wrapper {
+  background: var(--light);
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  margin: 0;
+  flex-wrap: wrap;
+  color: var(--dark);
+  font-family: "Muli", sans-serif;
+  position: relative;
+}
+
+.license {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 10px;
+  font-size: 12px;
+  color: grey;
+}
+
+button {
+  font-family: "Muli", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  background: var(--dark);
+  color: var(--light);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1.3;
+}
+
+header a {
+  color: var(--negative);
+  text-decoration: none;
+}
+
+header h2 {
+  font-size: 20px;
+}
+
+.instructions-header {
+  margin-top: 50px;
+}
+.main-plugin-config {
+  width: 100%;
+}
+section {
+  padding: 20px 50px 50px;
+}
+
+#configure {
+  background: var(--light);
+}
+
+#design {
+  background: var(--medium);
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    width: 300px;
+  }
+  .main-plugin-config {
+    width: calc(100% - 300px);
+  }
+}
+
+/* Navigation */
+@media screen and (min-width: 900px) {
+  header {
+    padding-top: 0;
+  }
+  nav {
+    position: sticky;
+    padding-top: 20px;
+    top: 0;
+  }
+}
+nav ol {
+  padding: 0 20px 0 30px;
+}
+
+nav a {
+  color: var(--negative);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.configuration-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-inner {
+  width: 100%;
+}
+
+@media screen and (min-width: 1405px) {
+  .section-inner {
+    width: 48%;
+    flex: unset;
+  }
+}
+/* The switch - the box around the slider */
+.switch-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--positive);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--light);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--negative);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--negative);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Tags */
+.added-tag {
+  display: inline-block;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  color: var(--light);
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.excluded .added-tag {
+  background: var(--negative);
+}
+
+.allowed .added-tag {
+  background: var(--positive);
+}
+
+.added-tag__text {
+  padding: 1px 8px;
+  margin: 2px 1px;
+  margin-left: 1px;
+  display: inline-block;
+  margin-left: 1px;
+  pointer-events: none;
+  word-break: break-word;
+}
+.close-tag {
+  cursor: pointer;
+  padding: 1px 5px;
+  display: none;
+}
+.added-tag:hover .close-tag {
+  display: inline-block;
+}
+
+.close-tag svg {
+  fill: white;
+  pointer-events: none;
+  height: 10px;
+  width: 10px;
+}
+
+.choices {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  padding: 20px;
+}
+/* Helpers */
+.hidden {
+  opacity: 0.2;
+  pointer-events: none;
+  filter: grayscale(100%);
+}
+
+/* Code Block */
+code[class*="language-"],
+pre[class*="language-"] {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Form */
+input[type="text"],
+input[type="url"],
+select,
+option,
+input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px 0 10px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+fieldset {
+  border: 2px solid #999;
+  margin: 25px 0;
+  padding: 20px;
+  background: var(--light);
+}
+
+fieldset fieldset {
+  border: none;
+  margin: 10px 0 5px;
+  padding: 0;
+  background: none;
+}
+
+fieldset fieldset legend {
+  font-weight: initial;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.radio-choice:nth-child(4) {
+  margin-left: 20px;
+}
+
+form.form-design fieldset div {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.instructions {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+/* Fake Blog Post Demo */
+.design-output {
+  background: var(--light);
+}
+.blogpost {
+  width: 100%;
+  border: 1px solid var(--medium);
+  padding: 20px 0;
+}
+.blogpost__title {
+  width: 30%;
+  margin: auto;
+  background: var(--medium);
+  padding: 10px;
+  text-align: center;
+}
+
+.blogpost__article-line {
+  width: 40%;
+  margin: auto;
+  height: 10px;
+  background: var(--medium);
+  margin-top: 5px;
+}
+
+.blogpost__article-img {
+  width: 80%;
+  margin: auto;
+  height: 100px;
+  background: var(--medium);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blogpost__article-space {
+  width: 100%;
+  height: 20px;
+}
+
+.blogpost__article-line:last-child {
+  margin-bottom: 20px;
+}
+
+.blogpost__footer {
+  border: 1px dashed var(--dark);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.blogpost__footer.hide-border {
+  border: none;
+}
+.blogpost__comments {
+  width: 40%;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--medium);
+  margin-top: 20px;
+}
+
+.blogpost__pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.important {
+  border: 2px solid var(--negative);
+  padding: 10px;
+}
+
+.generate-button,
+.reset-button {
+  border: none;
+  background: var(--positive);
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.reset-button {
+  background: var(--negative);
+  margin-right: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+input[type="color"] {
+  background: none;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  border: 1px solid black;
+  display: block;
+  margin-top: 5px;
+}
+
+div.color-input {
+  margin-right: 10px;
+}
+
+form.form-design div.background-color-questions {
+  margin-top: 0;
+}
+
+.background-color-questions div {
+  width: 48%;
+}
+</style>
+<template>
+    <div class="plugin-config-wrapper">
+        <header>
+        <nav>
+            <h1>Squarespace Blog Post Footer Plugin</h1>
+            <ol>
+            <li>
+                <a href="#configure" data-href="#configure">Configure</a>
+                <p>
+                Choose your configuration options. On which blog posts should your
+                blog post footer be displayed?
+                </p>
+            </li>
+            <li>
+                <a href="#design" data-href="#design">Design</a>
+                <p>
+                How do you want your footer to look? Choose from a few designs or
+                DIY.
+                </p>
+            </li>
+            </ol>
+            <div class="instructions-header">
+            <h2>Instructions</h2>
+            <p>This video was created for Version 1. In Version 2, all things remain the same except there is now only 1 pluginBlogFooter.js file and it will work for both 7.0 and 7.1.</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/64c993dd9ec147c0b1b1e85700e5c520" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+            </div>
+
+        </nav>
+        </header>
+        <div class="main-plugin-config">
+            <section id="configure" class="configuration-container">
+                <form action="" name="config" class="section-inner">
+                <h2>Configure Code</h2>
+                <p>Use the form below to configure the plugin for your website. The default settings will make your blog footer content show up on every blog post. Use the fields below to allow or exclude specific blog collections, tags, categories, or authors. You can even fill out the form multiple times to create different configurations for different posts.</p>
+                <div class="page-url-container">
+                    <fieldset>
+                    <legend>Page URL</legend>
+                    <div class="">
+                        <input id="pageUrl" type="text" placeholder="blog-footer" />
+                    </div>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <legend>Blog Collections</legend>
+                    <p>To find the collection id for each blog, visit the main blog page (not the individual posts) and find the collection id. You can use the <a href="https://heathertovey.com/squarespace-id-finder/">Squarespace ID Finder</a> to help you.</p>
+                    <input
+                    type="radio"
+                    id="blogCollectionAll"
+                    name="blogCollectionsChoose"
+                    class="radio-choice"
+                    value="all"
+                    checked
+                    />
+                    <label for="blogCollectionAll">All Blog Collections</label>
+                    <input
+                    type="radio"
+                    id="blogCollectionChoose"
+                    name="blogCollectionsChoose"
+                    class="radio-choice"
+                    value="choose"
+                    />
+                    <label for="blogCollectionChoose">Choose Blog Collections</label>
+                    <div id="blogCollectionsChoice" class="choices hidden">
+                    <div class="switch-container">
+                        <p>Include Selection</p>
+                        <label class="switch">
+                        <input
+                            id="blogCollectionsAllowed"
+                            name="blogCollectionsAllowed"
+                            type="checkbox"
+                        />
+                        <span class="slider round"></span>
+                        </label>
+                        <p>Exclude Selection</p>
+                    </div>
+                    <div class="tag-container">
+                        <input
+                        class="tag-behavior"
+                        id="blogCollections"
+                        name="blogCollections"
+                        type="text"
+                        placeholder="Blog Collections, comma separated"
+                        />
+                        <div class="tags"></div>
+                    </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Tags</legend>
+                    <input
+                    type="radio"
+                    id="tagAll"
+                    name="tagsChoose"
+                    value="all"
+                    class="radio-choice"
+                    checked
+                    />
+                    <label for="tagAll">All Tags</label>
+                    <input
+                    type="radio"
+                    id="tagChoose"
+                    name="tagsChoose"
+                    value="choose"
+                    class="radio-choice"
+                    />
+                    <label for="tagChoose">Choose Tags</label>
+                    <div id="tagsChoice" class="choices hidden">
+                    <div class="switch-container">
+                        <p>Include Selection</p>
+                        <label class="switch">
+                        <input id="tagsAllowed" name="tagsAllowed" type="checkbox" />
+                        <span class="slider round"></span>
+                        </label>
+                        <p>Exclude Selection</p>
+                    </div>
+                    <div class="tag-container">
+                        <input
+                        class="tag-behavior"
+                        id="tags"
+                        name="tags"
+                        type="text"
+                        placeholder="Tags, comma separated"
+                        />
+                        <div class="tags"></div>
+                    </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Categories</legend>
+                    <input
+                    type="radio"
+                    id="categoryAll"
+                    name="categoriesChoose"
+                    value="all"
+                    class="radio-choice"
+                    checked="checked"
+                    />
+                    <label for="categoryAll">All Categories</label>
+                    <input
+                    type="radio"
+                    id="categoryChoose"
+                    name="categoriesChoose"
+                    class="radio-choice"
+                    value="choose"
+                    />
+                    <label for="categoryChoose">Choose Categories</label>
+                    <div id="categoriesChoice" class="choices hidden">
+                    <div class="switch-container">
+                        <p>Include Selection</p>
+                        <label class="switch">
+                        <input
+                            id="categoriesAllowed"
+                            name="categoriesAllowed"
+                            type="checkbox"
+                        />
+                        <span class="slider round"></span>
+                        </label>
+                        <p>Exclude Selection</p>
+                    </div>
+                    <div class="tag-container">
+                        <input
+                        class="tag-behavior"
+                        id="categories"
+                        name="categories"
+                        type="text"
+                        placeholder="Categories, comma separated"
+                        />
+                        <div class="tags"></div>
+                    </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Authors</legend>
+                    <input
+                    type="radio"
+                    id="authorAll"
+                    name="authorsChoose"
+                    class="radio-choice"
+                    value="all"
+                    checked
+                    />
+                    <label for="authorAll">All Authors</label>
+                    <input
+                    type="radio"
+                    id="authorChoose"
+                    name="authorsChoose"
+                    class="radio-choice"
+                    value="choose"
+                    />
+                    <label for="authorChoose">Choose Authors</label>
+                    <div id="authorsChoice" class="choices hidden">
+                    <div class="switch-container">
+                        <p>Include Selection</p>
+                        <label class="switch">
+                        <input
+                            id="authorsAllowed"
+                            name="authorsAllowed"
+                            type="checkbox"
+                        />
+                        <span class="slider round"></span>
+                        </label>
+                        <p>Exclude Selection</p>
+                    </div>
+                    <div class="tag-container">
+                        <input
+                        class="tag-behavior"
+                        id="authors"
+                        name="authors"
+                        type="text"
+                        placeholder="Authors, comma separated"
+                        />
+                        <div class="tags"></div>
+                    </div>
+                    </div>
+                </fieldset>
+                </form>
+                <div class="code-wrapper section-inner">
+                <h2>Install</h2>
+                
+                <p>Upload the <code>pluginBlogFooter.js</code> file to your website (<a href="https://support.squarespace.com/hc/en-us/articles/205813928-Uploading-and-managing-files">see support article for help</a> ). You must name it <code>pluginBlogFooter.js</code>.</p>
+                <h3>Code</h3>
+                <p>Place the below code in <strong>Settings > Advanced > Code Injection > Footer</strong>.</p>
+                <pre
+                    id="code-output"
+                    class="language-html line-numbers"
+                ><code>&lt;!-- Blog Footer Plugin --&gt;
+        &lt;script src="/s/pluginBlogFooter.js"&gt;&lt;/script&gt;
+        &lt;script&gt;<span class="token function">createBlogFooter</span>(<span id="config-code"></span>);&lt;/script&gt;
+        &lt;!-- End Blog Footer Plugin --&gt;</code></pre>
+                </div>
+            </section>
+            <section id="design" class="configuration-container">
+                <div class="section-inner">
+                <h2>Design</h2>
+                <p>Here are some basic design options for the box your blog post footer will show up in. Use the fields below to add a background and/or a border. Once you're ready, press the Generate CSS button and then copy/paste the CSS code into <strong>Design > Custom CSS.</strong></p>
+                <form action="" name="design" class="form-design">
+                    <fieldset>
+                    <legend>Background</legend>
+                    <div class="flex background-color-questions">
+                        <div>
+                    <label for="background-color">Background Color</label>
+                    
+                    <input
+                        type="text"
+                        id="background-color"
+                        name="backgroundColor"
+                        placeholder="none"
+                        value="none"
+                        class="pickr"
+                    />
+                    </div>
+                    <div>
+                        
+                    <label for="padding">Padding (in pixels)</label>
+                    
+                    <input
+                        type="number"
+                        id="padding"
+                        name="padding"
+                        value=20
+                        min=0
+                    />
+                    </div>
+                    </div>
+                    <p class="important">
+                        The background image design options are presented for your
+                        convenience. You will likely need to tweak the CSS to make it
+                        perfect for your website.
+                    </p>
+                    <div>
+                        <label for="background-image">Background Image</label>
+                        <p class="instructions">
+                        Upload the image to Design > Custom CSS > Manage Custom Files.
+                        Paste the URL here.
+                        </p>
+                        <input
+                        type="url"
+                        id="background-image"
+                        placeholder="none"
+                        class="block-input"
+                        name="backgroundImage"
+                        />
+                        <div class="image-options hidden">
+                        <fieldset>
+                            <legend>Add color overlay to background image?</legend>
+                            <input
+                            type="radio"
+                            id="yesOverlay"
+                            name="overlayColor"
+                            value="yes"
+                            />
+                            <label for="yesOverlay">Yes</label>
+                            <input
+                            type="radio"
+                            id="noOverlay"
+                            name="overlayColor"
+                            value="no"
+                            checked
+                            />
+                            <label for="noOverlay">No</label>
+                        </fieldset>
+
+                        <div class="background-overlay-question flex hidden">
+                            <div class="color-input">
+                            <label for="background-overlay">Color</label>
+                            <input
+                                type="text"
+                                id="background-overlay"
+                                name="backgroundOverlay"
+                                class="pickr"
+                                placeholder="none"
+                                value="none"
+                            />
+                            </div>
+                            <div>
+                            <label for="backgroundTransparency"
+                                >Color Opacity - percent</label
+                            >
+                            <input
+                                type="number"
+                                id="backgroundTransparency"
+                                value="80"
+                                name="backgroundTransparency"
+                                min="0"
+                                max="100"
+                            />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="backgroundSize">Background Size</label>
+                            <select name="backgroundSize" id="backgroundSize">
+                            <option value="" selected></option>
+                            <option value="auto">Auto</option>
+                            <option value="cover">Cover</option>
+                            <option value="contain">Contain</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="backgroundPosition">Background Position</label>
+                            <select name="backgroundPosition" id="backgroundPosition">
+                            <option value="" selected></option>
+                            <option value="top left">Top Left</option>
+                            <option value="top center">Top Center</option>
+                            <option value="top right">Top Right</option>
+                            <option value="center left">Center Left</option>
+                            <option value="center center">Center Center</option>
+                            <option value="center right">Center Right</option>
+                            <option value="bottom left">Bottom Left</option>
+                            <option value="bottom center">Bottom Center</option>
+                            <option value="bottom right">Bottom Right</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="backgroundRepeat">Background Repeat</label>
+                            <select name="backgroundRepeat" id="backgroundRepeat">
+                            <option value="" selected></option>
+                            <option value="repeat">repeat</option>
+                            <option value="no-repeat">no-repeat</option>
+                            <option value="repeat-x">repeat-x</option>
+                            <option value="repeat-y">repeat-y</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Border</legend>
+                    <label for="border-width">Border Width in pixels</label>
+                    <input
+                        type="number"
+                        id="border-width"
+                        placeholder="0"
+                        name="borderWidth"
+                        min="0"
+                    />
+                    <div>
+                        <label for="border-color">Border Color</label>
+                        <input
+                        type="text"
+                        id="border-color"
+                        name="borderColor"
+                        class="pickr"
+                        placeholder="none"
+                        value="none"
+                        />
+                    </div>
+                    </fieldset>
+                    <button id="reset-css" type="reset" class="reset-button">
+                    Reset
+                    </button>
+                    <button id="generate-css" class="generate-button">
+                    Generate CSS
+                    </button>
+                </form>
+                </div>
+                <div class="section-inner">
+                <h2>Design Output</h2>
+                <p>
+                    <strong>Important</strong>: This is a rough wireframe with a few
+                    design options. You will control the content and the majority of the
+                    design within the blog footer page you create.
+                </p>
+                <div class="design-output">
+                    <div class="blogpost">
+                    <div class="blogpost__title">Post Title</div>
+                    <div class="blogpost__article">
+                        <div class="blogpost__article-img"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-space"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                        <div class="blogpost__article-line"></div>
+                    </div>
+                    <div
+                        id="blogpostFooterPlugin"
+                        class="blogpost__footer blogpost__footer-base"
+                    >
+                        Blog Post Footer Plugin
+                    </div>
+                    <div class="blogpost__comments">Comments</div>
+                    <div class="blogpost__pagination">
+                        <span>Previous</span><span>Next</span>
+                    </div>
+                    </div>
+                </div>
+
+                <h2>CSS Code Output</h2>
+                <p>Place this in <strong>Design > Custom CSS</strong>.</p>
+                <pre
+                    id="css-output"
+                    class="language-css line-numbers"
+                ><code>/* Blog Footer CSS */
+        .blogFooter {<span id="css-code"></span>}
+        /* End Blog Footer CSS */</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</template>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  //the event occurred
+(function() {
+var codeBlock = {
+  blogCollections: [],
+  blogCollectionsCopy: [],
+  blogCollectionsAllowed: true,
+  blogCollectionsChoose: "all",
+  tags: [],
+  tagsCopy: [],
+  tagsAllowed: true,
+  tagsChoose: "all",
+  categories: [],
+  categoriesCopy: [],
+  categoriesAllowed: true,
+  categoriesChoose: "all",
+  authors: [],
+  authorsCopy: [],
+  authorsAllowed: true,
+  authorsChoose: "all",
+  url: ""
+};
+
+function updateCodeBlock() {
+  var config = {};
+
+  if (codeBlock.blogCollections.length > 0) {
+    config.blogCollections = {};
+    config.blogCollections.items = codeBlock.blogCollections;
+    config.blogCollections.allowed = codeBlock.blogCollectionsAllowed;
+  }
+
+  if (codeBlock.tags.length > 0) {
+    config.tags = {};
+    config.tags.items = codeBlock.tags;
+    config.tags.allowed = codeBlock.tagsAllowed;
+  }
+
+  if (codeBlock.categories.length > 0) {
+    config.categories = {};
+    config.categories.items = codeBlock.categories;
+    config.categories.allowed = codeBlock.categoriesAllowed;
+  }
+
+  if (codeBlock.authors.length > 0) {
+    config.authors = {};
+    config.authors.items = codeBlock.authors;
+    config.authors.allowed = codeBlock.authorsAllowed;
+  }
+
+  if (codeBlock.url !== "") {
+    config.url = codeBlock.url;
+  }
+
+  if (Object.keys(config).length > 0) {
+    document.querySelector("#config-code").textContent = JSON.stringify(
+      config
+    );
+  } else {
+    document.querySelector("#config-code").textContent = "";
+  }
+}
+
+codeBlock.url = document.forms.config.pageUrl.value;
+document.forms.config.pageUrl.addEventListener("input", function(event) {
+  codeBlock.url = event.target.value;
+  updateCodeBlock();
+});
+
+document.querySelectorAll(".tag-behavior").forEach(function(input) {
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 188 || event.keyCode === 13) {
+      var tagText = event.target.value.replace(/,/g, "");
+
+      if (codeBlock[event.target.name].indexOf(tagText) === -1) {
+        var tag = document.createElement("span");
+        tag.classList.add("added-tag");
+        var tagContent = document.createElement("span");
+        tagContent.classList.add("added-tag__text");
+        tagContent.textContent = tagText;
+        tag.appendChild(tagContent);
+
+        codeBlock[event.target.name].push(tagText);
+        updateCodeBlock();
+
+        var close = document.createElement("span");
+        close.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>';
+        close.classList.add("close-tag");
+        close.addEventListener("click", function(event) {
+          var tagItem = event.target.parentNode.firstChild.textContent;
+          codeBlock[
+            event.target.parentNode.parentNode.previousElementSibling.name
+          ] = codeBlock[
+            event.target.parentNode.parentNode.previousElementSibling.name
+          ].filter(function(item) {
+            return item !== tagItem;
+          });
+          close.parentNode.parentNode.removeChild(close.parentNode);
+          updateCodeBlock();
+        });
+
+        tag.appendChild(close);
+        input.parentNode.querySelector(".tags").appendChild(tag);
+      }
+
+      input.value = "";
+    }
+  });
+});
+
+document.querySelectorAll(".switch input").forEach(function(inputSwitch) {
+  codeBlock[inputSwitch.name] = updateStatus(inputSwitch);
+
+  inputSwitch.addEventListener("click", function(event) {
+    codeBlock[event.target.name] = updateStatus(event.target);
+
+    updateCodeBlock();
+  });
+
+  updateCodeBlock();
+});
+
+function init() {
+  codeBlock.blogCollectionsChoose =
+    document.forms.config.blogCollectionsChoose.value;
+  if (codeBlock.blogCollectionsChoose === "choose") {
+    document
+      .querySelector("#blogCollectionsChoice")
+      .classList.remove("hidden");
+  } else {
+    document.querySelector("#blogCollectionsChoice").classList.add("hidden");
+  }
+  codeBlock.tagsChoose = document.forms.config.tagsChoose.value;
+  if (codeBlock.tagsChoose === "choose") {
+    document.querySelector("#tagsChoice").classList.remove("hidden");
+  } else {
+    document.querySelector("#tagsChoice").classList.add("hidden");
+  }
+  codeBlock.categoriesChoose = document.forms.config.categoriesChoose.value;
+  if (codeBlock.categoriesChoose === "choose") {
+    document.querySelector("#categoriesChoice").classList.remove("hidden");
+  } else {
+    document.querySelector("#categoriesChoice").classList.add("hidden");
+  }
+  codeBlock.authorsChoose = document.forms.config.authorsChoose.value;
+  if (codeBlock.authorsChoose === "choose") {
+    document.querySelector("#authorsChoice").classList.remove("hidden");
+  } else {
+    document.querySelector("#authorsChoice").classList.add("hidden");
+  }
+
+  var blogFooterMockup = document.querySelector("#blogpostFooterPlugin");
+
+  blogFooterMockup.style.backgroundColor =
+    document.forms.design.backgroundColor.value;
+
+  document.forms.design.backgroundColor.addEventListener("input", function(
+    event
+  ) {
+    blogFooterMockup.style.backgroundColor = event.target.value;
+  });
+
+  blogFooterMockup.style.padding = document.forms.design.padding.value + "px";
+
+  document.forms.design.padding.addEventListener("input", function(event) {
+    blogFooterMockup.style.padding = event.target.value + "px";
+  });
+
+  // Background Image
+  // If there's a background image and there's a color overlay, add both. Otherwise, add image.
+  if (document.forms.design.backgroundImage.value !== "") {
+    if (document.forms.design.overlayColor.value === "yes") {
+      createBackgroundOverlay(document.forms.design.backgroundOverlay.value);
+    } else {
+      blogFooterMockup.style.backgroundImage =
+        "url('" + document.forms.design.backgroundImage.value + "')";
+    }
+  } else {
+    blogFooterMockup.style.removeProperty("background-size");
+    blogFooterMockup.style.removeProperty("background-position");
+    blogFooterMockup.style.removeProperty("background-repeat");
+  }
+
+  if (document.forms.design.backgroundImage.value !== "") {
+    document.querySelector(".image-options").classList.remove("hidden");
+  } else {
+    document.querySelector(".image-options").classList.add("hidden");
+  }
+
+  // When background image changes, change background image. Remove background image property if an image doesn't exist.
+  document.forms.design.backgroundImage.addEventListener("input", function(
+    event
+  ) {
+    if (event.target.value !== "") {
+      document.querySelector(".image-options").classList.remove("hidden");
+      if (document.forms.design.overlayColor.value === "yes") {
+        createBackgroundOverlay(
+          document.forms.design.backgroundOverlay.value
+        );
+      } else {
+        blogFooterMockup.style.backgroundImage =
+          "url('" + event.target.value + "')";
+      }
+
+      blogFooterMockup.style.backgroundSize =
+        document.forms.design.backgroundSize.value;
+      blogFooterMockup.style.backgroundRepeat =
+        document.forms.design.backgroundRepeat.value;
+      blogFooterMockup.style.backgroundPosition =
+        document.forms.design.backgroundPosition.value;
+    } else {
+      document.querySelector(".image-options").classList.add("hidden");
+      blogFooterMockup.style.removeProperty("background-image");
+      blogFooterMockup.style.removeProperty("background-size");
+      blogFooterMockup.style.removeProperty("background-position");
+      blogFooterMockup.style.removeProperty("background-repeat");
+    }
+  });
+
+  // If user wants color overlay, show color choice. Otherwise, hide color choice.
+  if (document.forms.design.overlayColor.value === "yes") {
+    document
+      .querySelector(".background-overlay-question")
+      .classList.remove("hidden");
+  } else {
+    document
+      .querySelector(".background-overlay-question")
+      .classList.add("hidden");
+  }
+
+  // When color overlay question changes between yes and no, hide or show color choice as needed.
+  // When color overlay question changes between yes and no, add or remove color overlay as needed.
+  document
+    .querySelectorAll("input[name='overlayColor']")
+    .forEach(function(choice) {
+      choice.addEventListener("input", function(event) {
+        if (event.target.value === "yes") {
+          document
+            .querySelector(".background-overlay-question")
+            .classList.remove("hidden");
+          createBackgroundOverlay(
+            document.forms.design.backgroundOverlay.value
+          );
+        } else {
+          document
+            .querySelector(".background-overlay-question")
+            .classList.add("hidden");
+          removeBackgroundOverlay();
+        }
+      });
+    });
+
+  // When color overlay changes, change color overlay.
+  document.forms.design.backgroundOverlay.addEventListener("input", function(
+    event
+  ) {
+    createBackgroundOverlay(event.target.value);
+  });
+
+  blogFooterMockup.style.backgroundPosition =
+    document.forms.design.backgroundPosition.value;
+
+  document.forms.design.backgroundPosition.addEventListener("input", function(
+    event
+  ) {
+    blogFooterMockup.style.backgroundPosition = event.target.value;
+  });
+
+  // When color overlay opacity changes, change cover overlay opacity.
+  document.forms.design.backgroundTransparency.addEventListener(
+    "input",
+    function(event) {
+      createBackgroundOverlay(document.forms.design.backgroundOverlay.value);
+    }
+  );
+
+  blogFooterMockup.style.backgroundSize =
+    document.forms.design.backgroundSize.value;
+
+  document.forms.design.backgroundSize.addEventListener("input", function(
+    event
+  ) {
+    blogFooterMockup.style.backgroundSize = event.target.value;
+  });
+
+  blogFooterMockup.style.backgroundRepeat =
+    document.forms.design.backgroundRepeat.value;
+
+  document.forms.design.backgroundRepeat.addEventListener("input", function(
+    event
+  ) {
+    blogFooterMockup.style.backgroundRepeat = event.target.value;
+  });
+
+  if (parseInt(blogFooterMockup.style.borderWidth) > 0) {
+    blogFooterMockup.style.borderStyle = "solid";
+  } else {
+    blogFooterMockup.style.removeProperty("border-style");
+    blogFooterMockup.style.removeProperty("border-width");
+    blogFooterMockup.style.removeProperty("border-color");
+  }
+
+  blogFooterMockup.style.border =
+    document.forms.design.borderWidth.value +
+    "px solid " +
+    document.forms.design.borderColor.value;
+
+  if (document.forms.design.borderWidth.value === "0") {
+    blogFooterMockup.style.removeProperty("border");
+  }
+
+  document.forms.design.borderWidth.addEventListener("input", function(
+    event
+  ) {
+    var border =
+      event.target.value +
+      "px solid " +
+      document.forms.design.borderColor.value;
+
+    blogFooterMockup.style.border = border;
+
+    if (event.target.value === "0") {
+      blogFooterMockup.style.removeProperty("border");
+    }
+  });
+
+  document.forms.design.borderColor.addEventListener("input", function(
+    event
+  ) {
+    if (document.forms.design.borderWidth.value !== "0") {
+      var border =
+        document.forms.design.borderWidth.value +
+        "px solid " +
+        event.target.value;
+
+      blogFooterMockup.style.border = border;
+    }
+  });
+
+  document
+    .querySelector("#generate-css")
+    .addEventListener("click", function(event) {
+      event.preventDefault();
+      generateCSS();
+    });
+
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutationRecord) {
+      if (
+        (mutationRecord.target.style["background-color"] ===
+          "rgb(255, 255, 255)" ||
+          mutationRecord.target.style["background-color"] === "") &&
+        mutationRecord.target.style["background-image"] === ""
+      ) {
+        mutationRecord.target.classList.remove("hide-border");
+      } else {
+        mutationRecord.target.classList.add("hide-border");
+      }
+    });
+  });
+  var target = document.querySelector("#blogpostFooterPlugin");
+  observer.observe(target, { attributes: true, attributeFilter: ["style"] });
+  if (
+    (document.forms.design.backgroundColor.value === "rgb(255, 255, 255)" ||
+      document.forms.design.backgroundColor.value === "") &&
+    document.forms.design.backgroundImage.value === ""
+  ) {
+    target.classList.remove("hide-border");
+  } else {
+    target.classList.add("hide-border");
+  }
+
+  document
+    .querySelector("#reset-css")
+    .addEventListener("click", function(event) {
+      document.forms.design.backgroundImage.value = "";
+      document.forms.design.backgroundColor.value = "";
+      blogFooterMockup.classList.remove("hide-border");
+      blogFooterMockup.style.cssText = "";
+      document.querySelector("#css-code").textContent = "";
+      blogFooterMockup.style.padding =
+        document.forms.design.padding.value + "px";
+    });
+
+  generateCSS();
+}
+
+init();
+
+function generateCSS() {
+  var footer = document.querySelector(".blogpost__footer");
+
+  if (document.forms.design.backgroundImage.value === "") {
+    footer.style.removeProperty("background-size");
+    footer.style.removeProperty("background-position");
+    footer.style.removeProperty("background-repeat");
+  }
+  if (document.forms.design.borderWidth.value === "") {
+    footer.style.removeProperty("border-color");
+  }
+  var css = footer.style.cssText;
+
+  document.querySelector("#css-code").textContent = css;
+  Prism.highlightElement(document.querySelector(".language-css"));
+}
+function createBackgroundOverlay(color) {
+  var rgbaColor = hexToRGBA(color);
+  var css =
+    "linear-gradient(" +
+    rgbaColor +
+    "," +
+    rgbaColor +
+    "), url(" +
+    document.forms.design.backgroundImage.value +
+    ")";
+
+  var blogFooterMockup = document.querySelector("#blogpostFooterPlugin");
+  blogFooterMockup.style.backgroundImage = css;
+}
+
+function removeBackgroundOverlay() {
+  var blogFooterMockup = document.querySelector("#blogpostFooterPlugin");
+  blogFooterMockup.style.removeProperty("background-image");
+  blogFooterMockup.style.backgroundImage =
+    "url('" + document.forms.design.backgroundImage.value + "')";
+}
+
+function hexToRGBA(h) {
+  let r = 0,
+    g = 0,
+    b = 0;
+  a = document.forms.design.backgroundTransparency.value / 100;
+
+  // 3 digits
+  if (h.length == 4) {
+    r = "0x" + h[1] + h[1];
+    g = "0x" + h[2] + h[2];
+    b = "0x" + h[3] + h[3];
+
+    // 6 digits
+  } else if (h.length == 7) {
+    r = "0x" + h[1] + h[2];
+    g = "0x" + h[3] + h[4];
+    b = "0x" + h[5] + h[6];
+  }
+
+  return "rgba(" + +r + "," + +g + "," + +b + "," + a + ")";
+}
+
+document.querySelectorAll(".radio-choice").forEach(function(input) {
+  input.addEventListener("input", function(event) {
+    codeBlock[event.target.name] = event.target.value;
+    if (event.target.value === "all") {
+      event.target.parentNode.lastElementChild.classList.add("hidden");
+      removeCode(event.target.name);
+    } else {
+      event.target.parentNode.lastElementChild.classList.remove("hidden");
+      returnCode(event.target.name);
+    }
+  });
+});
+
+function removeCode(list) {
+  var copy = list.replace("Choose", "Copy");
+  codeBlock[copy] = codeBlock[list.replace("Choose", "")];
+  codeBlock[list.replace("Choose", "")] = [];
+  updateCodeBlock();
+}
+
+function returnCode(list) {
+  codeBlock[list.replace("Choose", "")] =
+    codeBlock[list.replace("Choose", "Copy")];
+  updateCodeBlock();
+}
+
+function updateStatus(status) {
+  if (status.checked) {
+    status.parentNode.parentNode.parentNode
+      .querySelector(".tag-container")
+      .classList.add("excluded");
+    status.parentNode.parentNode.parentNode
+      .querySelector(".tag-container")
+      .classList.remove("allowed");
+    return false;
+  } else {
+    status.parentNode.parentNode.parentNode
+      .querySelector(".tag-container")
+      .classList.remove("excluded");
+    status.parentNode.parentNode.parentNode
+      .querySelector(".tag-container")
+      .classList.add("allowed");
+    return true;
+  }
+}
+
+var pickrBG = document.querySelector("#background-color");
+const pickr = new Pickr({
+  el: pickrBG,
+  container: "body",
+  theme: "nano",
+  closeOnScroll: true,
+  appClass: "custom-class",
+  useAsButton: true,
+  padding: 8,
+  inline: false,
+  autoReposition: true,
+  sliders: "h",
+  disabled: false,
+  lockOpacity: false,
+  outputPrecision: 0,
+  comparison: true,
+  default: "#FFFFFF",
+  swatches: null,
+  defaultRepresentation: "HEX",
+  showAlways: false,
+  closeWithKey: "Escape",
+  position: "bottom-middle",
+  adjustableNumbers: true,
+  components: {
+    palette: true,
+
+    preview: true, // Display comparison between previous state and new color
+    opacity: true, // Display opacity slider
+    hue: true, // Display hue slider
+
+    // show or hide components on the bottom interaction bar.
+    interaction: {
+      hex: false, // Display 'input/output format as hex' button  (hexadecimal representation of the rgba value)
+      rgba: false, // Display 'input/output format as rgba' button (red green blue and alpha)
+      hsla: false, // Display 'input/output format as hsla' button (hue saturation lightness and alpha)
+      hsva: false, // Display 'input/output format as hsva' button (hue saturation value and alpha)
+      cmyk: false, // Display 'input/output format as cmyk' button (cyan mangenta yellow key )
+
+      input: true, // Display input/output textbox which shows the selected color value.
+      // the format of the input is determined by defaultRepresentation,
+      // and can be changed by the user with the buttons set by hex, rgba, hsla, etc (above).
+      cancel: true, // Display Cancel Button, resets the color to the previous state
+      clear: false, // Display Clear Button; same as cancel, but keeps the window open
+      save: true // Display Save Button,
+    }
+  },
+
+  // Button strings, brings the possibility to use a language other than English.
+  strings: {
+    save: "Save", // Default for save button
+    clear: "Remove Background", // Default for clear button
+    cancel: "Cancel" // Default for cancel button
+  }
+})
+  .on("init", pickr => {
+    pickrBG.value = "none";
+    updateBGColor("none");
+  })
+  .on("save", color => {
+    pickrBG.value = color.toHEXA().toString(0);
+    updateBGColor(color.toHEXA().toString(0));
+    pickr.hide();
+  });
+
+var pickrOverlay = document.querySelector("#background-overlay");
+const pickr2 = new Pickr({
+  el: pickrOverlay,
+  container: "body",
+  theme: "nano",
+  closeOnScroll: true,
+  appClass: "custom-class",
+  useAsButton: true,
+  padding: 8,
+  inline: false,
+  autoReposition: true,
+  sliders: "h",
+  disabled: false,
+  lockOpacity: true,
+  outputPrecision: 0,
+  comparison: true,
+  default: "#000000",
+  swatches: null,
+  defaultRepresentation: "HEXA",
+  showAlways: false,
+  closeWithKey: "Escape",
+  position: "bottom-middle",
+  adjustableNumbers: true,
+  components: {
+    palette: true,
+
+    preview: true, // Display comparison between previous state and new color
+    opacity: true, // Display opacity slider
+    hue: true, // Display hue slider
+
+    // show or hide components on the bottom interaction bar.
+    interaction: {
+      hex: false, // Display 'input/output format as hex' button  (hexadecimal representation of the rgba value)
+      rgba: false, // Display 'input/output format as rgba' button (red green blue and alpha)
+      hsla: false, // Display 'input/output format as hsla' button (hue saturation lightness and alpha)
+      hsva: false, // Display 'input/output format as hsva' button (hue saturation value and alpha)
+      cmyk: false, // Display 'input/output format as cmyk' button (cyan mangenta yellow key )
+
+      input: true, // Display input/output textbox which shows the selected color value.
+      // the format of the input is determined by defaultRepresentation,
+      // and can be changed by the user with the buttons set by hex, rgba, hsla, etc (above).
+      cancel: true, // Display Cancel Button, resets the color to the previous state
+      clear: false, // Display Clear Button; same as cancel, but keeps the window open
+      save: true // Display Save Button,
+    }
+  },
+
+  // Button strings, brings the possibility to use a language other than English.
+  strings: {
+    save: "Save", // Default for save button
+    clear: "Remove Background", // Default for clear button
+    cancel: "Cancel" // Default for cancel button
+  }
+})
+  .on("init", pickr2 => {
+    pickrOverlay.value = pickr2
+      .getSelectedColor()
+      .toHEXA()
+      .toString(0);
+  })
+  .on("save", color => {
+    pickrOverlay.value = color.toHEXA().toString(0);
+    createBackgroundOverlay(color.toHEXA().toString(0));
+    pickr2.hide();
+  });
+
+var pickrBorder = document.querySelector("#border-color");
+const pickr3 = new Pickr({
+  el: pickrBorder,
+  container: "body",
+  theme: "nano",
+  closeOnScroll: true,
+  appClass: "custom-class",
+  useAsButton: true,
+  padding: 8,
+  inline: false,
+  autoReposition: true,
+  sliders: "h",
+  disabled: false,
+  lockOpacity: true,
+  outputPrecision: 0,
+  comparison: true,
+  default: "#000000",
+  swatches: null,
+  defaultRepresentation: "HEX",
+  showAlways: false,
+  closeWithKey: "Escape",
+  position: "bottom-middle",
+  adjustableNumbers: true,
+  components: {
+    palette: true,
+
+    preview: true, // Display comparison between previous state and new color
+    opacity: true, // Display opacity slider
+    hue: true, // Display hue slider
+
+    // show or hide components on the bottom interaction bar.
+    interaction: {
+      hex: false, // Display 'input/output format as hex' button  (hexadecimal representation of the rgba value)
+      rgba: false, // Display 'input/output format as rgba' button (red green blue and alpha)
+      hsla: false, // Display 'input/output format as hsla' button (hue saturation lightness and alpha)
+      hsva: false, // Display 'input/output format as hsva' button (hue saturation value and alpha)
+      cmyk: false, // Display 'input/output format as cmyk' button (cyan mangenta yellow key )
+
+      input: true, // Display input/output textbox which shows the selected color value.
+      // the format of the input is determined by defaultRepresentation,
+      // and can be changed by the user with the buttons set by hex, rgba, hsla, etc (above).
+      cancel: true, // Display Cancel Button, resets the color to the previous state
+      clear: false, // Display Clear Button; same as cancel, but keeps the window open
+      save: true // Display Save Button,
+    }
+  },
+
+  // Button strings, brings the possibility to use a language other than English.
+  strings: {
+    save: "Save", // Default for save button
+    clear: "Remove Background", // Default for clear button
+    cancel: "Cancel" // Default for cancel button
+  }
+})
+  .on("init", pickr3 => {
+    pickrBorder.value = pickr3
+      .getSelectedColor()
+      .toHEXA()
+      .toString(0);
+    updateBorderColor(
+      pickr3
+        .getSelectedColor()
+        .toHEXA()
+        .toString(0)
+    );
+  })
+  .on("save", color => {
+    pickrBorder.value = color.toHEXA().toString(0);
+    updateBorderColor(color.toHEXA().toString(0));
+    pickr3.hide();
+  });
+
+function updateBGColor(color) {
+  document.querySelector(
+    "#blogpostFooterPlugin"
+  ).style.backgroundColor = color;
+}
+
+function updateBorderColor(color) {
+  document.querySelector("#blogpostFooterPlugin").style.borderColor = color;
+}
+})();
+})
+</script>

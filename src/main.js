@@ -18,7 +18,7 @@ import "@fontsource/chivo/900.css";
 import "@fontsource/overpass";
 import "@fontsource/overpass/600.css";
 import 'prismjs/themes/prism.css'
-//import '~/assets/styles.scss';
+import '~/assets/styles.scss';
 
 
 export default function (Vue, { appOptions, router, head, isClient }) {

@@ -1,21 +1,17 @@
 <template>
   <Layout>
-    <div class="grid">
-      <div class="grid__iem">
-        <h2>Page Not Found</h2>
-        <g-image src="../../static/404.svg" alt="404 page not found"/>
-      </div>
-    </div>
-
+      <plugin-config />
   </Layout>
 </template>
 
 <script>
 import Layout from '~/layouts/Blank.vue'
+import PluginConfig from '../components/PluginConfig'
 
 export default {
   components: {
-    Layout
+    Layout,
+    PluginConfig
   },
   metaInfo: {
     title: 'Page Not Found'

@@ -1,96 +1,76 @@
 <template>
-  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen" :class="theme">
-    <header role="banner" class="border-t-14 border-gray-900">
-      <nav class="container mx-auto flex flex-wrap justify-between items-center py-8" 
+  <div class="content-wrapper" :class="theme">
+    <header role="banner" class="header">
+      <nav 
       role="navigation"
-      aria-label="main navigation">
+      aria-label="main navigation"
+      class="grid">
+        <div class="grid__item navigation">
+          <div class="logo">
+            <g-link to="/" alt=""><g-image src="~/assets/images/heather_logo.png" alt="Heather Tovey" /></g-link>        
+          </div>
 
-        <div class="mx-auto">
-          <g-link to="/" alt=""><div class="font-serif text-4xl font-bold text-center">Heather Tovey</div></g-link>        
-        </div>
-
-        <div class="block lg:hidden">
-          <button aria-label="burger-menu" @click="toggle" class="flex items-center px-3 py-2 border rounded border-gray-500 hover:text-gray-600 hover:border-gray-600">
-            <svg class="current-color h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill="gray" /></svg>
-          </button>
-        </div>
-
-        <div class="mt-5 text-center container mx-auto flex flex-wrap">
           <ul
-            class="mx-auto uppercase tracking-wide font-bold w-full block flex-grow lg:space-x-8 space-y-6 lg:space-y-0 lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
+            class="menu"
             :class="isOpen ? 'block': 'hidden'"
           >
-            <li>
-              <theme-switcher :theme="theme" @themeChanged="updateTheme" />
+            <li class="menu__item">
+              <a v-if="$route.path === '/'" href="/blog/" class="menu__link">Blog</a>
+              <g-link v-else to="/blog/" class="menu__link">Blog</g-link>
             </li>
-            <li>
-              <a v-if="$route.path === '/'" href="/blog/" class="text-copy-primary hover:text-gray-600">Blog</a>
-              <g-link v-else to="/blog/" class="text-copy-primary hover:text-gray-600">Blog</g-link>
+            <li class="menu__item">
+              <a v-if="$route.path === '/'" href="/about/" class="menu__link">About</a>
+              <g-link v-else to="/about/" class="menu__link">About</g-link>
             </li>
-            <li>
-              <a v-if="$route.path === '/'" href="/about/" class="text-copy-primary hover:text-gray-600">About</a>
-              <g-link v-else to="/about/" class="text-copy-primary hover:text-gray-600">About</g-link>
+            <li class="menu__item">
+              <a v-if="$route.path === '/'" href="/shop/" class="menu__link">Shop</a>
+              <g-link v-else to="/shop/" class="menu__link">Shop</g-link>
             </li>
-            <li>
-              <a v-if="$route.path === '/'" href="/shop/" class="text-copy-primary hover:text-gray-600">Shop</a>
-              <g-link v-else to="/shop/" class="text-copy-primary hover:text-gray-600">Shop</g-link>
+          </ul>
+          <ul class="menu secondary-menu">
+            <li class="menu__item">
+              <theme-switcher class="menu__action" :theme="theme" @themeChanged="updateTheme" />
+              <span class="tooltip">Switch to {{ themeName }} theme</span>
             </li>
-            <li>
+            <!-- <li class="menu__item">
               <search-input />
-            </li>
-            <li>
-              <div class="">
+            </li> -->
+            <li class="menu__item">
                 <g-link
                   to="/cart"
-                  class="lowercase">
-                  cart - {{ cart.length }} Item{{ cart.length !== 1 ? 's' : '' }}
+                  class="cart-icon menu__action">
+                  <svg height='24' width='24'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30" fill="none" x="0px" y="0px"><path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 23.5C28.0523 23.5 28.5 23.0523 28.5 22.5C28.5 21.9477 28.0523 21.5 27.5 21.5L10.2592 21.5L9.56096 18.9981C9.59602 18.9994 9.6312 19 9.6665 19H26.3335C27.6996 19 28.8932 18.077 29.237 16.7549L31.9678 6.25161C32.0457 5.95199 31.9805 5.63318 31.7911 5.38827C31.6017 5.14336 31.3096 4.99998 31 4.99998H5.65449L4.4632 0.731201C4.34257 0.298954 3.94877 -7.53807e-08 3.50001 0L1 1.4748e-07C0.447715 2.05309e-07 -1.26274e-06 0.447716 0 1C-5.71899e-07 1.55229 0.447714 2 0.999999 2H2.74086L5.46126 11.7481L6.76303 16.7549C6.83162 17.0187 6.93403 17.2666 7.0649 17.4944L8.53681 22.7688C8.65744 23.201 9.05125 23.5 9.50001 23.5H9.87732C9.32836 24.1848 9 25.054 9 26C9 28.2091 10.7909 30 13 30C15.2091 30 17 28.2091 17 26C17 25.054 16.6716 24.1848 16.1227 23.5H20.8773C20.3284 24.1848 20 25.054 20 26C20 28.2091 21.7909 30 24 30C26.2091 30 28 28.2091 28 26C28 25.054 27.6716 24.1848 27.1227 23.5H27.5ZM7.39242 11.2276L6.29325 6.99998H29.7068L27.3013 16.2516C27.1867 16.6923 26.7889 17 26.3335 17H9.6665C9.36613 17 9.09079 16.8661 8.90525 16.6485L7.39242 11.2276ZM13 24C11.8954 24 11 24.8954 11 26C11 27.1045 11.8954 28 13 28C14.1046 28 15 27.1045 15 26C15 24.8954 14.1046 24 13 24ZM22 26C22 24.8954 22.8954 24 24 24C25.1046 24 26 24.8954 26 26C26 27.1045 25.1046 28 24 28C22.8954 28 22 27.1045 22 26Z" fill="currentColor"></path></svg><span class="cart-quantity">{{ cartLength }}</span>
                 </g-link>
-              </div>
+                <span class="tooltip">Go shopping!</span>
+            </li>
+            <li class="menu__item">
+              <button aria-label="menu" @click="toggle" class="menu__open menu__action">
+                <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;"><g><path d="M23.108,17.671L0.935,17.671C0.425,17.671 0.042,18.096 0.042,18.563C0.042,21.154 2.124,23.235 4.715,23.235L19.327,23.235C21.919,23.235 24,21.154 24,18.563C24,18.096 23.618,17.671 23.108,17.671ZM19.327,21.451L4.715,21.451C3.441,21.451 2.379,20.644 1.996,19.497L22.046,19.497C21.664,20.644 20.602,21.451 19.327,21.451Z" style="fill-rule:nonzero;"/><path d="M0.935,12.573L23.065,12.573C23.575,12.573 23.958,12.149 23.958,11.681C23.958,5.65 19.073,0.765 13.041,0.765L10.917,0.765C4.885,0.765 0,5.65 0,11.681C0.042,12.191 0.425,12.573 0.935,12.573ZM10.959,2.591L13.083,2.591C17.798,2.591 21.664,6.202 22.131,10.789L1.912,10.789C2.379,6.202 6.244,2.591 10.959,2.591Z" style="fill-rule:nonzero;"/><path d="M2.081,14.188C1.572,14.188 1.189,14.612 1.189,15.08C1.189,15.589 1.614,15.972 2.081,15.972L21.961,15.972C22.471,15.972 22.853,15.547 22.853,15.08C22.853,14.57 22.428,14.188 21.961,14.188L2.081,14.188Z" style="fill-rule:nonzero;"/></g></svg>
+              </button>
+              <span class="tooltip">Menu</span>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <div class="flex-grow">
-      <main role="main">
-        <slot/>
-      </main>
-    </div>
+    <main role="main">
+      <slot/>
+    </main>
 
-    <footer role="contentinfo" class="bg-gray-900 text-white">
-      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
-        <div class="mb-8 lg:mb-0">
-          <div>Copyright {{ new Date().getFullYear() }}. All rights reserved. v0.0.2 Made with ❤️ by <g-link to="https://gridsomify.com" alt="Gridsome + Shopify = Gridsomify">Gridsomify.com</g-link></div>
+    <footer role="contentinfo" class="footer">
+      <div class="footer__container footer__primary">
+        <div class="grid">
+          <div class="grid__item">
+            <p>Thank you for reading!</p>
+          </div>
         </div>
-        <ul class="flex items-center">
-            <li class="mr-8">
-                <a href="mailto:herve76@gmail.com" aria-label="Email" class="text-white hover:text-gray-400">
-                <svg width="25" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0h20A2.5 2.5 0 0 1 25 2.5v15a2.5 2.5 0 0 1-2.5 2.5h-20A2.5 2.5 0 0 1 0 17.5v-15C0 1.125 1.125 0 2.5 0zm20 4.225V2.5h-20v1.725l10 5 10-5zm0 2.8l-9.438 4.713a1.25 1.25 0 0 1-1.124 0L2.5 7.025V17.5h20V7.025z" fill-rule="nonzero"/></svg>
-                </a>
-            </li>
-
-            <li class="mr-8">
-                <a href="https://github.com/jsappme/gridsome-shopify-starter" rel="noreferrer" aria-label="GitHub" target="_blank" class="text-white hover:text-gray-400">
-                <svg width="20" height="19" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 0c1.814 0 3.487.435 5.02 1.306a9.827 9.827 0 0 1 3.639 3.542A9.33 9.33 0 0 1 20 9.734c0 2.121-.636 4.03-1.908 5.723a9.783 9.783 0 0 1-4.928 3.518c-.234.042-.408.012-.52-.09a.49.49 0 0 1-.17-.38l.006-.969c.005-.621.007-1.19.007-1.705 0-.82-.226-1.42-.677-1.8.495-.05.94-.126 1.335-.228a5.4 5.4 0 0 0 1.223-.494 3.62 3.62 0 0 0 1.055-.843c.282-.334.512-.777.69-1.33.178-.554.267-1.19.267-1.909a3.7 3.7 0 0 0-1.028-2.61c.32-.77.286-1.631-.105-2.586-.243-.076-.594-.03-1.054.14-.46.168-.86.354-1.198.557l-.495.304a9.478 9.478 0 0 0-2.5-.33c-.86 0-1.693.11-2.5.33a11.6 11.6 0 0 0-.553-.342c-.23-.135-.593-.298-1.088-.488-.494-.19-.863-.247-1.106-.171-.391.955-.426 1.816-.105 2.585A3.7 3.7 0 0 0 3.62 9.227c0 .719.089 1.352.267 1.902.178.549.406.993.683 1.33.278.339.627.622 1.048.85a5.4 5.4 0 0 0 1.224.494c.395.102.84.178 1.335.228-.338.305-.551.74-.638 1.306a2.631 2.631 0 0 1-.586.19 3.782 3.782 0 0 1-.742.063c-.287 0-.57-.09-.853-.272a2.256 2.256 0 0 1-.723-.792 2.068 2.068 0 0 0-.631-.66c-.256-.168-.471-.27-.645-.304l-.26-.038c-.182 0-.308.02-.378.057-.07.038-.09.087-.065.146.026.06.065.118.117.178.053.059.109.11.17.152l.09.063c.192.085.38.245.567.482.187.236.324.452.41.646l.13.292c.113.32.304.58.574.78.269.198.56.325.872.38.312.054.614.084.905.088.29.004.532-.01.723-.044l.299-.05c0 .32.002.694.007 1.12l.006.692a.49.49 0 0 1-.17.38c-.112.101-.286.13-.52.089a9.783 9.783 0 0 1-4.928-3.518C.636 13.763 0 11.855 0 9.734a9.33 9.33 0 0 1 1.341-4.886 9.827 9.827 0 0 1 3.64-3.542C6.512.436 8.185 0 10 0zM3.79 13.98c.025-.058-.005-.11-.092-.151-.087-.026-.143-.017-.17.025-.025.06.005.11.092.152.078.05.134.042.17-.025zm.403.432c.06-.043.052-.11-.026-.203-.087-.076-.157-.089-.209-.038-.06.042-.052.11.026.203.087.084.157.097.209.038zm.39.57c.078-.06.078-.14 0-.24-.07-.11-.143-.136-.221-.077-.078.042-.078.118 0 .228.078.11.152.14.221.089zm.547.532c.07-.067.052-.148-.052-.24-.104-.102-.19-.115-.26-.039-.078.068-.061.148.052.241.104.102.19.114.26.038zm.742.317c.026-.093-.03-.16-.169-.203-.13-.033-.213-.004-.247.09-.035.092.021.155.169.19.13.05.213.025.247-.077zm.82.064c0-.11-.073-.157-.22-.14-.14 0-.209.047-.209.14 0 .11.074.156.221.139.14 0 .209-.046.209-.14zm.756-.127c-.017-.093-.096-.131-.234-.114-.14.025-.2.088-.183.19.018.101.096.135.235.101.139-.034.2-.093.182-.177z" fill-rule="nonzero"/></svg>
-                </a>
-            </li>
-
-            <li class="mr-8">
-                <a href="https://twitter.com/herve76" rel="noreferrer" aria-label="Twitter"  target="_blank" class="text-white hover:text-gray-400">
-                <svg width="20" height="17" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.807 1.943a8.588 8.588 0 0 1-2.036 2.135 11.918 11.918 0 0 1-.465 3.854 12.085 12.085 0 0 1-1.452 3.177 12.426 12.426 0 0 1-2.318 2.691c-.897.78-1.978 1.402-3.243 1.867-1.265.464-2.618.697-4.06.697-2.27 0-4.348-.618-6.233-1.854.293.034.62.051.98.051 1.885 0 3.565-.588 5.04-1.764a3.915 3.915 0 0 1-2.363-.825 4.038 4.038 0 0 1-1.432-2.039c.276.043.532.064.766.064.36 0 .717-.047 1.068-.14A3.982 3.982 0 0 1 1.73 8.43c-.617-.754-.925-1.63-.925-2.627v-.051c.57.324 1.182.498 1.835.524a4.1 4.1 0 0 1-1.32-1.47 4.078 4.078 0 0 1-.49-1.969c0-.75.185-1.445.553-2.084a11.548 11.548 0 0 0 3.702 3.05 11.163 11.163 0 0 0 4.669 1.271c-.067-.324-.1-.639-.1-.946 0-1.142.395-2.116 1.187-2.92C11.632.402 12.589 0 13.712 0c1.173 0 2.161.435 2.966 1.304a7.878 7.878 0 0 0 2.576-.997 3.997 3.997 0 0 1-1.785 2.275 7.98 7.98 0 0 0 2.338-.639z" fill-rule="nonzero"/></svg>
-                </a>
-            </li>
-
-            <li class="mr-8">
-                <a href="https://www.linkedin.com/in/hervefulchiron/" rel="noreferrer" aria-label="LinkedIn"  target="_blank" class="text-white hover:text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-					<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect>
-					<circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-            </li>
-        </ul>
       </div>
+        <div class="footer__secondary">
+          <div class="grid">
+            <p class="small-text footer__copyright grid__item">Copyright {{ new Date().getFullYear() }}. All rights reserved.</p>
+          </div>
+        </div>
     </footer>
   </div>
 </template>
@@ -124,10 +104,18 @@ export default {
   },
   computed: {
     cart () { return this.$store.state.cart },
+    cartLength () { 
+      return this.$store.state.cart.reduce((acc, item) => {
+        return acc + item.qty
+      }, 0);
+    },
     searchResults () {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 3) return []
       return this.$search.search({ query: searchTerm, limit: 5, suggest: true })
+    },
+    themeName () {
+      return this.theme === "theme-light" ? "dark" : "light"
     }
   },
   watch: {
@@ -137,5 +125,3 @@ export default {
   }
 }
 </script>
-
-<style src="../css/main.css" />

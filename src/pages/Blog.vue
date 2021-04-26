@@ -1,14 +1,11 @@
 <template>
   <Layout>
-    <div class="page-width">
-
-		<u>
-			<h2>Posts</h2>
-		</u>
+    <div class="grid">
+		<h2 class="grid__item">Articles</h2>
 		<g-link
 			v-for="post in $page.posts.edges"
 			:key="post.id"
-			class="post"
+			class="post grid__item"
 			:to="post.node.path"
 		>
 			<div class="post">

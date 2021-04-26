@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="page-width">
+		<div class="grid">
 			<header class="title">
 				<h1>{{ $page.post.title }}</h1>
 				<p>Published on: {{ $page.post.date }}</p>

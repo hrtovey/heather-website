@@ -1,0 +1,113 @@
+// Color variables
+$yellow: #ffc73f;
+$black: #171717;
+$pink: #eb5a70;
+$dark-blue: #3a8fcb;
+$light-blue: #94c0d4;
+$white: white;
+$gray: #f7f7f7;
+
+// Light theme colors
+$color-lt-text: $black;
+$color-lt-accent: $yellow;
+$color-lt-background: $gray;
+$color-lt-neutral: $white;
+
+// Dark theme colors
+$color-dark-text: $white;
+$color-dark-accent: $dark-blue;
+$color-dark-background: $black;
+$color-dark-neutral: $black;
+
+
+.theme-light {
+    &.content-wrapper {
+        background-color: $color-lt-background;
+    }
+
+    color: $color-lt-text;
+
+    a, button {
+        color: $color-lt-text;
+    }
+
+    footer {
+        background: $color-lt-text;
+        color: $color-lt-neutral;
+    }
+
+    .cart-icon .cart-quantity {
+        background: $color-lt-accent;
+        color: $color-lt-text;
+    }
+
+    .tooltip {
+        border: 2px solid $color-lt-accent;
+        background: $color-lt-background;
+    }
+
+    .headshot {
+        // Used for gradient animation found in _components.scss
+        background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+        box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 50%);
+    }
+
+    .resource__link {
+        border: 2px solid $color-lt-neutral;
+        background: $color-lt-neutral;
+    }
+
+    .resource__link:after {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
+
+}
+
+
+// Theme Dark
+.theme-dark {
+    &.content-wrapper {
+        background-color: $color-dark-background;
+    }
+
+    color: $color-dark-text;
+
+    .logo img {
+        filter: invert(1);
+    }
+
+    a, button {
+        color: $color-dark-text;
+    }
+
+    footer {
+        background: $color-dark-text;
+        color: $color-dark-neutral;
+    }
+
+    .cart-icon .cart-quantity {
+        background: $color-dark-accent;
+        color: $color-dark-text;
+    }
+
+    .tooltip {
+        border: 2px solid $color-dark-accent;
+        background: $color-dark-background;
+    }
+
+    .headshot {
+        // Used for gradient animation found in _components.scss
+        background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+        box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 50%);
+    }
+
+    .resource__link {
+        border: 2px solid $color-dark-neutral;
+        background: $color-dark-neutral;
+    }
+
+    .resource__link:after {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
+
+}

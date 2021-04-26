@@ -5,10 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome Shopify Starter',
-  siteUrl: 'https://gridsome-shopify.netlify.app/',
-  siteDescription: 'PWA Headless ecommerce Gridsome Shopify starter',
-  titleTemplate: '%s - Gridsome + Shopify',
+  siteName: 'Heather Tovey',
+  siteUrl: 'https://heathertovey.com/',
+  siteDescription: 'A blog about web development and Shopify.',
+  titleTemplate: '%s - Heather Tovey',
   icon: {
     favicon: "./src/favicon.png",
     touchicon: "./src/favicon.png"
