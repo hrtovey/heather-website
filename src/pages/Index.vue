@@ -1,11 +1,11 @@
 <template>
   <Layout>
 
-    <section class="page-section hug--top">
-      <div class="grid">
+    <section class="page-section">
+      <div class="grid align-vertically">
         <div class="grid__item medium--7">
           <h1 class="hero-headline">Hello!<br> I'm Heather Tovey.</h1>
-          <p>I'm a Front-End Developer based in Calgary, Canada. Here, you'll find beginner and intermediate resources covering design and development with a focus on Squarespace and Shopify.</p>
+          <p>I'm a Front-End Developer based in Calgary, Canada 🇨🇦. Here, you'll find beginner and intermediate resources covering design and development with a focus on Squarespace and Shopify.</p>
         </div>
         <div class="grid__item medium--5">
           <div class="headshot">
@@ -27,7 +27,7 @@
             <div class="resource__info">
               <h2 class="resource__title">Get Design Resources</h2>
               <div class="resource__description">
-                <p>A curated collection of 100+ useful resources for web designers like you. Find platform-specific categories like Shopify and Squarespace as well as inspirational links. Maintained by me. 🙂</p>
+                <p>A curated collection of 100+ useful resources for web design and development. Maintained by me. 🙂</p>
               </div>
             </div>
           </a>
@@ -40,7 +40,7 @@
             <div class="resource__info">
               <h2 class="resource__title">Squarespace ID Finder</h2>
               <div class="resource__description">
-                <p>A cross-platform tool to quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a cross-browser bookmarklet.</p>
+                <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
               </div>
             </div>
           </g-link>
@@ -53,7 +53,7 @@
             <div class="resource__info">
               <h2 class="resource__title">Squarespace Blog Post Footer Plugin</h2>
               <div class="resource__description">
-                <p>A Squarespace plugin to add a consistent footer to the blog posts of your choice. Edit the footer in one place instead of having to edit every post.</p>
+                <p>A Squarespace plugin to add a consistent footer to the blog posts of your choice. Edit the footer in one place instead of editing every post.</p>
               </div>
             </div>
           </g-link>
@@ -72,7 +72,7 @@
           >
               <h3>{{ post.node.title }}</h3>
           </g-link>
-          <p>Date: {{ post.node.date }}</p>
+          <p class="post__date">{{ post.node.date }}</p>
         </div>
       </div>
     </section>
@@ -84,17 +84,6 @@
 export default {
   metaInfo: {
     title: 'Home'
-  },
-  computed: {
-    //featuredProducts () { return this.$page.allShopifyProduct.edges }
-    featuredProducts () { 
-      return this.$page.allShopifyProduct.edges.filter(prod => prod.node.availableForSale === true)
-    }
-  },
-  methods: {
-		selectProduct(product) {
-      this.$router.push({ path: "/product/" + product.node.handle })
-    },
   }
 }
 </script>
@@ -107,7 +96,7 @@ export default {
           id 
           title 
           path 
-          date(format: "MMMM D, YYYY")
+          date(format: "MMM D, YYYY")
           categories
         } 
       } 

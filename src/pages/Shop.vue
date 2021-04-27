@@ -1,41 +1,51 @@
 <template>
   <Layout>
-    <div class="grid">
-      <div
-        v-for="({ node: product }) in products"
-        :key="product.id"
-        class="grid__item medium--4">
-        <div class="card">
-          <div class="card-image">
-          <img
-            :src="product.images[0].src"
-            :alt="product.images[0].altText || product.title">
-          </div>
-          <div class="card-content has-text-left">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-4 is-family-secondary">
-                  {{ product.title }}
-                </p>
-                <p class="subtitle is-6">
-                  {{ product.priceRange.minVariantPrice.amount }}
-                </p>
-              </div>
+    <section>
+      <div class="grid">
+        <div class="grid__item">
+          <h1>Digital Downloads</h1>
+          <p>I don't currently have much here, but I'm open to suggestions.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid">
+        <div
+          v-for="({ node: product }) in products"
+          :key="product.id"
+          class="grid__item medium--4">
+          <div class="card">
+            <div class="card-image">
+            <img
+              :src="product.images[0].src"
+              :alt="product.images[0].altText || product.title">
             </div>
+            <div class="card-content has-text-left">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4 is-family-secondary">
+                    {{ product.title }}
+                  </p>
+                  <p class="subtitle is-6">
+                    {{ product.priceRange.minVariantPrice.amount }}
+                  </p>
+                </div>
+              </div>
 
-            <div class="field is-grouped is-grouped-right">
-              <div class="control">
-                <g-link
-                  :to="`product/${product.handle}`"
-                  class="button is-primary is-outlined is-rounded ">
-                  View Product
-                </g-link>
+              <div class="field is-grouped is-grouped-right">
+                <div class="control">
+                  <g-link
+                    :to="`product/${product.handle}`"
+                    class="button is-primary is-outlined is-rounded ">
+                    View Product
+                  </g-link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </Layout>
 </template>
 

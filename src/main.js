@@ -34,12 +34,13 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     easing: "ease",
   })
 
-  /*
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Prata'
+  head.script.push({
+    src: "https://microanalytics.io/js/script.js",
+    async: true,
+    defer: true,
+    "data-host": "https://microanalytics.io",
+    "data-dnt": "false"
   })
-  */
 
   // Create Apollo client
   const apolloClient = new ApolloClient({

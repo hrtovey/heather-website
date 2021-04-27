@@ -200,7 +200,11 @@
     align-items: center;
     padding: 2vw;
     border-radius: 10px;
-    cursor: pointer
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .resource__link:after {
@@ -227,13 +231,15 @@
 
 h2.resource__title {
     font-size: 16px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 .resource__description p {
     font-size: 16px;
     opacity: .6;
-    line-height: 1
+    line-height: 1;
+    margin-bottom: 0;
 }
 
 .resource__image {
@@ -275,4 +281,9 @@ h2.resource__title {
     .resource__image {
         margin-bottom: 20px
     }
+}
+
+.post__date {
+    font-size: 0.8rem;
+    opacity: 0.8;
 }

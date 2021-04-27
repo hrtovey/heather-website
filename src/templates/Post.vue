@@ -1,11 +1,13 @@
 <template>
 	<Layout>
 		<div class="grid">
-			<header class="title">
-				<h1>{{ $page.post.title }}</h1>
-				<p>Published on: {{ $page.post.date }}</p>
-			</header>
-			<main class="content" v-html="$page.post.content"></main>
+			<div class="grid__item">
+				<header class="title">
+					<h1>{{ $page.post.title }}</h1>
+					<p>Published on: {{ $page.post.date }}</p>
+				</header>
+				<main class="content" v-html="$page.post.content"></main>
+			</div>
 		</div>
 	</Layout>
 </template>
