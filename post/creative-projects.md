@@ -4,6 +4,7 @@ date: "2020-04-08"
 categories: 
   - "web-development"
 coverImage: "take-time-to-be-creative-thumbnail.png"
+excerpt: ""
 ---
 
 There's so much you can do in CSS. Style a link, add some fun animation, create the most fun buttons you've ever seen, etc! But what I'm particularly enjoying is pure CSS art.

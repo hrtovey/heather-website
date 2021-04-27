@@ -7,6 +7,7 @@ tags:
   - "code-snippets"
   - "custom-fonts"
 coverImage: "how-to-add-custom-fonts-to-squarespace-1.png"
+excerpt: ""
 ---
 
 You want the website you're designing to stand out and look and feel on brand, right?

@@ -7,6 +7,7 @@ tags:
   - "business-education"
   - "june-2018"
 coverImage: "9-tips-for-learning-what-you-need-to-grow-your-business.png"
+excerpt: ""
 ---
 
 You don't need that webinar. Put away that ebook. Unsubscribe from that podcast.

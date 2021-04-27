@@ -7,6 +7,7 @@ tags:
   - "code-snippets"
   - "squarespace-tips"
 coverImage: "5-squarespace-tips-to-speed-up-development-1.png"
+excerpt: ""
 ---
 
 Squarespace makes a designer's life simpler by providing so many built-in options. But there are still times when you find yourself reaching for code or needing some guidance on how to work around a default style.

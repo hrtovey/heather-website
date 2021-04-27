@@ -8,6 +8,7 @@ tags:
   - "back-to-top-buttons"
   - "code-snippets"
 coverImage: "how-to-create-a-floating-back-to-top-button-1.png"
+excerpt: ""
 ---
 
 * * *

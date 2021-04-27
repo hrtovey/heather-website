@@ -6,6 +6,7 @@ categories:
 tags: 
   - "code-snippets"
 coverImage: "how-to-add-custom-bullet-points-in-squarespace.png"
+excerpt: ""
 ---
 
 You’ve designed a beautiful website and have built it in Squarespace. [You’ve dotted every i and crossed every t](https://heathertovey.com/blog/pre-launch-checklist), but something feels like it’s missing.

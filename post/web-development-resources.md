@@ -6,6 +6,7 @@ categories:
 tags: 
   - "resources"
 coverImage: "Top-9-Web-Development-Resources-1.png"
+excerpt: ""
 ---
 
 Want to level up your design and coding skills?

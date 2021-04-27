@@ -7,6 +7,7 @@ tags:
   - "may-2018"
   - "perfectionism"
 coverImage: "how-to-overcome-perfectionism-as-an-entrepreneur-thumbnail.png"
+excerpt: ""
 ---
 
 My daughter is so happy when she's dancing.

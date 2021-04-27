@@ -8,6 +8,7 @@ tags:
   - "resources"
   - "time-tracking"
 coverImage: "how-to-become-a-better-entrepreneur-with-the-pomodoro-technique-1.png"
+excerpt: ""
 ---
 
 There simply isn't enough time in the day for everything that we have to do as entrepreneurs.

@@ -9,6 +9,7 @@ tags:
   - "resources"
   - "workflow"
 coverImage: "4-useful-tools-to-boost-your-squarespace-design-1.png"
+excerpt: ""
 ---
 
 There's no point in spending hours on something that could take you 5 minutes.

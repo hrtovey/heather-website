@@ -7,6 +7,7 @@ tags:
   - "learn-to-code"
   - "resources"
 coverImage: "5-tips-for-learning-how-to-code-1.png"
+excerpt: ""
 ---
 
 Learning isn't easy.

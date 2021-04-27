@@ -6,6 +6,7 @@ categories:
 tags: 
   - "april-2018"
 coverImage: "how-to-make-your-website-more-user-friendly-1.png"
+excerpt: ""
 ---
 
 I hate pop-ups.

@@ -8,6 +8,7 @@ tags:
   - "questions-to-ask"
   - "web-design"
 coverImage: "100-questions-to-ask-before-designing-your-website-1.png"
+excerpt: ""
 ---
 
 Why do you want a website?

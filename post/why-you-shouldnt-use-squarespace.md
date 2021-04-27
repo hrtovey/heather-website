@@ -4,6 +4,7 @@ date: "2018-10-30"
 categories: 
   - "squarespace"
 coverImage: "6-reasons-why-you-shouldnt-use-squarespace-1.png"
+excerpt: ""
 ---
 
 In [6 Reasons Why Squarespace is an Excellent Choice](https://heathertovey.com/blog/choose-squarespace), I begin by telling you that Squarespace isn’t designed to be a platform for everyone.

@@ -6,6 +6,7 @@ categories:
 tags: 
   - "developer-collaboration"
 coverImage: "5-benefits-you-gain-from-working-with-a-developer-1.png"
+excerpt: ""
 ---
 
 If you've seen any of my other articles, you may have noticed that I love to create [coding snippets](/blog?tag=code%20snippets) for others to use. I love solving problems, building websites, and writing custom code.

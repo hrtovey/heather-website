@@ -6,6 +6,7 @@ categories:
 tags: 
   - "developer-collaboration"
 coverImage: "what-can-a-developer-do-for-you-1.png"
+excerpt: ""
 ---
 
 You're a web designer working with excellent clients, but you want to do more.

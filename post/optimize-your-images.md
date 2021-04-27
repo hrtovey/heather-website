@@ -8,6 +8,7 @@ tags:
   - "page-speed"
   - "seo"
 coverImage: "how-to-optimize-your-images-and-speed-up-your-website-1.png"
+excerpt: ""
 ---
 
 A few months ago, I helped a fellow designer troubleshoot an issue she was having with the website she was building.

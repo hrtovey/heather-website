@@ -6,6 +6,7 @@ categories:
 tags: 
   - "code-snippets"
 coverImage: "3-css-tweaks-to-customize-your-squarespace-website-1.png"
+excerpt: "Learn how to create a fixed header, hide the header and footer, and style blockquotes on 7.0 Brine."
 ---
 
 Brine is a popular Squarespace template. There’s a lot of functionality there and a lot you can do with it.

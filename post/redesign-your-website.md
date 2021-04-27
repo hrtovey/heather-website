@@ -6,6 +6,7 @@ categories:
 tags: 
   - "april-2018"
 coverImage: "is-it-time-to-redesign-your-website-1.png"
+excerpt: ""
 ---
 
 ![ Is it time to redesign your website? ](./images/is-it-time-to-redesign-your-website.png)

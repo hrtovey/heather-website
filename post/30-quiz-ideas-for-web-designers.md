@@ -6,6 +6,7 @@ categories:
 tags: 
   - "quiz"
 coverImage: "30-useful-quiz-ideas-for-web-designers-1.png"
+excerpt: ""
 ---
 
 * * *

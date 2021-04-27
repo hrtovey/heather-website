@@ -9,6 +9,7 @@ tags:
   - "may-2018"
   - "table-of-contents"
 coverImage: "how-to-create-a-table-of-contents-for-your-article-1.png"
+excerpt: ""
 ---
 
 If you're like most people on the internet, you don't thoroughly read every article you come across.

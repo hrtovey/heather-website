@@ -7,6 +7,7 @@ tags:
   - "color-palettes"
   - "resources"
 coverImage: "18-tools-to-help-you-create-beautiful-color-palettes.png"
+excerpt: ""
 ---
 
 Color is important.

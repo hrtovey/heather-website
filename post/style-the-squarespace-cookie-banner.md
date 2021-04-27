@@ -7,6 +7,7 @@ tags:
   - "code-snippets"
   - "cookie-banner"
 coverImage: "3-more-ways-to-style-the-squarespace-cookie-banner-1.png"
+excerpt: ""
 ---
 
 **UPDATE (September 21, 2018):** Squarespace made some changes to the Squarespace Cookie Banner Code. The following code has been updated to reflect the new changes. If you run into any issues, please leave a comment and I'll fix it ASAP. Thank you!

@@ -6,6 +6,7 @@ categories:
 tags: 
   - "april-2018"
 coverImage: "6-reasons-why-squarespace-is-an-excellent-choice-1.png"
+excerpt: ""
 ---
 
 I'm not going to lie to you.

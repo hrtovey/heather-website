@@ -6,6 +6,7 @@ categories:
 tags: 
   - "code-snippets"
 coverImage: "how-to-change-default-text-labels-in-squarespace-1.png"
+excerpt: ""
 ---
 
 **\*Requires a Business or above account to add JavaScript code snippets.\***

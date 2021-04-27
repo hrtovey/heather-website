@@ -8,6 +8,7 @@ tags:
   - "may-2018"
   - "seo"
 coverImage: "how-to-improve-squarespace-seo-with-google-search-keywords-1.png"
+excerpt: ""
 ---
 
 As an online entrepreneur, you've probably read a lot of different advice about how to rank higher in Google Search. SEO is important, and you know that, but sometimes it's hard to find solid, practical advice.

@@ -4,7 +4,7 @@
 			<div class="grid__item">
 				<header class="title">
 					<h1>{{ $page.post.title }}</h1>
-					<reading-time :content="$page.post.content"></reading-time>
+					<p>{{ $page.post.timeToRead }} min read</p>
 					<p>Published on: {{ $page.post.date }}</p>
 				</header>
 				<main class="content" v-html="$page.post.content"></main>
@@ -13,15 +13,6 @@
 	</Layout>
 </template>
 
-<script>
-import ReadingTime from '~/components/ReadingTime.vue'
-
-export default {
-  components: {
-    ReadingTime
-  }
-}
-</script>
 <page-query>
 	query Post($path: String!) {
 		post: post(path: $path) {
@@ -30,6 +21,7 @@ export default {
 			path 
 			date (format: "MMMM D, YYYY h:mma") 
 			content
+			timeToRead(speed: 200)
 		}
 	}
 </page-query>

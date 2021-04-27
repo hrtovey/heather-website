@@ -10,6 +10,7 @@ tags:
   - "gradients"
   - "index-pages"
 coverImage: "how-to-add-colorful-gradient-backgrounds-in-squarespace-1.png"
+excerpt: ""
 ---
 
 If you're a big fan of color, it's possible that you also love color gradients.

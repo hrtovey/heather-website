@@ -7,6 +7,7 @@ tags:
   - "checklist"
   - "resources"
 coverImage: "the-ultimate-pre-launch-checklist-for-your-squarespace-website-1.png"
+excerpt: ""
 ---
 
 You’ve designed the website and you’ve built it too! Your client is happy and now all you have left to do is to launch the brand new website.
