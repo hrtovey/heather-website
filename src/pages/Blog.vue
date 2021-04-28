@@ -13,6 +13,7 @@
 				:to="post.node.path"
 			>
 				<div class="post-card__info">
+					<p class="post-card__category">{{ listCategories(post.node.categories) }}</p>
 					<h3 class="post-card__title">{{ post.node.title }}</h3>
 					<p>{{ truncateExcerpt(post.node.excerpt, 125) }}</p>
 					<div class="post-card__meta">
@@ -38,6 +39,9 @@ export default {
 		  } else {
 			  return `${ex.slice(0,num)}...`;
 		  }
+	  },
+	  listCategories (categories) {
+		  return categories.join(', ').replace(/-/g, ' ');
 	  }
   }
 }
@@ -55,6 +59,7 @@ export default {
 					excerpt
 					content
 					timeToRead(speed: 200)
+					categories
 				} 
 			} 
 		} 
