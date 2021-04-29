@@ -18,41 +18,41 @@
       <div class="grid">
         <h2 class="grid__item">Useful Resources</h2>
       </div>
-      <div class="resources-list grid">
-        <div class="resource grid__item medium--4">
-          <a class="resource__link" href="https://getdesignresources.com/">
-            <div class="resource__image">
+      <div class="cards-list grid align-stretch">
+        <div class="card grid__item medium--4 card--image">
+          <a class="card__link" href="https://getdesignresources.com/">
+            <div class="card__image">
               <g-image src="~/assets/images/getdesignresourcespattern.png" quality='100' />
             </div>
-            <div class="resource__info">
-              <h2 class="resource__title">Get Design Resources</h2>
-              <div class="resource__description">
+            <div class="card__info">
+              <h3 class="card__title">Get Design Resources</h3>
+              <div class="card__description">
                 <p>A curated collection of 100+ useful resources for web design and development. Maintained by me. 🙂</p>
               </div>
             </div>
           </a>
         </div>
-        <div class="resource grid__item medium--4">
-          <g-link class="resource__link" to="/squarespace-id-finder">
-            <div class="resource__image">
+        <div class="card grid__item medium--4 card--image">
+          <g-link class="card__link" to="/squarespace-id-finder">
+            <div class="card__image">
               <g-image src="~/assets/images/sqs-extension.png" />
             </div>
-            <div class="resource__info">
-              <h2 class="resource__title">Squarespace ID Finder</h2>
-              <div class="resource__description">
+            <div class="card__info">
+              <h3 class="card__title">Squarespace ID Finder</h3>
+              <div class="card__description">
                 <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
               </div>
             </div>
           </g-link>
         </div>
-        <div class="resource grid__item medium--4">
-          <g-link class="resource__link" to="/product/squarespace-blog-footer-plugin/">
-            <div class="resource__image">
+        <div class="card grid__item medium--4 card--image">
+          <g-link class="card__link" to="/product/squarespace-blog-footer-plugin/">
+            <div class="card__image">
               <g-image src="~/assets/images/blog-footer-plugin-1.png" />
             </div>
-            <div class="resource__info">
-              <h2 class="resource__title">Squarespace Blog Post Footer Plugin</h2>
-              <div class="resource__description">
+            <div class="card__info">
+              <h3 class="card__title">Blog CTA Plugin</h3>
+              <div class="card__description">
                 <p>A Squarespace plugin to add a consistent footer to the blog posts of your choice. Edit the footer in one place instead of editing every post.</p>
               </div>
             </div>
@@ -63,16 +63,26 @@
     <section class="page-section">
       <div class="grid">
         <h2 class="grid__item">Latest Articles</h2>
-        <div
+      </div>
+      <div class="grid align-stretch">
+        <div class="card grid__item medium--6"
           v-for="post in $page.posts.edges"
           :key="post.id"
-          class="post grid__item">
+        >
           <g-link
+            class="card__link grid__item"
             :to="post.node.path"
           >
-              <h3>{{ post.node.title }}</h3>
+            <div class="card__info">
+              <div class="card__meta">
+                <p class="card__category card__meta-item">{{ listCategories(post.node.categories) }}</p>
+                <p class="card__time-to-read card__meta-item">{{post.node.timeToRead}} min read</p>
+                <p class="card__date card__meta-item">{{ post.node.date }}</p>
+              </div>
+              <h3 class="card__title">{{ post.node.title }}</h3>
+              <p class="card__description">{{ truncateExcerpt(post.node.excerpt, 125) }}</p>
+            </div>
           </g-link>
-          <p class="post__date">{{ post.node.date }}</p>
         </div>
       </div>
     </section>
@@ -83,21 +93,36 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: '👩‍💻 Home'
+  },
+  methods: {
+	  truncateExcerpt (ex, num) {
+		  if (ex.length <= num) {
+			  return ex;
+		  } else {
+			  return `${ex.slice(0,num)}...`;
+		  }
+	  },
+	  listCategories (categories) {
+		  return categories.join(', ').replace(/-/g, ' ');
+	  }
   }
 }
 </script>
 
 <page-query>
   query {
-    posts: allPost (limit: 3) {
+    posts: allPost (limit: 4) {
       edges {
         node {
-          id 
-          title 
-          path 
-          date(format: "MMM D, YYYY")
-          categories
+					id 
+					title 
+					path 
+					date(format: "MMM YYYY")
+					excerpt
+					content
+					timeToRead(speed: 200)
+					categories
         } 
       } 
     } 

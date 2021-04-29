@@ -13,36 +13,21 @@
         <div
           v-for="({ node: product }) in products"
           :key="product.id"
-          class="grid__item medium--4">
-          <div class="card">
-            <div class="card-image">
-            <img
-              :src="product.images[0].src"
-              :alt="product.images[0].altText || product.title">
+          class="card grid__item medium--4 card--image">
+          <g-link class="card__link" :to="`product/${product.handle}`">
+            <div class="card__image">
+              <img
+                :src="product.images[0].src"
+                :alt="product.images[0].altText || product.title">
+                <div class="card__price">{{ product.priceRange.minVariantPrice.amount }}</div>
             </div>
-            <div class="card-content has-text-left">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4 is-family-secondary">
-                    {{ product.title }}
-                  </p>
-                  <p class="subtitle is-6">
-                    {{ product.priceRange.minVariantPrice.amount }}
-                  </p>
-                </div>
-              </div>
-
-              <div class="field is-grouped is-grouped-right">
-                <div class="control">
-                  <g-link
-                    :to="`product/${product.handle}`"
-                    class="button is-primary is-outlined is-rounded ">
-                    View Product
-                  </g-link>
-                </div>
+            <div class="card__info">
+              <h3 class="card__title">{{ product.title }}</h3>
+              <div class="card__description">
+                <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
               </div>
             </div>
-          </div>
+          </g-link>
         </div>
       </div>
     </section>
@@ -52,11 +37,17 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Come, shop!'
+    title: '🛍️ Time to shop!'
   },
   computed: {
     collection () { return this.$page.allShopifyCollection.edges.length && this.$page.allShopifyCollection.edges[ 0 ].node },
-    products () { return this.$page.allShopifyProduct.edges }
+    products () { return this.$page.allShopifyProduct.edges },
+    currencyAmount () {
+      return new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency: currencyCode
+      }).format(amount);
+    }
   }
 }
 </script>
@@ -72,7 +63,8 @@ query ShopifyProducts {
         descriptionHtml
         priceRange {
           minVariantPrice {
-            amount(format: true)
+            amount
+            currencyCode
           }
         }
         images (limit: 1) {

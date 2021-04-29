@@ -1,6 +1,7 @@
 // Color variables
 $yellow: #ffc73f;
 $black: #171717;
+$black--light: #747474;
 $pink: #eb5a70;
 $dark-blue: #3a8fcb;
 $light-blue: #94c0d4;
@@ -8,10 +9,11 @@ $white: white;
 $gray: #f7f7f7;
 
 // Light theme colors
-$color-lt-text: $black;
-$color-lt-accent: $yellow;
-$color-lt-background: $gray;
-$color-lt-neutral: $white;
+$color-light-text: $black;
+$color-light-text--secondary: $black--light;
+$color-light-accent: $yellow;
+$color-light-background: $gray;
+$color-light-neutral: $white;
 
 // Dark theme colors
 $color-dark-text: $white;
@@ -22,28 +24,28 @@ $color-dark-neutral: $black;
 
 .theme-light {
     &.content-wrapper {
-        background-color: $color-lt-background;
+        background-color: $color-light-background;
     }
 
-    color: $color-lt-text;
+    color: $color-light-text;
 
     a, button {
-        color: $color-lt-text;
+        color: $color-light-text;
     }
 
     footer {
-        background: $color-lt-text;
-        color: $color-lt-neutral;
+        background: $color-light-text;
+        color: $color-light-neutral;
     }
 
     .cart-icon .cart-quantity {
-        background: $color-lt-accent;
-        color: $color-lt-text;
+        background: $color-light-accent;
+        color: $color-light-text;
     }
 
     .tooltip {
-        border: 2px solid $color-lt-accent;
-        background: $color-lt-background;
+        border: 2px solid $color-light-accent;
+        background: $color-light-background;
     }
 
     .headshot {
@@ -52,13 +54,26 @@ $color-dark-neutral: $black;
         box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 50%);
     }
 
-    .resource__link, .post-card__link {
-        border: 2px solid $color-lt-neutral;
-        background: $color-lt-neutral;
+    .card__link {
+        background: $color-light-neutral;
     }
 
-    .resource__link:after, .post-card__link:after {
+    .card__link:after {
         box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
+
+    .card__meta-item, .card__description {
+        color: $color-light-text--secondary;
+    }
+
+    .card__category {
+        border-color: $color-light-accent;
+    }
+
+    .card__time-to-read + .card__date:before {
+        content: "\25CF";
+        margin-right: 10px;
+        color: $color-light-accent;
     }
 
 }
@@ -101,12 +116,11 @@ $color-dark-neutral: $black;
         box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 50%);
     }
 
-    .resource__link {
-        border: 2px solid $color-dark-neutral;
+    .card__link {
         background: $color-dark-neutral;
     }
 
-    .resource__link:after {
+    .card__link:after {
         box-shadow: 0 5px 15px rgba(0,0,0,.3);
     }
 
