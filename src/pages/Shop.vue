@@ -9,7 +9,7 @@
       </div>
     </section>
     <section>
-      <div class="grid">
+      <div class="grid justify-start ">
         <div
           v-for="({ node: product }) in products"
           :key="product.id"
@@ -19,7 +19,7 @@
               <img
                 :src="product.images[0].src"
                 :alt="product.images[0].altText || product.title">
-                <div class="card__price">{{ product.priceRange.minVariantPrice.amount }}</div>
+                <div class="card__price">{{ formatPrice(product.priceRange.minVariantPrice.amount, product.priceRange.minVariantPrice.currencyCode) }}</div>
             </div>
             <div class="card__info">
               <h3 class="card__title">{{ product.title }}</h3>
@@ -39,15 +39,25 @@ export default {
   metaInfo: {
     title: '🛍️ Time to shop!'
   },
+  methods: {
+    formatPrice (amount, currencyCode) {
+      // Regex to remove decimal and potential trailing currency code since we're adding our own and I just wanted to play it super duper safe
+      var decimalRemovalRegex = /\D00(?=\D*$)/;
+
+      if ( parseInt(amount) === 0) {
+        return "Free";
+      } else {
+        // Formatting comes directly from Shopify example
+        return new Intl.NumberFormat('en-CA', {
+          style: 'currency',
+          currency: currencyCode
+        }).format(amount).replace(decimalRemovalRegex, '') + " " + currencyCode;
+      }
+    }
+  },
   computed: {
     collection () { return this.$page.allShopifyCollection.edges.length && this.$page.allShopifyCollection.edges[ 0 ].node },
-    products () { return this.$page.allShopifyProduct.edges },
-    currencyAmount () {
-      return new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: currencyCode
-      }).format(amount);
-    }
+    products () { return this.$page.allShopifyProduct.edges }
   }
 }
 </script>

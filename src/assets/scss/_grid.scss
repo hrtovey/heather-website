@@ -31,3 +31,15 @@ $large: 1201px;
 @media (min-width: $large) {
     @include grid(large);
 }
+
+.grid.align-vertically {
+    align-items: center;
+}
+
+.grid.align-stretch {
+    align-items: stretch;
+}
+
+.grid.justify-start {
+    justify-content: flex-start;
+}
