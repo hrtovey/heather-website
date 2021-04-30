@@ -23,9 +23,7 @@
             </div>
             <div class="card__info">
               <h3 class="card__title">{{ product.title }}</h3>
-              <div class="card__description">
-                <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
-              </div>
+              <h3 class="card__title">{{ product.id }}</h3>
             </div>
           </g-link>
         </div>

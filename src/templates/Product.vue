@@ -1,70 +1,74 @@
 <template>
   <Layout>
-    <div class="container-inner mx-auto my-16">
-      <h1 class="text-4xl font-bold leading-tight">{{ product.title }}</h1>
-      <div class="text-xl text-gray-600 mb-4"></div>
-      <div v-if="currentVariant" class="flex mb-8 text-sm">
-        <g-link
-          class="bg-gray-300 rounded-full px-4 py-2 mr-4 hover:bg-green-300">
-          {{ currentVariant.price.amount }}
-        </g-link>
-      </div>
-      
-      <div class="mb-8">
-        <g-image
-              :src="product.images[0].src"
-              :alt="product.images[0].altText || product.title" />
-      </div>
+    <section>
+      {{ productAdditional.name }}
+      <div class="grid">
+        <div class="grid__item medium--6">
+          <div class="">
+            <g-image
+                  :src="product.images[0].src"
+                  :alt="product.images[0].altText || product.title" />
+          </div>
+        </div>
+        <div class="grid__item medium--6">
 
-      <div class="mb-8" v-html="product.descriptionHtml" />
+          <h1 class="">{{ product.title }}</h1>
+          <div v-if="currentVariant" class="">
+            <g-link
+              class="">
+              {{ currentVariant.price.amount }}
+            </g-link>
+          </div>
+          <div class="" v-html="product.descriptionHtml" />
 
-      <div
-        v-for="option in productOptions"
-        :key="option.id"
-        class="flex mx-auto">
-        <div class="">
-          <label
-            :for="option.name"
+          <div
+            v-for="option in productOptions"
+            :key="option.id"
             class="">
-            {{ option.name }}
             <div class="">
-              <select
-                :id="option.name"
-                v-model="selectedOptions[option.name]">
-                <option
-                  v-for="value in option.values"
-                  :key="value"
-                  :value="value">
-                  {{ value }}
-                </option>
-              </select>
+              <label
+                :for="option.name"
+                class="">
+                {{ option.name }}
+                <div class="">
+                  <select
+                    :id="option.name"
+                    v-model="selectedOptions[option.name]">
+                    <option
+                      v-for="value in option.values"
+                      :key="value"
+                      :value="value">
+                      {{ value }}
+                    </option>
+                  </select>
+                </div>
+              </label>
             </div>
-          </label>
+          </div>
+          <br>
+
+          <notifications />
+
+          <div class="">
+            <div class="">
+              <input
+                id="quantity"
+                v-model.number="quantity"
+                class=""
+                type="number">
+            </div>
+            <div class="">
+              <button @click="addToCart"
+                @keyup.enter="addToCart" 
+                class="">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <br>
         </div>
       </div>
-      <br>
-
-      <notifications />
-
-      <div class="flex mx-auto">
-        <div class="w-1/2">
-          <input
-            id="quantity"
-            v-model.number="quantity"
-            class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-            type="number">
-        </div>
-        <div class="w-1/2">
-          <button @click="addToCart"
-            @keyup.enter="addToCart" 
-            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-            Add To Cart
-          </button>
-        </div>
-      </div>
-      <br>
-
-    </div>
+    </section>
   </Layout>
 </template>
 
@@ -72,7 +76,7 @@
 export default {
   metaInfo () {
     return {
-      title: this.$page.shopifyProduct.title
+      title: this.$page.shopifyInfo.title
     }
   },
   data: () => ({
@@ -80,14 +84,15 @@ export default {
     quantity: 1
   }),
   computed: {
-    product () { return this.$page.shopifyProduct },
+    product () { return this.$page.shopifyInfo },
     productOptions () { return this.product.options.filter(({ name }) => name !== 'Title') },
     currentVariant () {
       const matchedVariant = this.product.variants.find(variant =>
         variant.selectedOptions.every(({ name, value }) => value === this.selectedOptions[ name ])
       )
       return matchedVariant
-    }
+    },
+    productAdditional () { return this.$page.customInfo }
   },
   watch: {
     $route (to, from) {
@@ -122,7 +127,7 @@ export default {
 
 <page-query>
 query Product ($id: ID!) {
-  shopifyProduct (id: $id) {
+  shopifyInfo: shopifyProduct (id: $id) {
     id
     descriptionHtml
     title
@@ -154,6 +159,10 @@ query Product ($id: ID!) {
         thumbnail: transformedSrc(maxWidth: 150, maxHeight: 150, crop: CENTER)
       }
     }
+  }
+  customInfo: productsInfo (id: $id) {
+    id
+    name
   }
 }
 </page-query>

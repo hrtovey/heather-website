@@ -5,7 +5,16 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api, options) {
-  api.loadSource(store => {
+module.exports = function (api) {
+  api.loadSource(async actions => {
+    const ProductsInfo = require('./data/product-info.json');
+
+    const collection = actions.addCollection({
+      typeName: 'ProductsInfo'
+    })
+
+    for (const productInfo of ProductsInfo) {
+      collection.addNode(productInfo);
+    }
   })
 }
