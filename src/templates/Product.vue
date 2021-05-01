@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <section>
-      {{ productAdditional.name }}
       <div class="grid">
         <div class="grid__item medium--6">
           <div class="">
@@ -51,11 +50,18 @@
 
           <div class="">
             <div class="">
+              <input type="button"
+                value="+"
+              >
               <input
                 id="quantity"
                 v-model.number="quantity"
-                class=""
-                type="number">
+                class="custom-number-input"
+                type="number"
+                min="1">
+              <input type="button"
+                value="-"
+              >
             </div>
             <div class="">
               <button @click="addToCart"
@@ -69,6 +75,7 @@
         </div>
       </div>
     </section>
+    <div class="" v-html="productAdditional.description" />
   </Layout>
 </template>
 
@@ -162,7 +169,7 @@ query Product ($id: ID!) {
   }
   customInfo: productsInfo (id: $id) {
     id
-    name
+    description
   }
 }
 </page-query>

@@ -90,7 +90,7 @@ module.exports = {
 			use: "@gridsome/source-filesystem",
 			options: {
 				typeName: "Post",
-				path: "./post/**/*.md",
+				path: "./src/post/**/*.md",
         remark: {
           plugins: [
             '@gridsome/remark-prismjs'

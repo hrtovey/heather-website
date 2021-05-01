@@ -279,3 +279,13 @@
     background-color: rgba(0,23,50,.1);
     line-height: 1;vertical-align: sub;
 }
+
+
+// Shop Page
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  appearance: none;
+}
+.custom-number-input {
+  -moz-appearance: textfield;
+}
