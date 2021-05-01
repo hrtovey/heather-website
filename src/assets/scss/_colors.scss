@@ -62,17 +62,11 @@ $color-dark-neutral: $black;
         box-shadow: 0 5px 15px rgba(0,0,0,.3);
     }
 
-    .card__meta-item, .card__description {
+    .card__meta-item:not(.card__category), .card__description {
         color: $color-light-text--secondary;
     }
 
-    .card__category {
-        border-color: $color-light-accent;
-    }
-
-    .card__time-to-read + .card__date:before {
-        content: "\25CF";
-        margin-right: 10px;
+    .card__meta-item:before {
         color: $color-light-accent;
     }
 

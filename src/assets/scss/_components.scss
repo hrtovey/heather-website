@@ -225,16 +225,9 @@
         }
     }
 
-    .card__date {
-        font-size: 0.8rem;
-        opacity: 0.8;
-    }
-
     .card__category {
         text-transform: capitalize;
-        border: 1px solid;
-        border-radius: 20px;
-        padding: 0 10px;
+        font-weight: 600;
     }
 
     .card__meta {
@@ -249,7 +242,7 @@
         line-height: 1;
     }
 
-    .card__time-to-read + .card__date:before {
+    .card__category + .card__time-to-read:before, .card__time-to-read + .card__date:before {
         content: "\25CF";
         margin-right: 10px;
     }
