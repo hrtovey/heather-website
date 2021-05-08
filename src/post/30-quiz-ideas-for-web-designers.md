@@ -1,5 +1,6 @@
 ---
 title: "30 Useful Quiz Ideas for Web Designers"
+slug: "30-quiz-ideas-for-web-designers"
 date: "2018-08-14"
 categories: 
   - "business"

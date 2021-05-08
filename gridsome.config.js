@@ -95,12 +95,34 @@ module.exports = {
           plugins: [
             '@gridsome/remark-prismjs'
           ]
+        },
+        refs: {
+          // Auto create a collection for all categories
+          categories: { 
+            typeName: 'Category',
+            create: true
+          },
+          // Auto create a collection for all categories
+          tags: { 
+            typeName: 'Tag',
+            create: true
+          }
         }
+
+			}
+		},
+    {
+			use: "@gridsome/source-filesystem",
+			options: {
+				typeName: "ProductsInfo",
+				path: "./src/data/**/*.md"
 			}
 		}
   ],
   templates: {
-    Post: "/blog/:title",
+    Post: "/blog/:slug",
+    Category: "/blog/category/:title",
+    Tag: "/blog/tag/:title",
     ShopifyProduct: [
       {
         path: '/product/:handle',

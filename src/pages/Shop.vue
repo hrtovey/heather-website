@@ -4,7 +4,7 @@
       <div class="grid">
         <div class="grid__item">
           <h1>Digital Downloads</h1>
-          <p>I don't currently have much here, but I'm open to suggestions.</p>
+          <p>Free and paid resources to help you level up your website.</p>
         </div>
       </div>
     </section>
@@ -19,11 +19,10 @@
               <img
                 :src="product.images[0].src"
                 :alt="product.images[0].altText || product.title">
-                <div class="card__price">{{ formatPrice(product.priceRange.minVariantPrice.amount, product.priceRange.minVariantPrice.currencyCode) }}</div>
             </div>
             <div class="card__info">
               <h3 class="card__title">{{ product.title }}</h3>
-              <h3 class="card__title">{{ product.id }}</h3>
+              <div class="card__price">{{ formatPrice(product.priceRange.minVariantPrice.amount, product.priceRange.minVariantPrice.currencyCode) }}</div>
             </div>
           </g-link>
         </div>
@@ -35,7 +34,10 @@
 <script>
 export default {
   metaInfo: {
-    title: '🛍️ Time to shop!'
+    title: '🛍️ Time to shop!',
+    bodyAttrs: {
+      class: 'page--shop'
+    },
   },
   methods: {
     formatPrice (amount, currencyCode) {

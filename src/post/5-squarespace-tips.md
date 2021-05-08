@@ -1,5 +1,6 @@
 ---
 title: "5 Squarespace Tips to Speed Up Development"
+slug: "5-squarespace-tips"
 date: "2018-08-28"
 categories: 
   - "squarespace"

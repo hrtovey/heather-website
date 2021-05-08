@@ -18,7 +18,10 @@ export default {
     Layout
   },
   metaInfo: {
-    title: 'Page Not Found'
+    title: 'Page Not Found',
+      bodyAttrs: {
+        class: 'page--404'
+      }
   }
 }
 </script>

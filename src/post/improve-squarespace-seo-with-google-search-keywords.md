@@ -1,5 +1,6 @@
 ---
 title: "How to Improve Squarespace SEO with Google Search Keywords"
+slug: "improve-squarespace-seo-with-google-search-keywords"
 date: "2018-05-15"
 categories: 
   - "squarespace"

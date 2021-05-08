@@ -5,17 +5,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 40px;
+    padding: 0 20px;
+
+    @media (min-width: 521px) {
+        padding: 0 40px;
+    }
 }
 
 .grid__item {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 0;
+    padding-left: 0;
     width: 100%;
 }
 
 $medium: 641px;
-$large: 1201px;
+$large: 1025px;
 @mixin grid($name) {
     @for $i from 0 through 12 {
         .grid__item.#{$name}--#{$i} {
@@ -26,6 +30,10 @@ $large: 1201px;
 
 @media (min-width: $medium) {
     @include grid(medium);
+    .grid__item {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }
 
 @media (min-width: $large) {

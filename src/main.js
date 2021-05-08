@@ -12,6 +12,7 @@ import fetch from 'isomorphic-fetch'
 
 import DefaultLayout from '~/layouts/Default.vue'
 import VueScrollTo from 'vue-scrollto'
+import VueSilentbox from 'vue-silentbox'
 
 import 'normalize.css';
 import "@fontsource/chivo/900.css";
@@ -34,12 +35,19 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     easing: "ease",
   })
 
+  Vue.use(VueSilentbox)
+
   head.script.push({
     src: "https://microanalytics.io/js/script.js",
     async: true,
     defer: true,
     "data-host": "https://microanalytics.io",
     "data-dnt": "false"
+  })
+
+  head.script.push({
+    src: "https://static.codepen.io/assets/embed/ei.js",
+    async: true
   })
 
   // Create Apollo client
@@ -60,9 +68,11 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   appOptions.apolloProvider = apolloProvider
 
   // Create Vuex store
+  let cart = window.localStorage.getItem('cart');
+  console.log(cart);
   appOptions.store = new Vuex.Store({
     state: {
-      cart: []
+      cart: cart ? JSON.parse(cart) : []
     },
     mutations: {
       addToCart: (state, newItem) => {
@@ -70,10 +80,17 @@ export default function (Vue, { appOptions, router, head, isClient }) {
 
         if (itemExists) itemExists.qty += newItem.qty
         else state.cart.push(newItem)
+
+        appOptions.store.commit('saveCart');
       },
       removeFromCart: (state, itemId) => {
         const updatedCart = state.cart.filter(item => item.variantId !== itemId)
         state.cart = updatedCart
+
+        appOptions.store.commit('saveCart');
+      },
+      saveCart(state) {
+        window.localStorage.setItem('cart', JSON.stringify(state.cart));
       }
     }
   })

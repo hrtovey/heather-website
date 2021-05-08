@@ -1,5 +1,6 @@
 ---
 title: "Top 9 Web Development Resources"
+slug: "web-development-resources"
 date: "2018-09-18"
 categories: 
   - "web-design"

@@ -1,23 +1,20 @@
 <template>
   <Layout>
-    <section>
+    <section class="page-section">
       <div class="grid">
         <div class="grid__item medium--6">
           <div class="">
             <g-image
-                  :src="product.images[0].src"
-                  :alt="product.images[0].altText || product.title" />
+                  :src="product.mainImage[0].src"
+                  :alt="product.mainImage[0].altText || product.title" />
           </div>
         </div>
         <div class="grid__item medium--6">
 
           <h1 class="">{{ product.title }}</h1>
-          <div v-if="currentVariant" class="">
-            <g-link
-              class="">
-              {{ currentVariant.price.amount }}
-            </g-link>
-          </div>
+          <p v-if="currentVariant" class="">
+              {{ formatPrice(currentVariant.price.amount, currentVariant.price.currencyCode) }}
+          </p>
           <div class="" v-html="product.descriptionHtml" />
 
           <div
@@ -50,23 +47,17 @@
 
           <div class="">
             <div class="">
-              <input type="button"
-                value="+"
-              >
               <input
                 id="quantity"
                 v-model.number="quantity"
-                class="custom-number-input"
+                class="hidden"
                 type="number"
                 min="1">
-              <input type="button"
-                value="-"
-              >
             </div>
             <div class="">
               <button @click="addToCart"
                 @keyup.enter="addToCart" 
-                class="">
+                class="button">
                 Add To Cart
               </button>
             </div>
@@ -75,7 +66,16 @@
         </div>
       </div>
     </section>
-    <div class="" v-html="productAdditional.description" />
+    <section class="page-section" v-if="product.additionalImages.length > 0">
+      <silent-box :gallery="product.additionalImages" :lazy-loading="true" class="grid">
+        
+      </silent-box>
+    </section>
+    <section class="page-section" v-if="productAdditional">
+      <div class="grid">
+        <div class="grid__item" v-html="productAdditional" />
+      </div>
+    </section>
   </Layout>
 </template>
 
@@ -83,7 +83,10 @@
 export default {
   metaInfo () {
     return {
-      title: this.$page.shopifyInfo.title
+      title: this.$page.shopifyInfo.title,
+      bodyAttrs: {
+        class: 'page--product'
+      }
     }
   },
   data: () => ({
@@ -99,7 +102,7 @@ export default {
       )
       return matchedVariant
     },
-    productAdditional () { return this.$page.customInfo }
+    productAdditional () { return this.$page.customInfo.content }
   },
   watch: {
     $route (to, from) {
@@ -127,6 +130,20 @@ export default {
         title: `Added ${payload.productTitle} to Cart`,
         type: 'primary'
       })
+    },
+    formatPrice (amount, currencyCode) {
+      // Regex to remove decimal and potential trailing currency code since we're adding our own and I just wanted to play it super duper safe
+      var decimalRemovalRegex = /\D00(?=\D*$)/;
+
+      if ( parseInt(amount) === 0) {
+        return "Free";
+      } else {
+        // Formatting comes directly from Shopify example
+        return new Intl.NumberFormat('en-CA', {
+          style: 'currency',
+          currency: currencyCode
+        }).format(amount).replace(decimalRemovalRegex, '') + " " + currencyCode;
+      }
     }
   }
 }
@@ -139,11 +156,17 @@ query Product ($id: ID!) {
     descriptionHtml
     title
     tags
-    images(limit: 4) {
+    mainImage: images (limit: 1) {
       id
       altText
-      src: transformedSrc(maxWidth: 600, maxHeight: 400, crop: CENTER)
+      src: transformedSrc(maxWidth: 620, maxHeight: 620, crop: CENTER)
       thumbnail: transformedSrc(maxWidth: 150, maxHeight: 150, crop: CENTER)
+    }
+    additionalImages: images (skip: 1) {
+      id
+      altText
+      thumbnail: transformedSrc(maxWidth: 300)
+      src: originalSrc
     }
     options {
       id
@@ -154,7 +177,8 @@ query Product ($id: ID!) {
       id
       title
       price {
-        amount(format: true)
+        amount
+        currencyCode
       }
       selectedOptions {
         name
@@ -169,7 +193,7 @@ query Product ($id: ID!) {
   }
   customInfo: productsInfo (id: $id) {
     id
-    description
+    content
   }
 }
 </page-query>

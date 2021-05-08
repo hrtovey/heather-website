@@ -1,5 +1,6 @@
 ---
 title: "9 Tips for Learning What You Need to Grow Your Business"
+slug: "learn-what-you-need"
 date: "2018-06-05"
 categories: 
   - "business"

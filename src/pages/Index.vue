@@ -19,7 +19,7 @@
         <h2 class="grid__item">Useful Resources</h2>
       </div>
       <div class="cards-list grid align-stretch">
-        <div class="card grid__item medium--4 card--image">
+        <div class="card grid__item medium--6 large--4 card--image">
           <a class="card__link" href="https://getdesignresources.com/">
             <div class="card__image">
               <g-image src="~/assets/images/getdesignresourcespattern.png" quality='100' />
@@ -32,7 +32,7 @@
             </div>
           </a>
         </div>
-        <div class="card grid__item medium--4 card--image">
+        <div class="card grid__item medium--6 large--4 card--image">
           <g-link class="card__link" to="/squarespace-id-finder">
             <div class="card__image">
               <g-image src="~/assets/images/sqs-extension.png" />
@@ -45,7 +45,7 @@
             </div>
           </g-link>
         </div>
-        <div class="card grid__item medium--4 card--image">
+        <div class="card grid__item medium--6 large--4 card--image">
           <g-link class="card__link" to="/product/squarespace-blog-footer-plugin/">
             <div class="card__image">
               <g-image src="~/assets/images/blog-footer-plugin-1.png" />
@@ -93,7 +93,10 @@
 <script>
 export default {
   metaInfo: {
-    title: '👩‍💻 Home'
+    title: '👩‍💻 Home',
+    bodyAttrs: {
+      class: 'page--home'
+    }
   },
   methods: {
 	  truncateExcerpt (ex, num) {
@@ -104,7 +107,10 @@ export default {
 		  }
 	  },
 	  listCategories (categories) {
-		  return categories.join(', ').replace(/-/g, ' ');
+		  var catList = categories.map((cat) => {
+			  return cat.title;
+		  })
+		  return catList.join(', ').replace(/-/g, ' ');
 	  }
   }
 }
@@ -115,14 +121,20 @@ export default {
     posts: allPost (limit: 4) {
       edges {
         node {
-					id 
+					id
+          slug
 					title 
 					path 
 					date(format: "MMM YYYY")
 					excerpt
 					content
 					timeToRead(speed: 200)
-					categories
+					categories {
+            title
+          }
+          tags {
+            title
+          }
         } 
       } 
     } 

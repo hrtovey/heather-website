@@ -7,14 +7,6 @@
 
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const ProductsInfo = require('./src/data/product-info.json');
 
-    const collection = actions.addCollection({
-      typeName: 'ProductsInfo'
-    })
-
-    for (const productInfo of ProductsInfo) {
-      collection.addNode(productInfo);
-    }
   })
 }

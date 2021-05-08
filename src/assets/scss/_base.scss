@@ -22,6 +22,7 @@ $scale: 1.414  !default;
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -41,6 +42,10 @@ html {
   // -ms-text-size-adjust: auto;
   // -o-text-size-adjust: auto;
   // text-size-adjust: auto;
+
+  @media (max-width: 640px) {
+    font-size: 112%;
+  }
 }
 
 /* Copy & Lists */
@@ -76,30 +81,29 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headlineFontFamily;
   font-weight: $headlineFontWeight;
   margin-bottom: $leading;
-  margin-top: 0;
-  line-height: $leading;
+  margin-top: $leading;
+  line-height: 1;
 }
 
 h1 {
   font-size: 2 * $scale * 1rem;
-  line-height: 2 * $leading;
-  margin-bottom: 2 * $leading;
+  margin-top: 0;
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.5 * $scale * 1rem;
-  line-height: 1.5 * $leading;
-  margin-bottom: 2 * $leading;
 }
 
-h3 {
+h3, .h3, .page--post .content__main h2 {
   font-size: 1 * $scale * 1rem;
-  margin-bottom: 0;
 }
 
-h4 {
-  font-size: $scale / 2 * 1rem;
+h4, .page--post .content__main h3 {
+  font-size: 1rem;
 }
+  .page--post .content__main h3 {
+    margin-bottom: 0;
+  }
 
 h5 {
   font-size: $scale / 3 * 1rem;
@@ -143,6 +147,7 @@ html {
 img {
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .small-text {
@@ -150,9 +155,160 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     text-decoration: underline;
   }
 }
+
+a.card__link {
+  text-decoration: none;
+}
+
+
+pre[class*="language-"] {
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.button {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 30px;
+  line-height: 1;
+  font-family: $headlineFontFamily;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #f8f8f2;
+   background: none;
+   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: .5em 0;
+   overflow: auto;
+   border-radius: 0.3em;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #282a36;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #6272a4;
+ }
+ 
+ .token.punctuation {
+   color: #f8f8f2;
+ }
+ 
+ .namespace {
+   opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: #ff79c6;
+ }
+ 
+ .token.boolean,
+ .token.number {
+   color: #bd93f9;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: #50fa7b;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+   color: #f8f8f2;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+   color: #f1fa8c;
+ }
+ 
+ .token.keyword {
+   color: #8be9fd;
+ }
+ 
+ .token.regex,
+ .token.important {
+   color: #ffb86c;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ 
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }

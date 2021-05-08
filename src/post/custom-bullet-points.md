@@ -1,5 +1,6 @@
 ---
 title: "How to Add Custom Bullet Points to Squarespace Lists"
+slug: "custom-bullet-points"
 date: "2018-10-02"
 categories: 
   - "squarespace"

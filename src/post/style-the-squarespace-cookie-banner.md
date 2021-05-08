@@ -1,5 +1,6 @@
 ---
 title: "3 More Ways to Style the Squarespace Cookie Banner"
+slug: "style-the-squarespace-cookie-banner"
 date: "2018-07-03"
 categories: 
   - "squarespace"

@@ -1,80 +1,65 @@
 <template>
   <Layout>
-    <div class="container-inner mx-auto my-16">
-
-      <table class="w-full table-auto">
-        <thead>
-          <tr>
-            <th />
-            <th class="px-4 py-2">Product</th>
-            <th class="px-4 py-2">Quantity</th>
-            <th class="px-4 py-2">Total</th>
-            <th />
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="item in cart"
-            :key="item.variantId">
-            <td>
-              <g-image
-                :src="item.image.thumbnail"
-                :alt="item.image.altText || item.title" />
-            </td>
-            <td>
-              {{ item.productTitle }}
-              {{ item.variantTitle !== 'Default Title' ? `- ${item.variantTitle}` : '' }}
-            </td>
-            <td>{{ item.qty }}</td>
-            <td>{{ totalPrice(item) }}</td>
-            <td>
-              <button
-                class=""
-                @click="removeItem(item.variantId)"
-                @keyup="removeItem(item.variantId)">
-                <small>Remove</small>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot v-if="cart.length">
-          <tr>
-            <th />
-            <th />
-            <th />
-            <th />
-            <th class="has-text-right">
-              <p>Cart Total: {{ cartTotal }}</p>
-            </th>
-          </tr>
-        </tfoot>
-      </table>
-      <br>
-
-      <form v-if="cart.length" @submit.prevent="checkout">
-        <div class="flex mx-auto">
-          <div class="w-1/2">
-            <button type="submit"
-              :class="{'is-loading': isLoading}"
-              class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-              Checkout
-            </button>
-          </div>
+    <div class="grid">
+      <div class="grid__item">
+        <table v-if="cart.length" class="cart">
+          <thead>
+            <tr>
+              <th />
+              <th class="">Product</th>
+              <th class="">Quantity</th>
+              <th class="">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="item in cart"
+              :key="item.variantId">
+              <td>
+                <g-image
+                  :src="item.image.thumbnail"
+                  :alt="item.image.altText || item.title" />
+              </td>
+              <td>
+                {{ item.productTitle }}
+                {{ item.variantTitle !== 'Default Title' ? `- ${item.variantTitle}` : '' }}
+                
+                <button
+                  class="remove"
+                  @click="removeItem(item.variantId)"
+                  @keyup="removeItem(item.variantId)">
+                  Remove
+                </button>
+              </td>
+              <td>{{ item.qty }}</td>
+              <td>{{ totalPrice(item) }} CAD</td>
+            </tr>
+          </tbody>
+        </table>
+        <div v-if="cart.length" class="cart__total">
+          <p>Cart Total: {{ cartTotal }} CAD</p>
         </div>
-      </form>
-
-      <div
-        v-else
-        class="txt-xl">
-        <p>To checkout, add some items to cart.</p>
-        <br>
-        <g-link
-          to="/"
-          class="button is-primary is-outlined">
-          Browse
-        </g-link>
       </div>
-
+      <div class="grid__item">
+        <form v-if="cart.length" @submit.prevent="checkout" class="cart__checkout">
+          <button type="submit"
+            :class="{'is-loading': isLoading}"
+            class="button">
+            Checkout
+          </button>
+        </form>
+        <div
+          v-else
+          class="">
+          <p>To checkout, add some items to cart.</p>
+          <br>
+          <g-link
+            to="/shop"
+            class="button is-primary is-outlined">
+            Browse
+          </g-link>
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
@@ -84,7 +69,10 @@ import currency from 'currency.js'
 import gql from 'graphql-tag'
 export default {
   metaInfo: {
-    title: 'Your Cart'
+    title: 'Your Cart',
+      bodyAttrs: {
+        class: 'page--cart'
+      }
   },
   data: () => ({ isLoading: false }),
   computed: {

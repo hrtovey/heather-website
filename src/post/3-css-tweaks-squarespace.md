@@ -1,5 +1,6 @@
 ---
 title: "3 CSS Tweaks to Customize Your Squarespace Website"
+slug: "3-css-tweaks-squarespace"
 date: "2018-11-13"
 categories: 
   - "squarespace"
@@ -55,7 +56,11 @@ To make your DIY cover pages less distracting, drop this code in that particular
 
 ```html
 <style>
-.Header, .Footer, .Mobile-bar,.sqs-announcement-bar-dropzone,.sqs-cookie-banner-v2 {
+.Header, 
+.Footer, 
+.Mobile-bar,
+.sqs-announcement-bar-dropzone,
+.sqs-cookie-banner-v2 {
     display:none !important;
 }
 </style>

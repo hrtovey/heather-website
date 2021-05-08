@@ -1,5 +1,6 @@
 ---
 title: "How to Make Your Website More User-Friendly"
+slug: "make-your-website-user-friendly"
 date: "2018-04-17"
 categories: 
   - "user-experience"

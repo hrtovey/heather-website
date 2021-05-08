@@ -1,5 +1,6 @@
 ---
 title: "How to Add Custom Fonts to Squarespace"
+slug: "add-custom-fonts"
 date: "2018-08-21"
 categories: 
   - "squarespace"
@@ -20,7 +21,7 @@ So what's a designer to do? Let me show you how to add and use custom fonts on S
 
 ## How to Use Custom Fonts
 
-### 1\. Choose your font.
+### 1. Choose your font.
 
 In particular, choose a font that you have the license for and is professional-looking.
 
@@ -28,7 +29,7 @@ Many typefaces are only licensed free for personal use or require payment for th
 
 And beware of free fonts that aren't high-quality. Test them out and make sure you want to go with them.
 
-### 2\. Upload font to Font Squirrel. 
+### 2. Upload font to Font Squirrel. 
 
 Once you're happy with your selection, use the [Webfont Generator at Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator) to make sure your custom font will work across all browsers.
 
@@ -36,7 +37,7 @@ Once you're happy with your selection, use the [Webfont Generator at Font Squirr
 
 Upload your font, choose Optimal, and agree that you're uploading fonts that you're allowed to use on the web. Then, click download and get access to your new webfonts.
 
-### 3\. Upload new fonts to Custom CSS.
+### 3. Upload new fonts to Custom CSS.
 
 Go to **Design > Custom CSS > Manage Custom Files** and upload the 2 font files Font Squirrel provides in their download.
 
@@ -44,7 +45,7 @@ Go to **Design > Custom CSS > Manage Custom Files** and upload the 2 font files 
 
 The files you'll want end in .woff and .woff2. You'll want to use both so that your custom fonts show up appropriately across all browsers and on mobile.
 
-### 4\. Add support for your new fonts.
+### 4. Add support for your new fonts.
 
 Once you've uploaded your fonts to your website, you still need to tell your website you want to use them! In **Design > Custom CSS**, add the following code.
 
@@ -62,7 +63,7 @@ Next, swap out **your-font-name** with the font name you want to use.
 
 Highlight **Woff 2 URL** in the above code and click on the custom .woff2 font file you uploaded earlier in **Manage Custom Files**. This will automatically insert the URL you need. Do the same with **Woff URL**. _Make sure to leave the quotation marks around the URL._
 
-### 5\. See your new fonts in action!
+### 5. See your new fonts in action!
 
 Now you'll need to decide where and how you want to use your new custom fonts.
 
@@ -94,7 +95,7 @@ To do this,
 To create the above example, I added the following to a Markdown block.
 
 ```md
-This is an H2 heading with <span class\="custom"\>custom fonts</span\> on some words.
+This is an H2 heading with <span class="custom">custom fonts</span> on some words.
 ----------------------------------------------------------------------------------
 ```
 

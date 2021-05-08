@@ -1,5 +1,6 @@
 ---
 title: "How to Customize the Squarespace Cookie Banner"
+slug: "how-to-customize-the-squarespace-cookie-banner"
 date: "2018-05-01"
 categories: 
   - "squarespace"

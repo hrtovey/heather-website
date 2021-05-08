@@ -1,5 +1,6 @@
 ---
 title: "How to Overcome Perfectionism as an Entrepreneur"
+slug: "overcome-perfectionism-as-an-entrepreneur"
 date: "2018-05-07"
 categories: 
   - "business"

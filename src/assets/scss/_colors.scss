@@ -3,7 +3,7 @@ $yellow: #ffc73f;
 $black: #171717;
 $black--light: #747474;
 $pink: #eb5a70;
-$dark-blue: #3a8fcb;
+$dark-blue: #0073c5;
 $light-blue: #94c0d4;
 $white: white;
 $gray: #f7f7f7;
@@ -11,6 +11,7 @@ $gray: #f7f7f7;
 // Light theme colors
 $color-light-text: $black;
 $color-light-text--secondary: $black--light;
+$color-light-link: $dark-blue;
 $color-light-accent: $yellow;
 $color-light-background: $gray;
 $color-light-neutral: $white;
@@ -33,6 +34,10 @@ $color-dark-neutral: $black;
         color: $color-light-text;
     }
 
+    a:hover {
+        color: $color-light-link;
+    }
+
     footer {
         background: $color-light-text;
         color: $color-light-neutral;
@@ -50,7 +55,8 @@ $color-dark-neutral: $black;
 
     .headshot {
         // Used for gradient animation found in _components.scss
-        background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+        //background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+        background-image: linear-gradient(230deg, #0073c5, #048ecb, #94c0d4);
         box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 50%);
     }
 
@@ -66,8 +72,33 @@ $color-dark-neutral: $black;
         color: $color-light-text--secondary;
     }
 
-    .card__meta-item:before {
+    .card__meta-item:before, .content__meta-item:before {
         color: $color-light-accent;
+    }
+
+    .content__newsletter {
+        background-color: $white;
+    }
+
+    .mobile-menu__container {
+        background: $color-light-accent;
+    }
+    
+    .button {
+        background: $color-light-accent;
+
+        &:hover {
+            background: $color-light-text;
+            color: $white;
+        }
+    }
+
+    .cart tbody tr {
+        background: white;
+    }
+
+    .cart tbody tr:not(:last-child) {
+        border-bottom: 10px solid #f7f7f7;
     }
 
 }

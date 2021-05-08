@@ -1,5 +1,6 @@
 ---
 title: "6 Reasons Why Squarespace is an Excellent Choice"
+slug: "choose-squarespace"
 date: "2018-04-10"
 categories: 
   - "squarespace"

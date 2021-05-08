@@ -1,5 +1,6 @@
 ---
 title: "6 Reasons Why You Shouldn't Use Squarespace"
+slug: "why-you-shouldnt-use-squarespace"
 date: "2018-10-30"
 categories: 
   - "squarespace"

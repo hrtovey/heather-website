@@ -1,5 +1,6 @@
 ---
 title: "How to Optimize Your Images and Speed Up Your Website"
+slug: "optimize-your-images"
 date: "2018-07-10"
 categories: 
   - "web-design"

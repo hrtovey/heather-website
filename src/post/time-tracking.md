@@ -1,5 +1,6 @@
 ---
 title: "How to Become a Better Entrepreneur with the Pomodoro Technique"
+slug: "time-tracking"
 date: "2018-06-26"
 categories: 
   - "business"

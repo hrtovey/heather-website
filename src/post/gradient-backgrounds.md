@@ -1,5 +1,6 @@
 ---
 title: "How to Add Colorful Gradient Backgrounds In Squarespace"
+slug: "gradient-backgrounds"
 date: "2018-06-19"
 categories: 
   - "squarespace"

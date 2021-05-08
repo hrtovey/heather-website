@@ -11,16 +11,11 @@
           </div>
 
           <ul
-            class="menu"
-            :class="isOpen ? 'block': 'hidden'"
+            class="menu primary-menu"
           >
             <li class="menu__item">
               <a v-if="$route.path === '/'" href="/blog/" class="menu__link">Blog</a>
               <g-link v-else to="/blog/" class="menu__link">Blog</g-link>
-            </li>
-            <li class="menu__item">
-              <a v-if="$route.path === '/'" href="/about/" class="menu__link">About</a>
-              <g-link v-else to="/about/" class="menu__link">About</g-link>
             </li>
             <li class="menu__item">
               <a v-if="$route.path === '/'" href="/shop/" class="menu__link">Shop</a>
@@ -35,7 +30,7 @@
             <!-- <li class="menu__item">
               <search-input />
             </li> -->
-            <li class="menu__item">
+            <li class="menu__item" v-if="cartLength > 0">
                 <g-link
                   to="/cart"
                   class="cart-icon menu__action">
@@ -43,7 +38,7 @@
                 </g-link>
                 <span class="tooltip">Go shopping!</span>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--container">
               <button aria-label="menu" @click="toggle" class="menu__open menu__action">
                 <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;"><g><path d="M23.108,17.671L0.935,17.671C0.425,17.671 0.042,18.096 0.042,18.563C0.042,21.154 2.124,23.235 4.715,23.235L19.327,23.235C21.919,23.235 24,21.154 24,18.563C24,18.096 23.618,17.671 23.108,17.671ZM19.327,21.451L4.715,21.451C3.441,21.451 2.379,20.644 1.996,19.497L22.046,19.497C21.664,20.644 20.602,21.451 19.327,21.451Z" style="fill-rule:nonzero;"/><path d="M0.935,12.573L23.065,12.573C23.575,12.573 23.958,12.149 23.958,11.681C23.958,5.65 19.073,0.765 13.041,0.765L10.917,0.765C4.885,0.765 0,5.65 0,11.681C0.042,12.191 0.425,12.573 0.935,12.573ZM10.959,2.591L13.083,2.591C17.798,2.591 21.664,6.202 22.131,10.789L1.912,10.789C2.379,6.202 6.244,2.591 10.959,2.591Z" style="fill-rule:nonzero;"/><path d="M2.081,14.188C1.572,14.188 1.189,14.612 1.189,15.08C1.189,15.589 1.614,15.972 2.081,15.972L21.961,15.972C22.471,15.972 22.853,15.547 22.853,15.08C22.853,14.57 22.428,14.188 21.961,14.188L2.081,14.188Z" style="fill-rule:nonzero;"/></g></svg>
               </button>
@@ -52,6 +47,26 @@
           </ul>
         </div>
       </nav>
+      <div
+        class="mobile-menu__container"
+        :class="isOpen ? 'menu--open': 'menu--closed'"
+      >
+        <div class="menu__item">
+          <button aria-label="menu" @click="toggle" class="menu__close menu__action">
+            <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;"><g><path d="M23.108,17.671L0.935,17.671C0.425,17.671 0.042,18.096 0.042,18.563C0.042,21.154 2.124,23.235 4.715,23.235L19.327,23.235C21.919,23.235 24,21.154 24,18.563C24,18.096 23.618,17.671 23.108,17.671ZM19.327,21.451L4.715,21.451C3.441,21.451 2.379,20.644 1.996,19.497L22.046,19.497C21.664,20.644 20.602,21.451 19.327,21.451Z" style="fill-rule:nonzero;"/><path d="M0.935,12.573L23.065,12.573C23.575,12.573 23.958,12.149 23.958,11.681C23.958,5.65 19.073,0.765 13.041,0.765L10.917,0.765C4.885,0.765 0,5.65 0,11.681C0.042,12.191 0.425,12.573 0.935,12.573ZM10.959,2.591L13.083,2.591C17.798,2.591 21.664,6.202 22.131,10.789L1.912,10.789C2.379,6.202 6.244,2.591 10.959,2.591Z" style="fill-rule:nonzero;"/><path d="M2.081,14.188C1.572,14.188 1.189,14.612 1.189,15.08C1.189,15.589 1.614,15.972 2.081,15.972L21.961,15.972C22.471,15.972 22.853,15.547 22.853,15.08C22.853,14.57 22.428,14.188 21.961,14.188L2.081,14.188Z" style="fill-rule:nonzero;"/></g></svg>
+          </button>
+        </div>
+        <ul class="menu mobile-menu">
+          <li class="mobile-menu__item">
+            <a v-if="$route.path === '/'" href="/blog/" class="menu__link">Blog</a>
+            <g-link v-else to="/blog/" class="menu__link">Blog</g-link>
+          </li>
+          <li class="mobile-menu__item">
+            <a v-if="$route.path === '/'" href="/shop/" class="menu__link">Shop</a>
+            <g-link v-else to="/shop/" class="menu__link">Shop</g-link>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main role="main">
@@ -68,7 +83,7 @@
       </div>
         <div class="footer__secondary">
           <div class="grid">
-            <p class="small-text footer__copyright grid__item">Copyright {{ new Date().getFullYear() }}. All rights reserved.</p>
+            <p class="small-text footer__copyright grid__item">© Heather Tovey {{ new Date().getFullYear() }}. All rights reserved.</p>
           </div>
         </div>
     </footer>

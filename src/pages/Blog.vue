@@ -14,7 +14,7 @@
 			>
 				<div class="card__info">
 					<div class="card__meta">
-						<p class="card__category card__meta-item">{{ listCategories(post.node.categories) }}</p>
+					<p class="card__category card__meta-item">{{ listCategories(post.node.categories) }}</p>
 						<p class="card__time-to-read card__meta-item">{{post.node.timeToRead}} min read</p>
 						<p class="card__date card__meta-item">{{ post.node.date }}</p>
 					</div>
@@ -30,7 +30,10 @@
 <script>
 export default {
   metaInfo: {
-    title: '🔖 Blog'
+    title: 'Blog',
+      bodyAttrs: {
+        class: 'page--blog'
+      }
   },
   methods: {
 	  truncateExcerpt (ex, num) {
@@ -41,8 +44,12 @@ export default {
 		  }
 	  },
 	  listCategories (categories) {
-		  return categories.join(', ').replace(/-/g, ' ');
+		  var catList = categories.map((cat) => {
+			  return cat.title;
+		  })
+		  return catList.join(', ').replace(/-/g, ' ');
 	  }
+
   }
 }
 </script>
@@ -53,13 +60,19 @@ export default {
 			edges {
 				node {
 					id 
-					title 
+					slug
+					title
 					path 
 					date(format: "MMM YYYY")
 					excerpt
 					content
 					timeToRead(speed: 200)
-					categories
+					categories {
+						title
+					}
+					tags {
+						title
+					}
 				} 
 			} 
 		} 

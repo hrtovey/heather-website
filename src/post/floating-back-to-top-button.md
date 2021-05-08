@@ -1,5 +1,6 @@
 ---
 title: "How To Create a Floating Back-to-Top Button"
+slug: "floating-back-to-top-button"
 date: "2018-07-24"
 categories: 
   - "squarespace"
@@ -15,7 +16,7 @@ excerpt: ""
 
 **Update:** This code has been completely transformed on May 24, 2019 in order to work with more browsers and with more Squarespace templates. Please let me know if you run into any issues.
 
-**\*Requires a Business or above account to add JavaScript code snippets.\***
+***Requires a Business or above account to add JavaScript code snippets.***
 
 * * *
 
@@ -206,7 +207,9 @@ Pay special attention to the code below. I added a couple of extra comments to w
 </style>
 
 <!-- Adds the back to top link to your website. Replaces the text with an image of your choosing. Add your own image url where it says ADD URL HERE. -->
-<a href="#" id="back-to-top" class="back-to-top" style="display: inline;"><img src="ADD URL HERE" ></a>  
+<a href="#" id="back-to-top" class="back-to-top" style="display: inline;">
+  <img src="ADD URL HERE" >
+</a>  
 <!-- Fades in the button when you scroll down -->
 <script>
   var link = document.getElementById("back-to-top");

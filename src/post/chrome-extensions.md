@@ -1,5 +1,6 @@
 ---
 title: "9 Useful Chrome Extensions for Web Designers"
+slug: "chrome-extensions"
 date: "2018-09-11"
 categories: 
   - "web-design"

@@ -1,5 +1,6 @@
 ---
 title: "18 Tools to Help You Create Beautiful Color Palettes"
+slug: "color-palette-tools"
 date: "2018-06-12"
 categories: 
   - "web-design"
