@@ -25,8 +25,6 @@ Today, I offer you a few JavaScript code snippets to help you customize the defa
 - the “Newer” and “Older” pagination links on your Blog page
     
 
-![](./images/how-to-change-default-text-labels-in-squarespace.png)
-
 ## How to Change Default Text Labels in Squarespace
 
 To use these coding snippets, copy/paste them into **Settings > Advanced > Code Injection > Footer**.

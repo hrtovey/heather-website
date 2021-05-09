@@ -41,10 +41,6 @@ module.exports = {
       options: {
         exclude: ['/exclude-me'],
         config: {
-          '/collections/*': {
-            changefreq: 'daily',
-            priority: 0.5
-          },
           '/product/*': {
             changefreq: 'daily',
             priority: 0.5
@@ -60,9 +56,12 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: '@noxify/gridsome-plugin-remote-image',
       options: {
-        id: ''
+        typeName: 'ShopifyImage',
+        sourceField: 'originalSrc',
+        targetField: 'downloadedSrc',
+        targetPath: './src/assets/remoteImages'
       }
     },
     {
@@ -127,12 +126,6 @@ module.exports = {
       {
         path: '/product/:handle',
         component: './src/templates/Product.vue'
-      }
-    ],
-    ShopifyCollection: [
-      {
-        path: '/collection/:handle',
-        component: './src/templates/Collection.vue'
       }
     ]
   },

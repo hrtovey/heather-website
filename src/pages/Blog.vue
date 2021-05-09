@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="grid">
-		<h2 class="grid__item">Articles</h2>
+		<h1 class="grid__item">Articles</h1>
 	</div>
 	<div class="grid align-stretch">
 		<div class="card grid__item medium--6"

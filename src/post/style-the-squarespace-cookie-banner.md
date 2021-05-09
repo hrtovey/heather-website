@@ -77,7 +77,7 @@ button.sqs-cookie-banner-v2-accept {
 
 To add an image to your Cookie Banner button, you'll first need to create an image. I made a 20px x 20px cookie image.
 
-If you'd like, you can [download](https://heathertovey.com/wp-content/uploads/2018/05/cookie-small.png) the one I created for my website to use on your own website.
+If you'd like, you can [download](/downloads/cookie-small.png) the one I created for my website to use on your own website.
 
 From there, you'll need to go to **Design > Custom CSS > Manage Custom Files** and upload your button icon.
 

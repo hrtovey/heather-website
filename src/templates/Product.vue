@@ -2,14 +2,14 @@
   <Layout>
     <section class="page-section">
       <div class="grid">
-        <div class="grid__item medium--6">
-          <div class="">
+        <div class="grid__item large--6">
+          <div class="product__image">
             <g-image
                   :src="product.mainImage[0].src"
                   :alt="product.mainImage[0].altText || product.title" />
           </div>
         </div>
-        <div class="grid__item medium--6">
+        <div class="grid__item large--6">
 
           <h1 class="">{{ product.title }}</h1>
           <p v-if="currentVariant" class="">
@@ -67,7 +67,7 @@
       </div>
     </section>
     <section class="page-section" v-if="product.additionalImages.length > 0">
-      <silent-box :gallery="product.additionalImages" :lazy-loading="true" class="grid">
+      <silent-box :gallery="formatGalleryResponse(product.additionalImages)" :lazy-loading="true" class="grid silentbox-gallery">
         
       </silent-box>
     </section>
@@ -144,6 +144,14 @@ export default {
           currency: currencyCode
         }).format(amount).replace(decimalRemovalRegex, '') + " " + currencyCode;
       }
+    },
+    formatGalleryResponse (additionalImages) {
+      return additionalImages.map((obj) => {
+        var newSrc = obj.downloadedSrc;
+        console.log(obj.downloadedSrc);
+        newSrc.thumbnail = obj.thumbnail.src;
+        return newSrc;
+      })
     }
   }
 }
@@ -159,14 +167,11 @@ query Product ($id: ID!) {
     mainImage: images (limit: 1) {
       id
       altText
-      src: transformedSrc(maxWidth: 620, maxHeight: 620, crop: CENTER)
-      thumbnail: transformedSrc(maxWidth: 150, maxHeight: 150, crop: CENTER)
+      src: downloadedSrc
     }
     additionalImages: images (skip: 1) {
-      id
-      altText
-      thumbnail: transformedSrc(maxWidth: 300)
-      src: originalSrc
+      downloadedSrc
+      thumbnail: downloadedSrc(width: 300)
     }
     options {
       id
@@ -187,7 +192,7 @@ query Product ($id: ID!) {
       image {
         id
         altText
-        thumbnail: transformedSrc(maxWidth: 150, maxHeight: 150, crop: CENTER)
+        thumbnail: transformedSrc(maxWidth: 400, maxHeight: 400, crop: CENTER)
       }
     }
   }

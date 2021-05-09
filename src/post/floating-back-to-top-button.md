@@ -163,17 +163,9 @@ border-radius: 50%;
 
 You'll need to create an image for this version (or use the one I created below). Once you've created your image, take note of the width and height of your image. You'll need that to change the code.
 
-[![](./images/back-to-top.png)](https://heathertovey.com/wp-content/uploads/2018/07/back-to-top.png)
+![](./images/back-to-top.png)
 
-[**Click to download!**](https://heathertovey.com/wp-content/uploads/2018/07/back-to-top.png)
-
-* * *
-
-**For your choice of 15 custom back-to-top images, check out this freebie:** [**Custom Back-to-Top Buttons**](/custom-back-to-top-buttons)**.**
-
-If you want more freebies like this, [sign up for my newsletter](/sign-up). I offer extra resources and coding snippets to my readers every week.
-
-* * *
+<a href="/downloads/back-to-top.png" download>Click to Download</a>
 
 The image that I'm providing today is 50x50 pixels.
 
@@ -182,7 +174,7 @@ Once you have your image, you'll need to upload it to your website under **Desig
 Pay special attention to the code below. I added a couple of extra comments to walk you through how to use this code with your own image.
 
 ```html
-<!-- Styles your button (this is a 100x100 pixels image) -->
+<!-- Styles your button (this is a 50x50 pixels image) -->
 <style>
 .back-to-top {
     /* Remove the background color */

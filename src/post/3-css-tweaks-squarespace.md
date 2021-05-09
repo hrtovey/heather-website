@@ -18,8 +18,6 @@ Here are 3 of my favorite “simple” Squarespace CSS code snippets. These were
 
 Have fun and make your Squarespace website more “on brand.”
 
-![ 3 CSS Tweaks to Customize Your Squarespace Website ](./images/3-css-tweaks-to-customize-your-squarespace-website.png)
-
 ## Fixed Header
 
 A header that moves off the screen as you scroll down the page is all well and good, but sometimes you want a fixed header that stays on the page as you scroll down.

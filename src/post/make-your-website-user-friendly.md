@@ -162,4 +162,4 @@ Use this 10-item checklist to:
 - provide a better experience for your readers
 - get your readers to stay on your website longer
 
-[Download Free Checklist](/wp-content/uploads/2019/04/user-friendly-checklist.pdf)
+[Download Free Checklist](/downloads/user-friendly-checklist.pdf)

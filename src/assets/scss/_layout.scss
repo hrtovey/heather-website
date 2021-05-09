@@ -17,13 +17,7 @@
 }
 
 .header {
-  margin-bottom: 20px;
-  padding: 2em 0;
-
-  @media (max-width: 520px) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  padding: 2rem 0;
 }
 
 .navigation {
@@ -35,6 +29,7 @@
 
 main {
   padding-bottom: 2rem;
+  flex: 1;
 }
 
 
@@ -42,8 +37,14 @@ main {
     max-width: 1400px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width:521px) {
+      padding-left: 60px;
+      padding-right: 60px;
+
+    }
   }
 
   .content__main {

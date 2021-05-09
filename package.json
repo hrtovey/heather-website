@@ -14,6 +14,7 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "@noxify/gridsome-plugin-remote-image": "git+https://github.com/noxify/gridsome-plugin-remote-image.git",
     "apollo-boost": "^0.4.9",
     "axios": "^0.21.1",
     "currency.js": "^2.0.3",

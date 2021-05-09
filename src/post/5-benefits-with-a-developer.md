@@ -15,11 +15,6 @@ If you've seen any of my other articles, you may have noticed that I love to cre
 But it's not everyone's cup of tea. That's why I often work with designers to bring their designs to life.
 
 Have you ever considered working with a developer on your client projects? If you haven't or you're on the fence, take a look at these 5 reasons to work with a developer on your design projects before making a decision.
-
-  
-
-![ 5 Incredible Benefits You Gain From Working With a Developer ](./images/5-benefits-you-gain-from-working-with-a-developer.png)
-
   
 
 ## 5 Benefits From Working With a Developer

@@ -13,7 +13,7 @@
         <div
           v-for="({ node: product }) in products"
           :key="product.id"
-          class="card grid__item medium--4 card--image">
+          class="card grid__item medium--6 large--4 card--image">
           <g-link class="card__link" :to="`product/${product.handle}`">
             <div class="card__image">
               <img
@@ -34,7 +34,7 @@
 <script>
 export default {
   metaInfo: {
-    title: '🛍️ Time to shop!',
+    title: 'Time to shop!',
     bodyAttrs: {
       class: 'page--shop'
     },
