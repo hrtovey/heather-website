@@ -2,7 +2,7 @@
   <Layout>
     <div class="grid">
       <div class="grid__item">
-        <table v-if="cart.length" class="cart">
+        <table v-show="cart.length" class="cart">
           <thead>
             <tr>
               <th />
@@ -36,12 +36,12 @@
             </tr>
           </tbody>
         </table>
-        <div v-if="cart.length" class="cart__total">
+        <div v-show="cart.length" class="cart__total">
           <p>Cart Total: {{ cartTotal }} CAD</p>
         </div>
       </div>
       <div class="grid__item">
-        <form v-if="cart.length" @submit.prevent="checkout" class="cart__checkout">
+        <form v-show="cart.length" @submit.prevent="checkout" class="cart__checkout">
           <button type="submit"
             :class="{'is-loading': isLoading}"
             class="button">
@@ -49,7 +49,7 @@
           </button>
         </form>
         <div
-          v-else
+          v-show="!cart.length"
           class="">
           <p>To checkout, add some items to cart.</p>
           <br>
@@ -77,17 +77,11 @@ export default {
   data: () => ({ isLoading: false }),
   computed: {
     cart () { 
-      if (process.isClient) {
-        return this.$store.state.cart 
-      } else {
-        return [];
-      }
+      return this.$store.state.cart 
     },
     cartTotal () {
-      if (process.isClient) {
         const total = this.cart.reduce((total, item) => total.add(currency(item.price.amount).multiply(item.qty)), currency(0, { formatWithSymbol: true, symbol: '$' }))
         return total.format()
-      }
     }
   },
   methods: {
@@ -102,43 +96,41 @@ export default {
       })
     },
     async checkout () {
-      if (process.isClient) {
-        if (!this.cart.length) return alert('No items in cart')
-        const lineItems = this.cart.map(item => ({ quantity: item.qty, variantId: item.variantId }))
+      if (!this.cart.length) return alert('No items in cart')
+      const lineItems = this.cart.map(item => ({ quantity: item.qty, variantId: item.variantId }))
 
-        const checkoutInput = { lineItems }
+      const checkoutInput = { lineItems }
 
-        try {
-          this.isLoading = true
-          const { data: { checkoutCreate } } = await this.$apollo.mutate({
-            mutation: gql`mutation checkoutCreate($input: CheckoutCreateInput!) {
-              checkoutCreate(input: $input) {
-                checkout {
-                  id
-                  webUrl
-                }
-                checkoutUserErrors {
-                  code
-                  field
-                  message
-                }
+      try {
+        this.isLoading = true
+        const { data: { checkoutCreate } } = await this.$apollo.mutate({
+          mutation: gql`mutation checkoutCreate($input: CheckoutCreateInput!) {
+            checkoutCreate(input: $input) {
+              checkout {
+                id
+                webUrl
+              }
+              checkoutUserErrors {
+                code
+                field
+                message
               }
             }
-            `,
-            variables: { input: checkoutInput }
-          })
-          if (checkoutCreate.checkoutUserErrors.length) throw new Error(checkoutCreate.checkoutUserErrors[ 0 ].message)
+          }
+          `,
+          variables: { input: checkoutInput }
+        })
+        if (checkoutCreate.checkoutUserErrors.length) throw new Error(checkoutCreate.checkoutUserErrors[ 0 ].message)
 
-          window.location = checkoutCreate.checkout.webUrl
-        } catch (error) {
-          this.isLoading = false
-          console.error(error)
-          this.$notify({
-            title: error,
-            type: 'danger',
-            message: 'Something went wrong - please try again.'
-          })
-        }
+        window.location = checkoutCreate.checkout.webUrl
+      } catch (error) {
+        this.isLoading = false
+        console.error(error)
+        this.$notify({
+          title: error,
+          type: 'danger',
+          message: 'Something went wrong - please try again.'
+        })
       }
     }
   }

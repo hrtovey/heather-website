@@ -389,10 +389,7 @@
     bottom: 0;
     z-index: 10000;
     transition: transform 0.5s ease-in-out;
-
-    &.menu--closed {
-        transform: translateX(-100%);
-    }
+    transform: translateX(-100%);
     
     &.menu--open {
         transform: translateX(0);
@@ -533,10 +530,6 @@ button.remove {
 
 .cart__checkout, .cart__total {
     text-align: right;
-}
-
-.content__newsletter {
-    background-image: url('/assets/images/inspiration-geometry.png');
 }
 
 .content__category-title, .cat__title {

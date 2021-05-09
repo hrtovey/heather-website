@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="content-wrapper">
+		<div class="content__wrapper">
 			<header class="content__header">
 				<h1 class="h2">{{ $page.post.title }}</h1>
 				<div class="content__meta">
