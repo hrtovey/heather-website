@@ -136,16 +136,12 @@ export default {
   },
   computed: {
     cart () {
-      if (process.isClient) {
-        return this.$store.state.cart 
-      }
+      return this.$store.state.cart 
     },
     cartLength () {
-      if (process.isClient) {
-        return this.$store.state.cart.reduce((acc, item) => {
-          return acc + item.qty
-        }, 0);
-      } 
+      return this.$store.state.cart.reduce((acc, item) => {
+        return acc + item.qty
+      }, 0);
     },
     searchResults () {
       const searchTerm = this.searchTerm

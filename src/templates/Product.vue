@@ -67,9 +67,9 @@
       </div>
     </section>
     <section class="page-section" v-if="product.additionalImages.length > 0">
-      <silent-box :gallery="formatGalleryResponse(product.additionalImages)" :lazy-loading="true" class="grid silentbox-gallery">
-        
-      </silent-box>
+      <ClientOnly>
+        <silent-box :gallery="formatGalleryResponse(product.additionalImages)" :lazy-loading="true" class="grid silentbox-gallery"></silent-box>
+      </ClientOnly>
     </section>
     <section class="page-section" v-if="productAdditional">
       <div class="grid">
@@ -148,7 +148,6 @@ export default {
     formatGalleryResponse (additionalImages) {
       return additionalImages.map((obj) => {
         var newSrc = obj.downloadedSrc;
-        console.log(obj.downloadedSrc);
         newSrc.thumbnail = obj.thumbnail.src;
         return newSrc;
       })

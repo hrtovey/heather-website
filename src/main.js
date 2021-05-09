@@ -35,9 +35,7 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     easing: "ease",
   })
 
-  if (process.isClient) {
-    Vue.use(VueSilentbox)
-  }
+  Vue.use(VueSilentbox)
 
   head.script.push({
     src: "https://microanalytics.io/js/script.js",
@@ -71,33 +69,30 @@ export default function (Vue, { appOptions, router, head, isClient }) {
 
   // Create Vuex store
 
-  if (process.isClient) {
-    let cart = window.localStorage.getItem('cart');
+  appOptions.store = new Vuex.Store({
+    state: {
+      cart: process.isServer ? [] : localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+    },
+    mutations: {
+      addToCart: (state, newItem) => {
+        const itemExists = state.cart.find(item => item.variantId === newItem.variantId)
 
-    appOptions.store = new Vuex.Store({
-      state: {
-        cart: cart ? JSON.parse(cart) : []
+        if (itemExists) itemExists.qty += newItem.qty
+        else state.cart.push(newItem)
+
+        appOptions.store.commit('saveCart');
       },
-      mutations: {
-        addToCart: (state, newItem) => {
-          const itemExists = state.cart.find(item => item.variantId === newItem.variantId)
+      removeFromCart: (state, itemId) => {
+        const updatedCart = state.cart.filter(item => item.variantId !== itemId)
+        state.cart = updatedCart
 
-          if (itemExists) itemExists.qty += newItem.qty
-          else state.cart.push(newItem)
-
-          appOptions.store.commit('saveCart');
-        },
-        removeFromCart: (state, itemId) => {
-          const updatedCart = state.cart.filter(item => item.variantId !== itemId)
-          state.cart = updatedCart
-
-          appOptions.store.commit('saveCart');
-        },
-        saveCart(state) {
-          window.localStorage.setItem('cart', JSON.stringify(state.cart));
-        }
+        appOptions.store.commit('saveCart');
+      },
+      saveCart(state) {
+        window.localStorage.setItem('cart', JSON.stringify(state.cart));
       }
-    })
-  }
+    }
+  })
 }
+
 
