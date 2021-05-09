@@ -5,7 +5,7 @@
       <div class="grid align-vertically">
         <div class="grid__item medium--7">
           <h1 class="hero-headline">Hello!<br> I'm Heather Tovey.</h1>
-          <p>I'm a Front-End Developer based in Calgary, Canada 🇨🇦. Here, you'll find beginner and intermediate resources covering design and development with a focus on Squarespace and Shopify.</p>
+          <p>I'm a Front-End Developer based in Calgary, Canada. Here, you'll find beginner and intermediate resources covering design and development with a focus on Squarespace and Shopify.</p>
         </div>
         <div class="grid__item medium--5">
           <div class="headshot">

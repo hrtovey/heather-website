@@ -22,6 +22,7 @@ import '~/assets/styles.scss';
 
 
 export default function (Vue, { appOptions, router, head, isClient }) {
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
@@ -34,7 +35,9 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     easing: "ease",
   })
 
-  Vue.use(VueSilentbox)
+  if (process.isClient) {
+    Vue.use(VueSilentbox)
+  }
 
   head.script.push({
     src: "https://microanalytics.io/js/script.js",
@@ -67,31 +70,34 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   appOptions.apolloProvider = apolloProvider
 
   // Create Vuex store
-  let cart = window.localStorage.getItem('cart');
-  appOptions.store = new Vuex.Store({
-    state: {
-      cart: cart ? JSON.parse(cart) : []
-    },
-    mutations: {
-      addToCart: (state, newItem) => {
-        const itemExists = state.cart.find(item => item.variantId === newItem.variantId)
 
-        if (itemExists) itemExists.qty += newItem.qty
-        else state.cart.push(newItem)
+  if (process.isClient) {
+    let cart = window.localStorage.getItem('cart');
 
-        appOptions.store.commit('saveCart');
+    appOptions.store = new Vuex.Store({
+      state: {
+        cart: cart ? JSON.parse(cart) : []
       },
-      removeFromCart: (state, itemId) => {
-        const updatedCart = state.cart.filter(item => item.variantId !== itemId)
-        state.cart = updatedCart
+      mutations: {
+        addToCart: (state, newItem) => {
+          const itemExists = state.cart.find(item => item.variantId === newItem.variantId)
 
-        appOptions.store.commit('saveCart');
-      },
-      saveCart(state) {
-        window.localStorage.setItem('cart', JSON.stringify(state.cart));
+          if (itemExists) itemExists.qty += newItem.qty
+          else state.cart.push(newItem)
+
+          appOptions.store.commit('saveCart');
+        },
+        removeFromCart: (state, itemId) => {
+          const updatedCart = state.cart.filter(item => item.variantId !== itemId)
+          state.cart = updatedCart
+
+          appOptions.store.commit('saveCart');
+        },
+        saveCart(state) {
+          window.localStorage.setItem('cart', JSON.stringify(state.cart));
+        }
       }
-    }
-  })
+    })
+  }
 }
-
 
