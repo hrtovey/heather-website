@@ -28,99 +28,95 @@ $color-dark-neutral: $gray;
 $color-dark-card: $black--light;
 
 
-.theme-light {
-    &.content-wrapper {
-        background-color: $color-light-background;
-    }
-
+.content-wrapper {
+    background-color: $color-light-background;
     color: $color-light-text;
+}
 
-    a, button {
-        color: $color-light-text;
+a, button {
+    color: $color-light-text;
+}
+
+a:hover {
+    color: $color-light-link;
+}
+
+footer {
+    background: $color-light-text;
+    color: $color-light-neutral;
+}
+
+.cart-icon .cart-quantity {
+    background: $color-light-accent;
+    color: $color-light-text;
+}
+
+.tooltip {
+    border: 2px solid $color-light-accent;
+    background: $color-light-background;
+}
+
+.headshot {
+    // Used for gradient animation found in _components.scss
+    //background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+    background-image: linear-gradient(230deg, #0073c5, #048ecb, #94c0d4);
+}
+
+.card__link {
+    background: $color-light-neutral;
+
+    &:hover {    
+        color: initial;
     }
+}
 
-    a:hover {
-        color: $color-light-link;
-    }
 
-    footer {
+
+.card__meta-item:not(.card__category), .card__description {
+    color: $color-light-text--secondary;
+}
+
+.card__meta-item:before, .content__meta-item:before {
+    color: $color-light-accent;
+}
+
+.content__newsletter {
+    background-color: $color-light-neutral;
+}
+
+.mobile-menu__container {
+    background: $color-light-accent;
+}
+
+.button {
+    background: $color-light-accent;
+
+    &:hover {
         background: $color-light-text;
         color: $color-light-neutral;
     }
+}
 
-    .cart-icon .cart-quantity {
-        background: $color-light-accent;
-        color: $color-light-text;
+.cart tbody tr {
+    background: $color-light-neutral;
+}
+
+.cart tbody tr:not(:last-child) {
+    border-bottom: 10px solid $color-light-background;
+}
+
+.form-list {
+    input, textarea {
+        border: 2px solid $color-light-text;
     }
+}
 
-    .tooltip {
-        border: 2px solid $color-light-accent;
-        background: $color-light-background;
-    }
+a.footer__link {
+    color: $color-light-neutral;
 
-    .headshot {
-        // Used for gradient animation found in _components.scss
-        //background-image: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
-        background-image: linear-gradient(230deg, #0073c5, #048ecb, #94c0d4);
-    }
-
-    .card__link {
-        background: $color-light-neutral;
-
-        &:hover {    
-            color: initial;
-        }
-    }
-
-
-
-    .card__meta-item:not(.card__category), .card__description {
-        color: $color-light-text--secondary;
-    }
-
-    .card__meta-item:before, .content__meta-item:before {
+    &:hover {
         color: $color-light-accent;
     }
-
-    .content__newsletter {
-        background-color: $color-light-neutral;
-    }
-
-    .mobile-menu__container {
-        background: $color-light-accent;
-    }
-    
-    .button {
-        background: $color-light-accent;
-
-        &:hover {
-            background: $color-light-text;
-            color: $color-light-neutral;
-        }
-    }
-
-    .cart tbody tr {
-        background: $color-light-neutral;
-    }
-
-    .cart tbody tr:not(:last-child) {
-        border-bottom: 10px solid $color-light-background;
-    }
-
-    .form-list {
-        input, textarea {
-            border: 2px solid $color-light-text;
-        }
-    }
-
-    a.footer__link {
-        color: $color-light-neutral;
-    
-        &:hover {
-            color: $color-light-accent;
-        }
-    }
-
 }
 
 
