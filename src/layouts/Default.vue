@@ -34,7 +34,7 @@
             <!-- <li class="menu__item">
               <search-input />
             </li> -->
-            <li class="menu__item" v-if="cartLength > 0">
+            <li class="menu__item" v-show="cartLength > 0">
                 <g-link
                   to="/cart"
                   class="cart-icon menu__action">

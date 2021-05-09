@@ -2,7 +2,7 @@
   <Layout>
     <div class="grid">
       <div class="grid__item">
-        <table v-if="cart.length" class="cart">
+        <table v-show="cart.length" class="cart">
           <thead>
             <tr>
               <th />
@@ -36,12 +36,12 @@
             </tr>
           </tbody>
         </table>
-        <div v-if="cart.length" class="cart__total">
+        <div v-show="cart.length" class="cart__total">
           <p>Cart Total: {{ cartTotal }} CAD</p>
         </div>
       </div>
       <div class="grid__item">
-        <form v-if="cart.length" @submit.prevent="checkout" class="cart__checkout">
+        <form v-show="cart.length" @submit.prevent="checkout" class="cart__checkout">
           <button type="submit"
             :class="{'is-loading': isLoading}"
             class="button">
@@ -49,7 +49,7 @@
           </button>
         </form>
         <div
-          v-else
+          v-show="!cart.length"
           class="">
           <p>To checkout, add some items to cart.</p>
           <br>
