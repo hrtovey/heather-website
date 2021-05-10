@@ -3,7 +3,7 @@
     <div class="grid">
       <div class="grid__item large--6">
         <h1>Get in Touch</h1>
-        <p>Have a question about something you see on this website? Fill out this contact form or email me directly at <a href="javascript:location='mailto:\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0040\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0074\u006f\u0076\u0065\u0079\u002e\u0063\u006f\u006d';void 0" id="obfuscatedEmail">{{obfuscateEmail()}}</a>
+        <p>Have a question about something you see on this website? Fill out this contact form or email me directly at heather@heathertovey.com
         </p>
       </div>
       <div class="form-wrapper grid__item large--6">
@@ -84,17 +84,7 @@ export default {
       class: "page--contact",
     },
   },
-  computed: {
-    submittedMsg: function(input = false) {
-      if (input) {
-        this.$router.push("/");
-      }
-    }
-  },
   methods: {
-    processForm() {
-      this.$router.push("/");
-    },
     obfuscateEmail() {
         return '\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0040\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0074\u006f\u0076\u0065\u0079\u002e\u0063\u006f\u006d';
     }
