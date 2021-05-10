@@ -9,10 +9,17 @@
       <div class="form-wrapper grid__item large--6">
         <form
           class="form"
-          action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdvWgdcBGiEkEOr7bU3cguQPg1T1Tdggp6hexO3u-NpKsrZ6A/formResponse"
-          method="post"
-          @submit="processForm"
+          name="contact"
+          method="POST"
+          action="/"
+          data-netlify="true"
+          netlify-honeypot="bot-field" 
         >
+          <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+
+
           <ol class="form-list">
             <li>
               <div class="input-wrapper">
@@ -76,6 +83,13 @@ export default {
     bodyAttrs: {
       class: "page--contact",
     },
+  },
+  computed: {
+    submittedMsg: function(input = false) {
+      if (input) {
+        this.$router.push("/");
+      }
+    }
   },
   methods: {
     processForm() {
