@@ -105,7 +105,7 @@ footer {
     border-bottom: 10px solid $color-light-background;
 }
 
-.form-list {
+form[name="contact"] {
     input, textarea {
         border: 2px solid $color-light-text;
     }
@@ -202,7 +202,7 @@ a.footer__link {
         border-bottom: 10px solid $color-dark-background;
     }
 
-    .form-list {
+    form[name="contact"] {
         input, textarea {
             border: 2px solid $color-dark-text;
             background: $color-dark-card;

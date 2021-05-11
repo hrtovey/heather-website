@@ -34,28 +34,3 @@ export default {
   },
 };
 </script>
-
-<page-query>
-  query {
-    posts: allPost (limit: 4) {
-      edges {
-        node {
-					id
-          slug
-					title 
-					path 
-					date(format: "MMM YYYY")
-					excerpt
-					content
-					timeToRead(speed: 200)
-					categories {
-            title
-          }
-          tags {
-            title
-          }
-        } 
-      } 
-    } 
-  }
-</page-query>

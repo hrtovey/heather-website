@@ -574,10 +574,8 @@ button.remove {
 }
 
 // Form
-.form-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+form[name="contact"] {
+
 
     label, input, textarea {
         display: block;
@@ -592,7 +590,7 @@ button.remove {
         min-height: 500px;
     }
 
-    .input-wrapper {
+    .sender-info > div, .message-wrapper {
         margin-bottom: 20px;
     }
 }
@@ -677,5 +675,23 @@ button.remove {
     }
     .logo--mobile {
         display: block;
+    }
+}
+
+.page--thank-you {
+    .grid {
+        justify-content: center;
+
+        @media (min-width: 641px) {
+            .grid__item:first-child {
+                text-align: right;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .grid__item {
+                text-align: center;
+            }
+        }
     }
 }
