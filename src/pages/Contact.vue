@@ -3,73 +3,45 @@
     <div class="grid">
       <div class="grid__item large--6">
         <h1>Get in Touch</h1>
-        <p>Have a question about something you see on this website? Fill out this contact form or email me directly at heather@heathertovey.com
+        <p>Have a question about something you see on this website? Fill out this contact form or email me directly at  <a href="javascript:location='mailto:\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0040\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0074\u006f\u0076\u0065\u0079\u002e\u0063\u006f\u006d';void 0" id="obfuscatedEmail">{{obfuscateEmail()}}</a>
         </p>
       </div>
       <div class="form-wrapper grid__item large--6">
         <form
-          class="form"
           name="contact"
-          method="POST"
-          action="/"
+          method="post"
+          v-on:submit.prevent="handleSubmit"
+          action="/thank-you/"
           data-netlify="true"
-          netlify-honeypot="bot-field" 
+          data-netlify-honeypot="bot-field"
         >
-          <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
           </p>
+          <div class="sender-info">
+            <div>
+              <label for="name" class="label" >Your name</label>
+              <input type="text" name="name" v-model="formData.name" />
+            </div>
+            <div>
+              <label for="email">Your email</label>
+              <input type="email" name="email" v-model="formData.email" />
+            </div>
+            <div>
+              <label for="email">Your subject</label>
+              <input type="text" name="subject" v-model="formData.subject" />
+            </div>
+          </div>
 
+          <div class="message-wrapper">
+            <label for="message">Message</label>
+            <textarea name="message" v-model="formData.message"></textarea>
+          </div>
 
-          <ol class="form-list">
-            <li>
-              <div class="input-wrapper">
-                <label class="label" for="fullName">Your Name</label>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="entry.1918602153"
-                  id="fullName"
-                  required
-                />
-              </div>
-            </li>
-            <li>
-              <div class="input-wrapper">
-                <label class="label" for="email">Your Email</label>
-                <input
-                  class="form__input"
-                  type="email"
-                  name="entry.1818087617"
-                  id="email"
-                  required
-                />
-              </div>
-            </li>
-            <li>
-              <div class="input-wrapper">
-                <label class="label" for="subject">Your Subject</label>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="entry.537179835"
-                  id="subject"
-                  required
-                />
-              </div>
-            </li>
-            <li>
-              <div class="input-wrapper">
-                <label class="label" for="message">Your Message</label>
-                <textarea
-                  class="form__input"
-                  name="entry.1099061782"
-                  id="message"
-                  required
-                ></textarea>
-              </div>
-            </li>
-          </ol>
-          <input class="button button--submit" type="submit" value="Send Message" />
+          <button type="submit" class="button">Submit form</button>
         </form>
       </div>
     </div>
@@ -87,7 +59,29 @@ export default {
   methods: {
     obfuscateEmail() {
         return '\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0040\u0068\u0065\u0061\u0074\u0068\u0065\u0072\u0074\u006f\u0076\u0065\u0079\u002e\u0063\u006f\u006d';
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => this.$router.push('/thank-you'))
+      .catch(error => alert(error))
     }
   },
+  data() {
+    return {
+      formData: {},
+    }
+  }
 };
 </script>

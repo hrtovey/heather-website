@@ -69,6 +69,10 @@
             <a v-if="$route.path === '/'" href="/shop/" class="menu__link">Shop</a>
             <g-link v-else to="/shop/" class="menu__link">Shop</g-link>
           </li>
+          <li class="mobile-menu__item">
+            <a v-if="$route.path === '/'" href="/contact/" class="menu__link">Contact</a>
+            <g-link v-else to="/contact/" class="menu__link">Contact</g-link>
+          </li>
         </ul>
       </div>
     </header>
