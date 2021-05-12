@@ -16,27 +16,6 @@ module.exports = {
   plugins: [
     'gridsome-plugin-robots',
     {
-      use: 'gridsome-plugin-pwa',
-      options: {
-          title: 'Heather Tovey',
-          startUrl: '/',
-          display: 'standalone',
-          gcm_sender_id: undefined,
-          statusBarStyle: 'default',
-          manifestPath: 'manifest.json',
-          disableServiceWorker: true,
-          serviceWorkerPath: 'service-worker.js',
-          cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg',
-          shortName: 'Heather Tovey',
-          themeColor: '#000000',
-          lang: "en-US",
-          backgroundColor: '#000000',
-          icon: './src/favicon.png', // must be provided like 'src/favicon.png'
-          msTileImage: 'Heather Tovey',
-          msTileColor: '#000000'
-      }
-    },
-    {
       use: '@gridsome/plugin-sitemap',
       options: {
         exclude: ['/exclude-me'],

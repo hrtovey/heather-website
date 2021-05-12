@@ -6,10 +6,10 @@
         <p>Looks like this page doesn't exist. Sorry about that!</p>
         <p>Maybe one of the following links would be helpful?</p>
         <ul>
-          <li><g-link to="/" class="footer__link">Home</g-link></li>
-          <li><g-link to="/blog/" class="footer__link">Blog</g-link></li>
-          <li><g-link to="/shop/" class="footer__link">Shop</g-link></li>
-          <li><g-link to="/contact/" class="footer__link">Contact</g-link></li>
+          <li><g-link to="/" class="404__link">Home</g-link></li>
+          <li><g-link to="/blog/" class="404__link">Blog</g-link></li>
+          <li><g-link to="/shop/" class="404__link">Shop</g-link></li>
+          <li><g-link to="/contact/" class="404__link">Contact</g-link></li>
         </ul>
       </div>
       <div class="grid__item large--6">
