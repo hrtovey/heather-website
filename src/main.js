@@ -42,7 +42,8 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     async: true,
     defer: true,
     "data-host": "https://microanalytics.io",
-    "data-dnt": "false"
+    "data-dnt": "false",
+    id: "ZwSg9rf6GA"
   })
 
   head.script.push({

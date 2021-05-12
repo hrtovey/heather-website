@@ -9,7 +9,6 @@
   "dependencies": {
     "@fontsource/chivo": "^4.2.2",
     "@fontsource/overpass": "^4.2.2",
-    "@gridsome/plugin-google-analytics": "^0.1.2",
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
@@ -21,7 +20,6 @@
     "graphql-tag": "^2.11.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-flexsearch": "^1.1.0",
-    "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-robots": "^0.2.1",
     "gridsome-source-shopify": "^0.2.6",
     "isomorphic-fetch": "^3.0.0",
