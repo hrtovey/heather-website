@@ -6,7 +6,7 @@ categories:
   - "business"
 tags: 
   - "quiz"
-coverImage: "30-useful-quiz-ideas-for-web-designers-1.png"
+coverImage: "./images/useful-quiz-ideas-for-web-designers.png"
 excerpt: ""
 ---
 
@@ -34,7 +34,6 @@ But writing one can be difficult. How do you decide what the topic of your quiz 
 
 I struggled for a bit when I wrote [my quiz](https://www.tryinteract.com/share/quiz/5b61e04af8ef7b0014a473ca), so today I'm sharing some tips, examples, and 30 quiz ideas for designers. I hope these help to provide inspiration for creating your very own quiz!
 
-![ 30 Useful Quiz Ideas for Web Designers ](./images/30-useful-quiz-ideas-for-web-designers.png)
 
 ## Tips for Writing a Quiz
 

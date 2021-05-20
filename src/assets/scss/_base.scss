@@ -335,3 +335,14 @@ pre[class*="language-"] {
  .token.entity {
    cursor: help;
  }
+ ul {
+   margin-top: 0;
+ }
+
+ ul p {
+   margin-bottom: 0;
+ }
+
+ .content__main > ul > li {
+   margin-bottom: 1rem;
+ }

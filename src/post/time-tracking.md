@@ -8,7 +8,7 @@ tags:
   - "pomodoro-technique"
   - "resources"
   - "time-tracking"
-coverImage: "how-to-become-a-better-entrepreneur-with-the-pomodoro-technique-1.png"
+coverImage: "./images/become-a-better-entrepreneur-using-pomodoro-method.png"
 excerpt: ""
 ---
 
@@ -18,7 +18,6 @@ Between writing content, marketing our services, and meeting with potential clie
 
 As entrepreneurs, we wear a lot of hats. So how do you stay focused and make sure that all the work is getting done?
 
-![ How to Become a Better Entrepreneur with the Pomodoro Technique ](./images/how-to-become-a-better-entrepreneur-with-the-pomodoro-technique.png)
 
 I'm a big believer in time tracking. I love looking back on the statistics of the past week or month or year and seeing where I can make my work a bit more efficient.
 

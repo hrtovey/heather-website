@@ -6,7 +6,7 @@ categories:
   - "squarespace"
 tags: 
   - "code-snippets"
-coverImage: "how-to-change-default-text-labels-in-squarespace-1.png"
+coverImage: "./images/how-to-change-default-titles-in-squarespace.png"
 excerpt: ""
 ---
 

@@ -9,7 +9,7 @@ tags:
   - "plugins"
   - "resources"
   - "workflow"
-coverImage: "4-useful-tools-to-boost-your-squarespace-design-1.png"
+coverImage: "./images/useful-tools-to-boost-squarespace-design.png"
 excerpt: ""
 ---
 
@@ -19,7 +19,6 @@ We're busy people with busy lives. On any given day, you might find yourself tal
 
 As as web developer, I'm always looking for tools or resources to design websites quickly and efficiently. I love working on the Squarespace platform, so I thought I'd share of few tools and resources that help me to speed up my workflow.
 
-![ 4 Useful Tools to Boost Your Squarespace Design ](./images/4-useful-tools-to-boost-your-squarespace-design.png)
 
 ## 4 Useful Tools to Boost Your Squarespace Design
 

@@ -6,7 +6,7 @@ categories:
   - "squarespace"
 tags: 
   - "code-snippets"
-coverImage: "how-to-add-custom-bullet-points-in-squarespace.png"
+coverImage: "./images/how-to-add-custom-bullet-points-to-squarespace-lists.png"
 excerpt: ""
 ---
 
@@ -28,8 +28,6 @@ Whenever you create a bulleted list in Squarespace, it looks something very simi
 It’s very plain and dull. It serves its purpose, but sometimes you want those bullet points to stand out.
 
 So today, I’m going to walk you through adding custom bullet points to your Squarespace lists.
-
-![ How to Add Custom Bullet Points in Squarespace ](./images/how-to-add-custom-bullet-points-in-squarespace-large.png)
 
 ## Add Custom Bullet Points
 

@@ -7,7 +7,7 @@ categories:
 tags: 
   - "may-2018"
   - "perfectionism"
-coverImage: "how-to-overcome-perfectionism-as-an-entrepreneur-thumbnail.png"
+coverImage: "./images/how-to-overcome-perfectionism-as-an-entrepreneur.png"
 excerpt: ""
 ---
 
@@ -33,7 +33,6 @@ But here's the thing. Launched is better than perfect. You're never 100% done wi
 
 And if you don't get started as soon as possible, you lose out on all the time to learn and grow and get better with real feedback from real people.
 
-![ How to Overcome Perfectionism as an Entrepreneur ](./images/how-to-overcome-perfectionism-as-an-entrepreneur.png)
 
 ## Are You a Perfectionist?
 

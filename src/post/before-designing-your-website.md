@@ -8,7 +8,7 @@ tags:
   - "may-2018"
   - "questions-to-ask"
   - "web-design"
-coverImage: "100-questions-to-ask-before-designing-your-website-1.png"
+coverImage: "./images/important-questions-you-need-to-ask-before-designing-website.png"
 excerpt: ""
 ---
 
@@ -29,8 +29,6 @@ To help you do that, I've created an exhaustive list of questions that will cove
 It's likely that you already know the answer to many of these questions. Take a minute to write down the answers so that you can better communicate your website goals and needs with others.
 
 Whether you choose to DIY your website or work with a designer, be sure to go over these questions **before** you start the design process.
-
-![ 100+ Questions to Ask Before Designing Your Website ](./images/100-questions-to-ask-before-designing-your-website.png)
 
 ## 100+ Questions to Ask Yourself Before You Design Your Website
 

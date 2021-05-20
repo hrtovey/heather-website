@@ -39,15 +39,9 @@
 </template>
 
 <script>
+import SEO from '../mixins/SEO'
+
 export default {
-  metaInfo () {
-    return {
-      title: this.$page.post.title,
-      bodyAttrs: {
-        class: 'page--post'
-      }
-    }
-  },
   methods: {
 	  formatCategory(category) {
 		  return category.replace(/-/g, ' ');
@@ -55,7 +49,8 @@ export default {
 	  createTitleLink(categoryTitle) {
 		  return `/blog/category/${categoryTitle}`;
 	  }
-  }
+  },
+  mixins: [SEO]
 }
 </script>
 
@@ -67,6 +62,8 @@ export default {
 			path 
 			date (format: "MMM YYYY") 
 			content
+			excerpt
+			image: coverImage
 			timeToRead(speed: 200)
 			categories {
             	title

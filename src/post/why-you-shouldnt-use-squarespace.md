@@ -4,7 +4,7 @@ slug: "why-you-shouldnt-use-squarespace"
 date: "2018-10-30"
 categories: 
   - "squarespace"
-coverImage: "6-reasons-why-you-shouldnt-use-squarespace-1.png"
+coverImage: "./images/reasons-why-you-should-not-use-squarespace.png"
 excerpt: ""
 ---
 
@@ -12,7 +12,6 @@ In [6 Reasons Why Squarespace is an Excellent Choice](https://heathertovey.com/b
 
 If you're a Squarespace designer, you may run into snags where a client wants styling or a feature that isn't easily doable in Squarespace. This list will help you to [form questions to ask every potential client](https://heathertovey.com/blog/before-designing-your-website) and make sure you're designing on the best platform for your client.
 
-![ 6 Reasons Why You Shouldn’t Use Squarespace ](./images/6-reasons-why-you-shouldnt-use-squarespace.png)
 
 ## 6 Reasons Why You Shouldn't Use Squarespace
 

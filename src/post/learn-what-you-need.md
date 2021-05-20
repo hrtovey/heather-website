@@ -7,7 +7,7 @@ categories:
 tags: 
   - "business-education"
   - "june-2018"
-coverImage: "9-tips-for-learning-what-you-need-to-grow-your-business.png"
+coverImage: "./images/tips-for-learning-what-you-need-to-grow-your-business.png"
 excerpt: ""
 ---
 
@@ -25,7 +25,6 @@ But don't get me wrong. I think learning is incredibly valuable. I believe that 
 
 But there's a better way to learn than to hop from course to course as time permits. The biggest key? **Know what you need to know next.**
 
-  ![ 9 Tips for Learning What You Need to Grow Your Business ](./images/9-tips-for-learning-what-you-need-to-grow-your-business-large.png)
 
  
 

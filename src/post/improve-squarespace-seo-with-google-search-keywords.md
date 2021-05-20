@@ -8,7 +8,7 @@ tags:
   - "google-search-keywords"
   - "may-2018"
   - "seo"
-coverImage: "how-to-improve-squarespace-seo-with-google-search-keywords-1.png"
+coverImage: "./images/how-to-improve-squarespace-seo-with-google-search-keywords.png"
 excerpt: ""
 ---
 
@@ -24,7 +24,6 @@ In This Article
 - [What Can You Do with Google Search Keywords in Squarespace Analytics](#what-can-you-do-with-google-search-keywords)
 - [What Else Can You Do with Google Search Console](#what-else-can-you-do-with-google-search-console)
 
-  ![ How to Improve Squarespace SEO with Google Search Keywords ](./images/how-to-improve-squarespace-seo-with-google-search-keywords.png)
 
 ## What is Google Search Console?
 

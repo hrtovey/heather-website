@@ -10,13 +10,12 @@ tags:
   - "color"
   - "gradients"
   - "index-pages"
-coverImage: "how-to-add-colorful-gradient-backgrounds-in-squarespace-1.png"
+coverImage: "./images/how-to-add-colorful-gradient-backgrounds-in-squarespace.png"
 excerpt: ""
 ---
 
 If you're a big fan of color, it's possible that you also love color gradients.
 
-![ How to Add Colorful Gradient Backgrounds in Squarespace ](./images/how-to-add-colorful-gradient-backgrounds-in-squarespace.png)
 
 What's a gradient? A gradient in web design is an area filled with color where one color flows naturally into another color.
 

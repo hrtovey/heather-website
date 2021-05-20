@@ -7,7 +7,7 @@ categories:
 tags: 
   - "code-snippets"
   - "cookie-banner"
-coverImage: "3-more-ways-to-style-the-squarespace-cookie-banner-1.png"
+coverImage: "./images/more-ways-to-style-squarespace-cookie-banner.png"
 excerpt: ""
 ---
 
@@ -19,7 +19,6 @@ You may use a cookie banner on your website, but you don't have to use a cookie 
 
 My last post about [customizing the Squarespace Cookie Banner](/blog/how-to-customize-the-squarespace-cookie-banner) was popular, so today I'm back with even more coding snippets for you to use on your Squarespace website.
 
-![ 3 More Ways to Style the Squarespace Cookie Banner ](./images/3-more-ways-to-style-the-squarespace-cookie-banner.png)
 
 ## Rectangular Cookie Banner
 

@@ -7,7 +7,7 @@ categories:
 tags: 
   - "color-palettes"
   - "resources"
-coverImage: "18-tools-to-help-you-create-beautiful-color-palettes.png"
+coverImage: "./images/tools-to-help-you-create-beautiful-color-palettes.png"
 excerpt: ""
 ---
 
@@ -21,7 +21,6 @@ But with so many colors to choose from, how do you decide which ones to use?
 
 Here are some of my favorite color palette generators and color tools to help you design your brand and website.
 
-![ 18 Tools to Help You Create Beautiful Color Palettes ](./images/18-tools-to-help-you-create-beautiful-color-palettes-large.png)
 
 ## Color Inspiration
 

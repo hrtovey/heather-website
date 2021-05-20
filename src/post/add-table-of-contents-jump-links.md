@@ -9,7 +9,7 @@ tags:
   - "jump-links"
   - "may-2018"
   - "table-of-contents"
-coverImage: "how-to-create-a-table-of-contents-for-your-article-1.png"
+coverImage: "./images/how-to-create-a-table-of-contents.png"
 excerpt: ""
 ---
 
@@ -41,8 +41,6 @@ Ask yourself:
 - Do you want readers to easily come back later to find the section they're looking for?
 
 Consider using jump links so your readers can get straight to the sections that are most relevant to them.
-
-![ How to Create a Table of Contents For Your Article Using Jump Links [Quick Tip] ](./images/how-to-create-a-table-of-contents-for-your-article.png)
 
  
 

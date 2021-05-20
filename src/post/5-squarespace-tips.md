@@ -7,15 +7,13 @@ categories:
 tags: 
   - "code-snippets"
   - "squarespace-tips"
-coverImage: "5-squarespace-tips-to-speed-up-development-1.png"
+coverImage: "./images/squarespace-tips-to-speed-up-development.png"
 excerpt: ""
 ---
 
 Squarespace makes a designer's life simpler by providing so many built-in options. But there are still times when you find yourself reaching for code or needing some guidance on how to work around a default style.
 
 To help you speed up your website development, here are 5 tips that I use on nearly every Squarespace website I build.
-
-![ 5 Squarespace Tips to Speed Up Development ](./images/5-squarespace-tips-to-speed-up-development.png)
 
  
 

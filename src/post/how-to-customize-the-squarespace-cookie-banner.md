@@ -7,7 +7,7 @@ categories:
 tags: 
   - "code-snippets"
   - "may-2018"
-coverImage: "cookie-banner.png"
+coverImage: "./images/how-to-customize-the-squarespace-cookie-banner.png"
 excerpt: ""
 ---
 
@@ -15,7 +15,6 @@ excerpt: ""
 
 * * *
 
-![ How to Customize the Squarespace Cookie Banner - with code snippets ](./images/how-to-customize-the-squarespace-cookie-banner.png)
 
 Does your website use cookies?
 

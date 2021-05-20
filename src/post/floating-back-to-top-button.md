@@ -8,7 +8,7 @@ tags:
   - "anchor-links"
   - "back-to-top-buttons"
   - "code-snippets"
-coverImage: "how-to-create-a-floating-back-to-top-button-1.png"
+coverImage: "./images/how-to-create-a-floating-back-to-top-button.png"
 excerpt: ""
 ---
 
@@ -34,7 +34,6 @@ Given how popular long-form content is, you may just find yourself wanting to ad
 
 Luckily, I have the code to help you add a back-to-top button to your Squarespace website today!
 
-![ How to Create a Floating Back-to-Top Button in Squarespace ](./images/how-to-create-a-floating-back-to-top-button.png)
 
 ## A Few Guidelines for Back-to-Top Buttons
 

@@ -6,7 +6,7 @@ categories:
   - "squarespace"
 tags: 
   - "april-2018"
-coverImage: "6-reasons-why-squarespace-is-an-excellent-choice-1.png"
+coverImage: "./images/reasons-why-squarespace-is-an-excellent-choice.png"
 excerpt: ""
 ---
 
@@ -16,7 +16,6 @@ Squarespace isn't for everyone. It's not designed to be for everyone.
 
 But it _is_ a great choice for a lot of businesses. Probably even yours.
 
-![](./images/6-reasons-why-squarespace-is-an-excellent-choice.png)
 
 I've worked on my fair share of websites. I've used WordPress. I've used Jekyll. I've handwritten HTML, CSS, and JavaScript from scratch.
 
