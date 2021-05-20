@@ -7,7 +7,7 @@ categories:
 tags: 
   - "checklist"
   - "resources"
-coverImage: "the-ultimate-pre-launch-checklist-for-your-squarespace-website-1.png"
+coverImage: "./images/the-ultimate-prelaunch-checklist-for-squarespace.png"
 excerpt: ""
 ---
 
@@ -21,7 +21,6 @@ Before you officially celebrate and announce the new website, go through these 3
 
   
 
-![ The Ultimate Pre-Launch Checklist for Your Squarespace Website ](./images/the-ultimate-pre-launch-checklist-for-your-squarespace-website.png)
 
 ## Pre-Launch Site Checklist
 

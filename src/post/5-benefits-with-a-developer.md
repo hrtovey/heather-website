@@ -6,7 +6,7 @@ categories:
   - "developer-collaboration"
 tags: 
   - "developer-collaboration"
-coverImage: "5-benefits-you-gain-from-working-with-a-developer-1.png"
+coverImage: "./images/5-benefits-you-gain-from-working-with-a-developer.png"
 excerpt: ""
 ---
 

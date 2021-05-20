@@ -7,7 +7,7 @@ categories:
 tags: 
   - "learn-to-code"
   - "resources"
-coverImage: "5-tips-for-learning-how-to-code-1.png"
+coverImage: "./images/tips-for-learning-how-to-code.png"
 excerpt: ""
 ---
 
@@ -23,7 +23,6 @@ Maybe you want to tweak your website design or make it perform better on mobile 
 
 As a self-taught developer, I've had my fair share of ups and downs along the way. So today, I'm sharing my top 5 tips for learning how to code!
 
-  ![ 5 Tips for Learning How to Code ](./images/5-tips-for-learning-how-to-code.png)
 
  
 

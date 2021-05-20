@@ -6,7 +6,7 @@ categories:
   - "web-design"
 tags: 
   - "resources"
-coverImage: "Top-9-Web-Development-Resources-1.png"
+coverImage: "./images/top-9-web-development-resources.png"
 excerpt: ""
 ---
 
@@ -16,7 +16,6 @@ I’m a big believer in [forever learning](https://heathertovey.com/blog/learn-w
 
 But what are the best resources out there for daily learning? Here’s what I use!
 
-![ Top 9 Web Development Resources ](./images/Top-9-Web-Development-Resources.png)
 
 ## Design
 

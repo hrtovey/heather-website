@@ -7,7 +7,7 @@ categories:
 tags: 
   - "code-snippets"
   - "custom-fonts"
-coverImage: "how-to-add-custom-fonts-to-squarespace-1.png"
+coverImage: "./images/how-to-add-custom-fonts-to-squarespace.png"
 excerpt: ""
 ---
 
@@ -16,8 +16,6 @@ You want the website you're designing to stand out and look and feel on brand, r
 Well one way to do that is to add custom fonts to the website! Unfortunately, while Squarespace provides solid font options straight out of the box, every other website is using those fonts too.
 
 So what's a designer to do? Let me show you how to add and use custom fonts on Squarespace websites in 5 steps.
-
-![ How to Add Custom Fonts to Squarespace ](./images/how-to-add-custom-fonts-to-squarespace.png)
 
 ## How to Use Custom Fonts
 

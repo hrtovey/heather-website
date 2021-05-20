@@ -8,7 +8,7 @@ tags:
   - "images"
   - "page-speed"
   - "seo"
-coverImage: "how-to-optimize-your-images-and-speed-up-your-website-1.png"
+coverImage: "./images/how-to-optimize-your-images-and-speed-up-your-website.png"
 excerpt: ""
 ---
 
@@ -26,7 +26,6 @@ Your website visitors won't stick around if your page takes too long to load. Th
 
 So today, I'm going to walk you through my entire image optimization process for a speedy website.
 
-![ How to Optimize Your Images and Speed Up Your Website ](./images/how-to-optimize-your-images-and-speed-up-your-website.png)
 
 ## Step 1: Use high-quality images.
 

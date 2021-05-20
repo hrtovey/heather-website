@@ -6,7 +6,7 @@ categories:
   - "squarespace"
 tags: 
   - "code-snippets"
-coverImage: "3-css-tweaks-to-customize-your-squarespace-website-1.png"
+coverImage: "./images/css-tweaks-to-customize-squarespace.png"
 excerpt: "Learn how to create a fixed header, hide the header and footer, and style blockquotes on 7.0 Brine."
 ---
 

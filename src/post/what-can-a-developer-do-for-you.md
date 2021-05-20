@@ -6,7 +6,7 @@ categories:
   - "developer-collaboration"
 tags: 
   - "developer-collaboration"
-coverImage: "what-can-a-developer-do-for-you-1.png"
+coverImage: "./images/what-can-a-developer-do-for-you.png"
 excerpt: ""
 ---
 
@@ -18,7 +18,6 @@ But maybe you're not sure how much time you need or what a developer can even do
 
   
 
-![ What Can A Developer Do For You? ](./images/what-can-a-developer-do-for-you.png)
 
 ## What Can a Developer Do For You?
 

@@ -6,11 +6,10 @@ categories:
   - "web-design"
 tags: 
   - "april-2018"
-coverImage: "is-it-time-to-redesign-your-website-1.png"
+coverImage: "./images/is-it-time-to-redesign-your-website.png"
 excerpt: ""
 ---
 
-![ Is it time to redesign your website? ](./images/is-it-time-to-redesign-your-website.png)
 
 When I first moved into my house, the walls were a bright orangeish-yellow, and the trim was olive green and maroon.
 

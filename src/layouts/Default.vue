@@ -111,11 +111,33 @@
   </div>
 </template>
 
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteDescription
+      siteUrl
+      twitter {
+        site
+        creator
+      }
+    }
+  }
+</static-query>
+
 <script>
 import SearchInput from '../components/SearchInput'
 import ThemeSwitcher from '../components/ThemeSwitcher'
 
 export default {
+  metaInfo () {
+    return {
+      meta: [
+        { key: 'twitter:site', name: 'twitter:site', content: this.$static.metadata.twitter.site },
+        { key: 'twitter:creator', name: 'twitter:creator', content: this.$static.metadata.twitter.creator }
+      ]
+    }
+  },
   components: {
     SearchInput,
     ThemeSwitcher

@@ -4,7 +4,7 @@ slug: "creative-projects"
 date: "2020-04-08"
 categories: 
   - "web-development"
-coverImage: "take-time-to-be-creative-thumbnail.png"
+coverImage: "./images/pure-css-designs.png"
 excerpt: ""
 ---
 

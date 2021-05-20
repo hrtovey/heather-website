@@ -6,19 +6,25 @@
 
 module.exports = {
   siteName: 'Heather Tovey',
-  siteUrl: 'https://heathertovey.com/',
+  siteUrl: 'https://heathertovey.com',
   siteDescription: 'A blog about web development and Shopify.',
   titleTemplate: '%s - Heather Tovey',
   icon: {
     favicon: "./src/favicon.png",
     touchicon: "./src/favicon.png"
   },
+  metadata: {
+    twitter: {
+      site: '@hrtovey',
+      creator: '@hrtovey'
+    }
+  },
   plugins: [
     'gridsome-plugin-robots',
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/exclude-me'],
+        exclude: ['/thank-you'],
         config: {
           '/product/*': {
             changefreq: 'daily',

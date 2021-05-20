@@ -6,7 +6,7 @@ categories:
   - "user-experience"
 tags: 
   - "april-2018"
-coverImage: "how-to-make-your-website-more-user-friendly-1.png"
+coverImage: "./images/how-to-make-your-website-user-friendly.png"
 excerpt: ""
 ---
 
@@ -22,7 +22,6 @@ I happily and aggressively say no to those pop-ups as quickly as humanly possibl
 
 Though annihilating pop-ups is at the top of my personal list, it isn't the only thing you can do to give your visitors a better user experience. So let's go over 10 ways you can make your website more user-friendly today.
 
-![ How to make your website more user-friendly plus a free checklist. ](./images/how-to-make-your-website-more-user-friendly.png)
 
 ## A User-Friendliness Checklist
 
