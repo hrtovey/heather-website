@@ -1,5 +1,5 @@
 ---
-id: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MDk2NDg2NTQ0OTg="
+id: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MDk2NDg2MjE3MzA="
 title: "Squarespace Blog Post Footer Plugin"
 ---
 
