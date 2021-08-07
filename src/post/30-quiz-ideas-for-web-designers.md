@@ -1,9 +1,9 @@
 ---
-title: "30 Useful Quiz Ideas for Web Designers"
+title: "30 Useful Quiz Ideas To Get Web Design Leads"
 slug: "30-quiz-ideas-for-web-designers"
 date: "2018-08-14"
 categories: 
-  - "business"
+  - "productivity"
 tags: 
   - "quiz"
 coverImage: "./images/useful-quiz-ideas-for-web-designers.png"
@@ -12,7 +12,7 @@ excerpt: ""
 
 * * *
 
-_Disclaimer: This article includes affiliate links for Interact. I became an Interact Partner/Affiliate after checking out their service, and I promise that I am sharing these links with you because I actively use Interact myself and can highly recommend their service. If you make a purchase through these links, I make a commission at no extra cost to you._
+_Disclaimer: This article includes affiliate links for Interact. I became an Interact Partner/Affiliate after checking out their service, and I promise that I am sharing these links with you because I enjoy the service. If you make a purchase through these links, I make a commission at no extra cost to you._
 
 * * *
 

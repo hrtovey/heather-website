@@ -2,8 +2,9 @@
 title: "5 Tips for Learning How to Code"
 slug: "5-tips-learn-to-code"
 date: "2018-07-31"
+lastModified: "2021-08-07"
 categories: 
-  - "business"
+  - "web-development"
 tags: 
   - "learn-to-code"
   - "resources"
@@ -17,9 +18,7 @@ Learning is a roller coaster of highs and lows. Confusion reigns supreme, and br
 
 ![ A bright and cheery yellow roller coaster track set against the bright blue sky. ](./images/roller-coaster.jpg)
 
-As an online entrepreneur or web designer, you're likely honing your craft and learning new skills. You may even be learning how to code.
-
-Maybe you want to tweak your website design or make it perform better on mobile devices. Learning even a little bit of coding can help you develop the design of your dreams.
+As a web developer, you're likely honing your craft and learning new skills. You may be learning how to code or leveling up into harder material.
 
 As a self-taught developer, I've had my fair share of ups and downs along the way. So today, I'm sharing my top 5 tips for learning how to code!
 
@@ -30,68 +29,95 @@ As a self-taught developer, I've had my fair share of ups and downs along the wa
 
 Why are you learning how to code?
 
-Mostly likely, you're learning to code because you're trying to solve a specific problem. Choosing a problem to solve or a project that sparks your interest is the key to getting and staying motivated.
+There are a lot of reasons to learn how to code. For one, it's a lot of fun! 
 
-If you're designing Squarespace websites, you may be interested in learning topics like:
+But you may have other reasons. Maybe you want to:
+- earn a solid job without going back to school
+- create a product without having to find a developer to partner with
+- add more skills to your repertoire as a web designer
+- automate some processes in your day-to-day work
 
-- how to tweak your design for mobile devices
-- how to keep your text from sprawling across a wide screen
-- how to use browser tools to troubleshoot your website
+Once you have your motivation, write it down. You can write it down on a sticky note or even create a vision board. Put it somewhere where you can see it while you're learning and coding. 
 
-Whatever the problem, learn how to solve it and then find the next problem to solve!
+I used to think that this was a silly suggestion. How could I forget about my goal? But once I actually tried it out, it was very motivating to look up and see the Why. It can be easy to lose days and weeks to other priorities. But being reminded of your Why helps you to better prioritize things and make the time (even if it's just 10-15 minutes a day for a while).
 
-If you don’t know what problem you want to solve or what project you want to work on, I have a handful of [coding projects](https://heathertovey.com/blog/?tag=code+snippets) you can do and a [Pinterest Board](https://www.pinterest.ca/heather_tovey/coding-snippets/) with some starter projects. Pick one that sparks your interest and get started!
+## Tip #2: Find Resources That Click For You
 
-## Tip #2: Choose the Right Language
+We all learn differently. What works for me won't necessarily work for you. We all come from different backgrounds and have different strengths and weaknesses.
 
-Type "learn to code" into Google and you're going to receive over 4 billion results. **4 billion!**
+When you're first learning, it's a great time to take a step back and try a lot of different tutorials. Take time to find resources that you love and make sure that you're on the right coding journey. There are a lot of different paths you can take with coding, after all.
 
-These results cover a variety of languages like Java, Python, C, PHP, C++, JavaScript, C#, Ruby, etc., etc., etc.
+Some Questions to Ask Yourself:
+- Who are the content creators that make the most sense to you?
+- Do you prefer videos or reading documentation?
+- Do you prefer workshops with a 1:1 component?
+- Do you like to work solo or in groups?
+- Do you want the extra 1:1 instruction that a bootcamp provides? (Be careful with bootcamps. There are some really great ones but also some that are more predatory. Do your research.)
+- Are there languages that make more sense to you?
 
-That's a long list of programming languages, but you don't need most of them if you're building Squarespace websites!
+Take a few weeks when you're just starting out to figure out what type of projects excite you. That will help you narrow down the languages and types of material you'll have the most success with.
 
-Focus your learning on **HTML, CSS, and JavaScript**. HTML and CSS by themselves are enough to do most of what you'd want to do in Squarespace. And bonus! These are great languages to help you dip your toes into learning how to code.
 
-## Tip #3: Find amazing resources!
+## Tip #3: Avoid Getting Stuck In Tutorials
 
-My lowest lows on my coding journey came when I didn't know what to learn or how to learn it.
+A common problem for aspiring developers is getting stuck completing tutorial after tutorial and not really getting anything out of it. You'll feel lke you're learning a lot until you sit down to create a project on your own and suddenly it feels like you know nothing. It's so common a problem that it's been named Tutorial Hell.
 
-I felt overwhelmed and confused. I didn't even know how to start!
+Now, don't get me wrong. Tutorials are great and super useful, but the key is to immediately put what you've learned into practice. You can do this by taking the tutorial project and building on it further. What tweaks can you make? What additional functionality do you want to add? How can you take the project even further using what you already know?
 
-So how do you choose what to learn? And where do you find resources?
+Additionally, I recommend choosing a main project to work on. Let's say that you're an aspiring web developer and you want to build your personal web site. 
 
-Well, I can definitely help you there. Here are a few of my favorite resources for learning HTML, CSS, and JavaScript.
+So you take a tutorial on building a website from scratch with HTML and CSS. That tutorial may have a project that goes with it. Great! But don't use that tutorial project as the base for the personal site you're building. Start over from scratch on your own site and see how far you can get without referring to the tutorial. If you get stuck, try Googling for some answers.
 
-These resources will help get you started and also give you ideas for what you can learn next.
+Once you have a basic site, what features do you want to add? Maybe you choose to add a dark theme. That means you can look for a tutorial that helps you add that feature to your own site.
 
-### Resource List
+Tutorials are really great for teaching you about the things that you need to know. They help give you some high-level guidance on how to go about working on a project. They help give you the language to talk about what you're doing. They help give you the keywords you need to find documentation or potential solutions when you get stuck on your own project. But they don't teach you how to solve problems. And being a developer is all about solving the problems that you run into while developing.
 
-- [HTML & CSS: Design and Build Websites by Jon Duckett](http://www.htmlandcssbook.com/)
-    
-- [Coding for Designers](https://www.thegymnasium.com/courses/GYM/100/0/about)
-    
-- [Learn to Code HTML & CSS](https://learn.shayhowe.com/html-css/)
-    
-- [FreeCodeCamp](https://www.freecodecamp.org/)
-    
+So by all means, use tutorials. But don't stop there. Work on a your own fun projects.
 
 ## Tip #4: Set SMART Goals
 
-Without a good goal to reach for, you're likely to get lost along the way.
+We talked about knowing your motivation for learning, but you'll also want a framework to help you turn this big Why into goals you can complete.
 
-Solid goals are SMART goals. SMART stands for Specific, Measurable, Attainable, Relevant, and Time-bound.
+I like to use SMART Goals. SMART stands for Specific, Measurable, Attainable, Relevant, and Time-bound.
 
 **Specific** \- Create a super detailed goal. The more details about what you're going to learn and how you're going to get there, the better.
 
+Instead of "I'm going to learn web development" try "Learn HTML and CSS so I can build my first site from scratch."
+
 **Measurable** \- How are you going to measure your success? How will you know when you've succeeded?
+
+- Learn HTML and CSS so I can build my first site from scratch.
+- **I have completed my goal when I can share a link to my first site on CodeNewbies.**
 
 **Attainable** \- It's all fine and dandy to shoot for the stars, but you need a goal that's within reach. Don't set yourself up for failure. Make sure your goal is reasonable for your current skills.
 
-Building a web app in a day is not attainable if you're just starting to learn how to code. But learning [how to add colorful gradients to your page backgrounds](https://heathertovey.com/blog/gradient-backgrounds) is a perfectly reasonable thing to achieve in an hour or two.
+Building a web app in a day is not attainable if you're just starting to learn how to code. But learning the basics of HTML and structuring a web page in a week or two is much easier to obtain.
 
-**Relevant** \- How is your goal relevant to your long-term goals and dreams? How does your goal help you run your business?
+Think about what resources you'll use to make sure this goal is attainable.
+
+- Learn HTML and CSS so I can build my first site from scratch.
+- I have completed my goal when I can share a link to my first site on CodeNewbies.
+- **To achieve this goal, I have enrolled in a workshop to learn HTML and CSS over 4 weeks.**
+
+
+**Relevant** \- How is your goal relevant to your long-term goals and dreams?
+
+Sometimes, we get distracted by the newest shiny thing, so make sure that your SMART Goals are relevant to your overall goals. Your Why from Tip #1.
+
+- Learn HTML and CSS so I can build my first site from scratch.
+- I have completed my goal when I can share a link to my first site on CodeNewbies.
+- To achieve this goal, I have enrolled in a workshop to learn HTML and CSS over 4 weeks.
+- **This goal will help me to become a professional web developer.**
 
 **Time-bound** - Give your goal a deadline. Don't make the mistake of leaving this open-ended. You need a line drawn in the sand to help keep you motivated and moving forward.
+
+- Learn HTML and CSS so I can build my first site from scratch.
+- I have completed my goal when I can share a link to my first site on CodeNewbies.
+- To achieve this goal, I have enrolled in a free workshop to learn HTML and CSS.
+- This goal will help me to become a professional web developer.
+- **I will complete this goal in 4 weeks and share the link to my site on | specific date |.**
+
+Setting SMART Goals will help set you up for success. So make sure that you take the time to formally write things down. You may find that it helps you to form a curriculum and overall learning path that works for you.
 
 ## Tip #5: Embrace the Confusion
 
@@ -103,20 +129,20 @@ One of my favorite articles about learning is by Dr. Rhett Allain. In his articl
 
 By going through the process of first being confused about a concept, and then learning it until it clicks, you're setting yourself up to **truly** understand that concept and remember it.
 
-If you're not confused, you're unlikely to push yourself to learn more than a surface understanding of the concept. And a surface understanding is easily forgettable.
+If you're not confused, you're unlikely to push yourself to gain more than a surface understanding of the concept. And a surface understanding is easily forgettable.
 
-When you're confused and frustrated and nothing is going the way that you want it to, take a time out.
+So when (not if) you're confused and frustrated and nothing is going the way that you want it to, take a time out.
 
 Take a step back from your work, go on a walk, take a shower, or work on something creative. Once you've given your brain a break, you may just find that you're ready to approach the problem from a different angle and finally obtain a deeper understanding of the concept.
 
 ## Learn to Code
 
-It's true. Learning isn't easy. But with a few tips and a bit of perserverance, you can succeed!
+Learning isn't easy. But with a few tips and a bit of perseverance, you can succeed!
 
 Remember to:
 
-1. Find a problem to solve or project that sparks your interest.
-2. Start with HTML and CSS. Then, work your way up to JavaScript.
-3. Benefit from my learning journey and check out [my favorite resources](#tip3).
+1. Find your motivation.
+2. Get a feel for the different resources that exist and find ones that work for the way you like to learn.
+3. Avoid Tutorial Hell by working on projects that you care about.
 4. Set SMART goals!
 5. Embrace the confusion. Push past it into deeper understanding.

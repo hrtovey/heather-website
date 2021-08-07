@@ -1,9 +1,9 @@
 ---
-title: "How to Overcome Perfectionism as an Entrepreneur"
+title: "How to Overcome Perfectionism as Web Developer"
 slug: "overcome-perfectionism-as-an-entrepreneur"
 date: "2018-05-07"
 categories: 
-  - "business"
+  - "productivity"
 tags: 
   - "may-2018"
   - "perfectionism"
@@ -19,9 +19,9 @@ She looks free and happy and she doesn't care how she dances because she's enjoy
 
 As we get older, we sometimes lose that freedom. Too busy paying attention to what others think. Too busy trying to perfect our work, and too afraid to show our work to others.
 
-I see this a lot in entrepreneurs and designers.
+I see this a lot in web developers.
 
-> “Oh, this website isn’t quite there yet. There’s just something off about it.”
+> “Oh, this website isn’t quite there yet. There’s just something off about it. I need to tweak it some more.”
 
 > “My product isn’t ready to launch yet! I still have so much to work on.”
 
@@ -58,11 +58,8 @@ My guess is that you've experienced at least one of these items while running yo
 There are different levels of perfectionism. You can be a healthy perfectionist and not let it run your life. But if you find that perfectionism is holding you back, it's important to deal with it so you can:
 
 - drop the anxiety
-    
 - get started promptly on projects instead of procrastinating
-    
 - launch products and services
-    
 - avoid analysis paralysis
     
 
@@ -72,7 +69,7 @@ This list is not the end all be all of dealing with perfectionism, but it's a go
 
 ### 1\. Stop comparing yourself to others.
 
-You're probably in a handful or more groups related to your business. And you probably see people posting about their success.
+You're probably in a handful or more groups related to your career field. And you probably see people posting about their success.
 
 Maybe it makes you jealous. Maybe it makes you anxious wondering if that will ever be you. Maybe it makes you feel like you can't launch anything until it's as perfect as what others are producing.
 

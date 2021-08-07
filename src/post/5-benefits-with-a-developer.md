@@ -10,11 +10,7 @@ coverImage: "./images/5-benefits-you-gain-from-working-with-a-developer.png"
 excerpt: ""
 ---
 
-If you've seen any of my other articles, you may have noticed that I love to create [coding snippets](/blog?tag=code%20snippets) for others to use. I love solving problems, building websites, and writing custom code.
-
-But it's not everyone's cup of tea. That's why I often work with designers to bring their designs to life.
-
-Have you ever considered working with a developer on your client projects? If you haven't or you're on the fence, take a look at these 5 reasons to work with a developer on your design projects before making a decision.
+Are you a designer? Have you ever considered working with a developer on your client projects? If you haven't or you're on the fence, take a look at these 5 reasons to work with a developer on your design projects before making a decision.
   
 
 ## 5 Benefits From Working With a Developer

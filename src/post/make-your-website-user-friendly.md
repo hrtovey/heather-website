@@ -3,7 +3,7 @@ title: "How to Make Your Website More User-Friendly"
 slug: "make-your-website-user-friendly"
 date: "2018-04-17"
 categories: 
-  - "user-experience"
+  - "web-design"
 tags: 
   - "april-2018"
 coverImage: "./images/how-to-make-your-website-user-friendly.png"
@@ -18,7 +18,7 @@ You've probably seen these at some point. There's usually a little yes/no sectio
 
 ![ A pop-up in the middle of the page, covering other content visitors might be interested in reading. The pop-up has an image of an adorable ginger kitten looking down and to the left. Underneath the image, the pop-up says ](./images/popups-are-bad.jpg)
 
-I happily and aggressively say no to those pop-ups as quickly as humanly possible. (How dare they try to use my emotions against me!)
+I happily and aggressively say no to those pop-ups as quickly as humanly possible. (Poor puppies and kittens.)
 
 Though annihilating pop-ups is at the top of my personal list, it isn't the only thing you can do to give your visitors a better user experience. So let's go over 10 ways you can make your website more user-friendly today.
 
@@ -38,6 +38,8 @@ But despite my lengthy rant, maybe you want to try out pop-ups on your website a
 If you do, **please** use exit-intent pop-ups. These pop-ups don't appear until your reader moves their mouse cursor out of the browser window. This usually indicates they're about to close the window or navigate elsewhere.
 
 An exit-intent pop-up doesn't disrupt your reader's flow (as much) and doesn't pop up right when they start reading. It's the best type of pop-up there is, and I will grudgingly tolerate them.
+
+Alternatively, you can try adding a pop-up to the bottom corner of your website. Whatever you do, remember that many of your readers will want to read your articles and get to know you before they sign up. So don't get in their way.
 
 ![ Menu item robots have a battle with swords to figure out which menu item gets to be in the navigation. ](./images/menu-fighting.png)
 

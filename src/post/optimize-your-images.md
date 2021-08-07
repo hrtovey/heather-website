@@ -3,7 +3,7 @@ title: "How to Optimize Your Images and Speed Up Your Website"
 slug: "optimize-your-images"
 date: "2018-07-10"
 categories: 
-  - "web-design"
+  - "web-development"
 tags: 
   - "images"
   - "page-speed"
@@ -12,13 +12,13 @@ coverImage: "./images/how-to-optimize-your-images-and-speed-up-your-website.png"
 excerpt: ""
 ---
 
-A few months ago, I helped a fellow designer troubleshoot an issue she was having with the website she was building.
+A few months ago, I helped a web designer troubleshoot an issue she was having with the website she was building.
 
 The issue was that the website was **painfully** slow. It was so slow that it would crash the browser completely on mobile phones. 
 
-After spending some time poking around in the code, I discovered she had over **200** massive images uploaded into a slideshow gallery. The browser couldn't handle the huge page load and would crash trying to show the different images.
+After spending some time poking around in the code, I discovered she had over **200** massive images displayed on a slideshow gallery. The browser couldn't handle the huge page load and would crash trying to show the different images.
 
-In the end, she had to have a chat with her client about choosing and showcasing only a handful of images. Once they settled on the prize images, the website loaded quickly and visitors could actually navigate through the slideshow again. Phew! Problem solved.
+In the end, she had to have a chat with her client about choosing and showcasing only a handful of images. Once they settled on the prize images, the website was able to load quickly and visitors could actually navigate through the slideshow again. Phew! Problem solved.
 
 While you may not have over 200 images slowing down your website, you're probably not doing enough to optimize your images.
 

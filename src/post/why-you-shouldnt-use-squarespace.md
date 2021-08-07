@@ -2,6 +2,7 @@
 title: "6 Reasons Why You Shouldn't Use Squarespace"
 slug: "why-you-shouldnt-use-squarespace"
 date: "2018-10-30"
+lastModified: "2021-08-07"
 categories: 
   - "squarespace"
 coverImage: "./images/reasons-why-you-should-not-use-squarespace.png"
@@ -87,3 +88,6 @@ If you're a Squarespace designer, you have a few options available to you:
 - [team up with a developer](https://heathertovey.com/blog/5-benefits-with-a-developer) who can develop on the platform of your choice
 
 You want to work with awesome clients and you want to provide them with the best platform possible for their needs. Sometimes that's Squarespace, and sometimes that's another platform entirely. Consider branching out and trying a different platform. Maybe you'll find a new favorite or maybe you'll remember why you love Squarespace just the way it is.
+
+
+**Update**: When I originally wrote this in 2018, I was still supporting Squarespace designers. I have since moved on to working primarily on the Shopify platform. If you'd like to learn more about Shopify theme development, sign up for my newsletter. New content coming soon!
