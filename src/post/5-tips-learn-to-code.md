@@ -3,6 +3,7 @@ title: "5 Tips for Learning How to Code"
 slug: "5-tips-learn-to-code"
 date: "2018-07-31"
 lastModified: "2021-08-07"
+pillar: true
 categories: 
   - "web-development"
 tags: 
