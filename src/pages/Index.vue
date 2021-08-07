@@ -77,7 +77,6 @@
               <div class="card__meta">
                 <p class="card__category card__meta-item">{{ listCategories(post.node.categories) }}</p>
                 <p class="card__time-to-read card__meta-item">{{post.node.timeToRead}} min read</p>
-                <p class="card__date card__meta-item">{{ post.node.date }}</p>
               </div>
               <h3 class="card__title">{{ post.node.title }}</h3>
               <p class="card__description">{{ truncateExcerpt(post.node.excerpt, 125) }}</p>
@@ -125,7 +124,6 @@ export default {
           slug
 					title 
 					path 
-					date(format: "MMM YYYY")
 					excerpt
 					content
 					timeToRead(speed: 200)
