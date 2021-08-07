@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Heather Tovey',
-  siteUrl: 'https://heathertovey.com',
+  siteUrl: 'https://www.heathertovey.com',
   siteDescription: 'A blog about web development and Shopify.',
   titleTemplate: '%s - Heather Tovey',
   icon: {
