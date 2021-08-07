@@ -48,8 +48,6 @@ The cover pages offered through Squarespace are amazing, but require that you fo
 
 One way to design a page exactly the way you want is to use a regular page and then hide the distracting header, footer, announcement bar and cookie banner on just that page.
 
-For an example of what this might look like, check out my [newsletter sign-up page](/sign-up).
-
 To make your DIY cover pages less distracting, drop this code in that particular page’s **Settings (the cogwheel) > Advanced > Page Header Code Injection**.
 
 ```html

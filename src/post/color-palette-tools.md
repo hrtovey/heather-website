@@ -1,5 +1,5 @@
 ---
-title: "18 Tools to Help You Create Beautiful Color Palettes"
+title: "17 Tools to Help You Create Beautiful Color Palettes"
 slug: "color-palette-tools"
 date: "2018-06-12"
 categories: 
@@ -101,12 +101,6 @@ I personally love using this handy little tool put together by Lea Verou. Simply
 [Colorable](https://colorable.jxnblk.com/006655/9900ff)
 
 Another useful way to test color contrast. Use sliders to change the Hue, Saturation, and Lightness of the different colors until your colors pass color contrast standards.
-
-![ NoCoffee opens up to give you access to over 20 different ways to change your website to reflect vision differences. ](./images/NoCoffee.png)
-
-[NoCoffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl/)
-
-A Chrome browser extention that allows you to test websites and color palettes by showing you what those web pages look like for someone with slight or extreme vision problems. This tool tests how websites look with Low Acuity, Low Contrast Sensitivity, Colorblindness, Visual snow, glare, ghosting, and cataracts, Nystagmus, and Obstructed visual field. This will give you a good step toward making your website usable and visible for more people.
 
 ## Color Games
 
