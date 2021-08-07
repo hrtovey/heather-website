@@ -97,6 +97,10 @@ export default {
     },
     async checkout () {
       if (!this.cart.length) return alert('No items in cart')
+      if(typeof pa !== "undefined") {
+        pa.track({name: 'Checkout'})
+      }
+
       const lineItems = this.cart.map(item => ({ quantity: item.qty, variantId: item.variantId }))
 
       const checkoutInput = { lineItems }

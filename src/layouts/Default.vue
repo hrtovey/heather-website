@@ -143,7 +143,11 @@ export default {
     ThemeSwitcher
   },
   mounted() {
-    this.theme = localStorage.getItem('theme') || 'theme-light'
+    this.theme = localStorage.getItem('theme') || 'theme-light';
+    this.linkList = document.querySelectorAll('a[href^="http"]:not([href^="https://www.heathertovey.com"]');
+    this.linkList.forEach(link => {
+      link.addEventListener('click', this.reportToMicro);
+    })
   },
   data() {
     return {
@@ -158,6 +162,11 @@ export default {
     },
     updateTheme(theme) {
       this.theme = theme
+    },
+    reportToMicro(event) {
+      if (typeof pa !== "undefined") {
+        pa.track({name: 'Outbound', value: event.target.href})
+      }
     }
   },
   computed: {
