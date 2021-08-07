@@ -2,6 +2,7 @@
   <Layout>
     <div class="grid">
 		<h1 class="grid__item">Articles</h1>
+		<p class="grid__item">Looking for my older Squarespace articles? You can find them in the <g-link to="/blog/category/squarespace/">Squarespace category</g-link>.</p>
 	</div>
 	<div class="grid align-stretch">
 		<div class="card grid__item medium--6"
@@ -56,7 +57,7 @@ export default {
 
 <page-query>
 	query {
-		posts: allPost {
+		posts: allPost(filter: { categories: { id: { ne: "squarespace" } } }) {
 			edges {
 				node {
 					id 
