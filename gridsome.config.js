@@ -77,8 +77,9 @@ module.exports = {
 				path: "./src/post/**/*.md",
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
-          ]
+            '@gridsome/remark-prismjs',
+            ['remark-toc']
+          ],
         },
         refs: {
           // Auto create a collection for all categories
@@ -101,7 +102,29 @@ module.exports = {
 				typeName: "ProductsInfo",
 				path: "./src/data/**/*.md"
 			}
-		}
+		},
+    {
+      use: "gridsome-plugin-feed",
+      options: {
+        contentTypes: ["Post"],
+        feedOptions: {
+          title: "HeatherTovey.com Blog Feed",
+          description: "Articles about Shopify theme development.",
+          link: "https://www.heathertovey.com/",
+          language: "en"
+        },
+        rss: {
+          enabled: true,
+          output: "/rss.xml"
+        },
+        maxItems: 25,
+        nodeToFeedItem: node => ({
+          title: node.title,
+          date: node.date,
+          content: node.excerpt
+        })
+      }
+    },
   ],
   templates: {
     Post: "/blog/:slug",

@@ -2,6 +2,7 @@
 title: "100+ Important Questions You Need to Ask Before Designing Your Website"
 slug: "before-designing-your-website"
 date: "2018-05-29"
+pillar: false
 categories: 
   - "web-design"
 tags: 

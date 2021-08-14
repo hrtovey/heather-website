@@ -3,7 +3,7 @@ title: "5 Tips for Learning How to Code"
 slug: "5-tips-learn-to-code"
 date: "2018-07-31"
 lastModified: "2021-08-07"
-pillar: true
+pillar: false
 categories: 
   - "web-development"
 tags: 
@@ -13,7 +13,7 @@ coverImage: "./images/tips-for-learning-how-to-code.png"
 excerpt: ""
 ---
 
-Learning isn't easy.
+Learning is hard.
 
 Learning is a roller coaster of highs and lows. Confusion reigns supreme, and breakthroughs are amazing!
 

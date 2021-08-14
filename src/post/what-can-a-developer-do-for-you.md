@@ -2,6 +2,7 @@
 title: "What Can a Developer Do For You?"
 slug: "what-can-a-developer-do-for-you"
 date: "2018-11-06"
+pillar: false
 categories: 
   - "developer-collaboration"
 tags: 

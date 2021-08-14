@@ -2,6 +2,7 @@
 title: "3 CSS Tweaks to Customize Your Squarespace Website"
 slug: "3-css-tweaks-squarespace"
 date: "2018-11-13"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

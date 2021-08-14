@@ -2,6 +2,7 @@
 title: "How to Overcome Perfectionism as Web Developer"
 slug: "overcome-perfectionism-as-an-entrepreneur"
 date: "2018-05-07"
+pillar: false
 categories: 
   - "productivity"
 tags: 

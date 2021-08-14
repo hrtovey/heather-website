@@ -16,52 +16,6 @@
     </section>
     <section class="page-section">
       <div class="grid">
-        <h2 class="grid__item">Useful Resources</h2>
-      </div>
-      <div class="cards-list grid align-stretch">
-        <div class="card grid__item medium--6 large--4 card--image">
-          <a class="card__link" href="https://getdesignresources.com/">
-            <div class="card__image">
-              <g-image src="~/assets/images/getdesignresourcespattern.png" quality='100' />
-            </div>
-            <div class="card__info">
-              <h3 class="card__title">Get Design Resources</h3>
-              <div class="card__description">
-                <p>A curated collection of 100+ useful resources for web design and development. Maintained by me. 🙂</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="card grid__item medium--6 large--4 card--image">
-          <g-link class="card__link" to="/squarespace-id-finder">
-            <div class="card__image">
-              <g-image src="~/assets/images/sqs-extension.png" />
-            </div>
-            <div class="card__info">
-              <h3 class="card__title">Squarespace ID Finder</h3>
-              <div class="card__description">
-                <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
-              </div>
-            </div>
-          </g-link>
-        </div>
-        <div class="card grid__item medium--6 large--4 card--image">
-          <g-link class="card__link" to="/product/squarespace-blog-footer-plugin/">
-            <div class="card__image">
-              <g-image src="~/assets/images/blog-footer-plugin-1.png" />
-            </div>
-            <div class="card__info">
-              <h3 class="card__title">Blog CTA Plugin</h3>
-              <div class="card__description">
-                <p>A Squarespace plugin to add a consistent footer to the blog posts of your choice. Edit the footer in one place instead of editing every post.</p>
-              </div>
-            </div>
-          </g-link>
-        </div>
-      </div>
-    </section>
-    <section class="page-section">
-      <div class="grid">
         <h2 class="grid__item">Latest Articles</h2>
       </div>
       <div class="grid align-stretch">

@@ -50,6 +50,13 @@
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    svg {
+        margin-right: 5px;
+        margin-top: -3px;
+    }
 }
 
 // Cart Icon
@@ -193,6 +200,20 @@
         padding-top: 0;
       }
     }
+
+    &.page-section--narrow {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.page-section--header {
+        text-align: center;
+    }
+
+    img {
+        margin-bottom: 1.5rem;
+    }
 }
 
 // Post Cards
@@ -275,6 +296,7 @@
     .card__meta-item {
         margin-right: 10px;
         line-height: 1;
+        margin-top: 0;
         margin-bottom: 10px;
     }
 
@@ -350,6 +372,7 @@
     }
 
     .content__meta-item {
+        margin-top: 0;
         margin-bottom: 0;
     }
 }
@@ -357,6 +380,10 @@
 .content__main img {
     display: block;
     margin: auto;
+}
+
+.page--post .content__main img {
+    margin: 1rem 0;
 }
 
 .content__main h2 {
@@ -691,6 +718,131 @@ form[name="contact"] {
         @media (max-width: 640px) {
             .grid__item {
                 text-align: center;
+            }
+        }
+    }
+}
+
+// Pillar Posts
+.pillar-post {
+    .table-of-contents {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .toc-list {
+        justify-content: flex-start;
+
+        p {
+            margin: 0;
+        }
+
+
+        .card {
+            margin-bottom: 20px;
+        }
+        .grid__item {
+            @media (min-width: $medium) {
+                &.medium--6 {
+
+                    &:nth-child(odd) {
+                        padding-right: 8px;
+                    }
+
+                    &:nth-child(even) {
+                        padding-left: 8px;
+                    }
+                }
+            }
+            
+            @media (min-width: $large) {
+
+                &.large--3 {
+
+                    padding-left: 8px;
+                    padding-right: 8px;
+    
+                    &:nth-child(4n+1) {
+                        padding-left: 20px;
+                    }
+    
+                    &:nth-child(4n+4) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+
+        
+
+        .toc-list__item {
+            .toc-item-number {
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            &:not(:first-child):not(:last-child) {
+                .toc-item-number {
+                    &:before {
+                        content: attr(data-link-number);
+                        font-size: 30px;
+                        font-family: $headlineFontFamily;                    }
+                }
+            }
+
+            &:first-child {
+                .toc-item-number {
+                    background-image: url(./images/waving.svg);
+                    background-position: center;
+                    background-size: 75%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &:last-child {
+                .toc-item-number {
+                    background-image: url(./images/fireworks.svg);
+                    background-position: center;
+                    background-size: 120%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .card__link {
+                padding-top: 2vw;
+                padding-bottom: 2vw;
+            }
+
+            .card__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .card__description {
+                font-size: 14px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .card__title {
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            .toc__info {
+                width: calc(100% - 70px);
             }
         }
     }

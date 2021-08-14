@@ -2,6 +2,7 @@
 title: "Pure CSS Designs"
 slug: "creative-projects"
 date: "2020-04-08"
+pillar: false
 categories: 
   - "web-development"
 coverImage: "./images/pure-css-designs.png"

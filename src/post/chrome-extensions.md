@@ -2,6 +2,7 @@
 title: "9 Useful Chrome Extensions for Web Developers"
 slug: "chrome-extensions"
 date: "2018-09-11"
+pillar: false
 categories: 
   - "web-development"
 tags: 

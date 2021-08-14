@@ -1,5 +1,5 @@
 <template>
-    <div class="content__wrapper">
+    <div class="content__wrapper pillar-post">
         <header class="content__header">
             <h1 class="h2">{{ $page.post.title }}</h1>
             <div class="content__meta">
@@ -12,6 +12,8 @@
             </div>
         </header>
         <section class="table-of-contents">
+            <div class="toc-list grid align-stretch" v-html="formatToC($page.post.content)">
+            </div>
         </section>
         <article class="content__main" v-html="$page.post.content"></article>
         <section class="content__newsletter">
@@ -47,7 +49,30 @@ export default {
 	  },
 	  createTitleLink(categoryTitle) {
 		  return `/blog/category/${categoryTitle}`;
-	  }
+	  },
+      formatToC(content) {
+          let frag = document.createRange().createContextualFragment(content);
+          let toc = frag.querySelectorAll('h2');
+          let sectionContainer = ``;
+          toc.forEach((h2, index, array) => {
+            let tocItem = `
+                <div class="card grid__item medium--6 large--3 toc-list__item">
+                    <a class="card__link grid__item toc-link" href="#${h2.id}">
+                        <div class="card__info">
+                            <div class="toc-item-number" data-link-number="${index}"></div>
+                            <div class="toc__info">
+                                <p class="card__description">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[0] : index === 0 ? 'Introduction': index === (array.length - 1) ? 'Conclusion' : `Section ${index}`}</p>
+                                <p class="card__title">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[1] : h2.textContent.split(':')[0]}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>`;
+            sectionContainer += tocItem;
+            
+
+          });
+          return sectionContainer;
+      }
   }
 }
 </script>

@@ -2,6 +2,7 @@
 title: "9 Tips for Growing Your Business"
 slug: "learn-what-you-need"
 date: "2018-06-05"
+pillar: false
 categories: 
   - "productivity"
 tags: 

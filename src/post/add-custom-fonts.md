@@ -2,6 +2,7 @@
 title: "How to Add Custom Fonts to Squarespace"
 slug: "add-custom-fonts"
 date: "2018-08-21"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

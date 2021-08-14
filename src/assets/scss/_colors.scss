@@ -71,6 +71,16 @@ footer {
 }
 
 
+.toc-item-number {
+    background: $color-light-accent;
+}
+
+
+.table-of-contents {
+    background: $light-blue;
+}
+
+
 
 .card__meta-item:not(.card__category), .card__description {
     color: $color-light-text--secondary;

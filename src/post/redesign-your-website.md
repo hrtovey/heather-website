@@ -2,6 +2,7 @@
 title: "Is it Time to Redesign Your Website?"
 slug: "redesign-your-website"
 date: "2018-04-24"
+pillar: false
 categories: 
   - "web-design"
 tags: 

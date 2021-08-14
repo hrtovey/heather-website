@@ -2,6 +2,7 @@
 title: "How to Become a More Efficient Web Developer with the Pomodoro Technique"
 slug: "time-tracking"
 date: "2018-06-26"
+pillar: false
 categories: 
   - "productivity"
 tags: 

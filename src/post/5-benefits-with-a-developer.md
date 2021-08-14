@@ -2,6 +2,7 @@
 title: "5 Benefits You Gain From Working With a Developer"
 slug: "5-benefits-with-a-developer"
 date: "2018-08-07"
+pillar: false
 categories: 
   - "developer-collaboration"
 tags: 

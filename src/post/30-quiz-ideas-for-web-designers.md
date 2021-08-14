@@ -2,6 +2,7 @@
 title: "30 Useful Quiz Ideas To Get Web Design Leads"
 slug: "30-quiz-ideas-for-web-designers"
 date: "2018-08-14"
+pillar: false
 categories: 
   - "productivity"
 tags: 
@@ -43,7 +44,7 @@ First things first, let's talk about how to go about writing a quiz.
 2. **Start with the results first.** What outcomes do you want to lead your readers to?
 3. **Write 5-10 quiz questions.** You want to keep your quiz short enough to hold your reader's interest. Use this [Quiz Content Worksheet](http://help.tryinteract.com/getting-started/quiz-content-worksheet) provided by Interact to stay organized.
 4. **Find interesting and relevant photos.** The best quizzes involve stimulating visuals to go with your words.
-5. **Build your quiz!** Choose a quiz platform that works for you. I chose to use [Interact](https://www.tryinteract.com#oid=94736_4020) (affiliate link) several months ago after seeing the brand pop up on a couple of quizzes that I enjoyed taking. I've had a great experience and will be sticking with their service.
+5. **Build your quiz!** Choose a quiz platform that works for you. I chose to use [Interact](https://interact.grsm.io/htovey) (affiliate link) several months ago after seeing the brand pop up on a couple of quizzes that I enjoyed taking. I've had a great experience and will be sticking with their service.
 6. **Connect your quiz results to your newsletter.** Get interested readers onto your newsletter and offer them more valuable content made especially for them.
 7. **Embed your quiz onto your website.** You can embed your quiz directly on your website to help keep your readers on your site longer. Let people know you have a quiz! Don't hide it. Encourage people to try it out.
 8. **Fine tune your quiz over time.** If the quiz platform you choose to use has analytics (Interact does), use those statistics to find confusing questions or unexpected results. Make your quiz better as you get more results.
@@ -109,6 +110,6 @@ If you're looking for ways to generate more business, try adding a quiz to your 
 - get people talking about your company
 - and more!
 
-Use a platform like [Interact](https://www.tryinteract.com#oid=94736_4020) (affiliate link) to make setting up your quiz easier and faster. Use your platform to connect your quiz to your newsletter and use the analytics provided to make your quiz better over time.
+Use a platform like [Interact](https://interact.grsm.io/htovey) (affiliate link) to make setting up your quiz easier and faster. Use your platform to connect your quiz to your newsletter and use the analytics provided to make your quiz better over time.
 
 Armed with the tips, ideas, and inspiration from this article, you're well on your way to creating the ideal quiz for your business.

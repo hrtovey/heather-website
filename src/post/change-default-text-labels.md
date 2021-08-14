@@ -2,6 +2,7 @@
 title: "How to Change Default Text Labels in Squarespace"
 slug: "change-default-text-labels"
 date: "2018-11-21"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

@@ -3,6 +3,7 @@ title: "6 Reasons Why You Shouldn't Use Squarespace"
 slug: "why-you-shouldnt-use-squarespace"
 date: "2018-10-30"
 lastModified: "2021-08-07"
+pillar: false
 categories: 
   - "squarespace"
 coverImage: "./images/reasons-why-you-should-not-use-squarespace.png"

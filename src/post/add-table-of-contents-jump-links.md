@@ -2,6 +2,7 @@
 title: "How to Create a Table of Contents for Your Article [Quick Tip]"
 slug: "add-table-of-contents-jump-links"
 date: "2018-05-22"
+pillar: false
 categories: 
   - "squarespace"
 tags: 
