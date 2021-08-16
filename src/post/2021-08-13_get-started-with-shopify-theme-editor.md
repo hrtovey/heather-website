@@ -21,23 +21,18 @@ The Theme Editor doesn't change the content in your product information or blog 
 
 The Theme Editor can be used to customize each theme separately. Settings changed in one theme will not affect settings in another theme. So you can feel free to duplicate themes and play around with settings and sections without disrupting the live site.
 
-## A Quick Walkthrough
-The Shopify Theme Editor can be loosely divided into 2 areas:
-- Top Bar
-- Sidebar
-
+## Top Bar
 ![ The top bar in the Shopify Online Store 2.0 has different buttons and features like the Exit button, theme information, Theme Actions dropdown menu, Template Picker, Device Preview, and Undo, Redo, and Save buttons. ](./images/top-bar.png)
 
-### Top Bar
-The top bar is where you'll find some controls to help you more easily navigate and view the different theme settings.
+The Shopify Theme Editor can be loosely divided into 2 areas: the Top Bar and the Sidebar. The top bar is where you'll find some controls to help you more easily navigate and view the different theme settings.
 
-#### 1. Exit Button
+### 1. Exit Button
 ![ The exit button shows up in the very left-hand side of the top bar. ](./images/exit-theme-status.png)
 The Exit button will quickly take you out of the Theme Editor and back to the Themes admin screen.
 
 
 
-#### 2. Theme Information
+### 2. Theme Information
 ![ Theme name, "Dawn", is to the right of the Exit button. Theme status is shown to the right of the theme name. In this theme status, there is a green dot to the left of the word "Live". The green dot and the word "Live" share a lighter green background. Theme Actions is a dropdown menu with a 3 dot icon as the toggle button. It's placed to the right of the Theme name and status. Inside this dropdown menu, you have the Theme Information: "Dawn 2.0.0-alpha.23" and "Design and support by Shopify" directly underneath that. Underneath this information, you will find the Theme Action links (noted below). ](./images/theme-actions.png)
 Here, you'll find:
 - your theme name
@@ -50,40 +45,40 @@ Here, you'll find:
   - the support page associated with this theme (default is Shopify support, but many theme developers have their own support pages)
 
 
-#### 3. Template Picker
+### 3. Template Picker
 ![The template picker is a dropdown menu with the word "Home page" as the default option because we are on the home page. When this dropdown menu is open, there is a search bar at the top where you can "Search Online Store". Underneath the search bar is a list of Templates. In this list, we have Home Page, Products, Collections, Collections List, and Pages. The image is cut off indicating that there may be more choices below Pages. Products, Collections, and Pages have right arrows on the very right hand side of the dropdown menu indicating that clicking on them will show you specific Product, Collection, and Page templates.](./images/template-picker.png)
 In the middle of the top bar, you'll find a dropdown list of templates. This allows you to quickly and easily switch between all the templates available in your theme. 
 
 ![An overlay modal labeled "Create a Template" sits on the screen over the page in the Theme Editor. It has settings that allow you to create a template to customize how your content is displayed. After it's published, you can assign the template to a page in the Shopify admin. Settings exist for name (with a maximum of 25 characters). You can also use a dropdown box labeled "Based on" to pick the template that you're basing this template off of. Its initial value is set to Default Product in this example.](./images/create-a-template.png)
 If your theme has Sections Everywhere support, you'll also be able to create new templates from here.
 
-#### 4. Device Preview
+### 4. Device Preview
 ![The device preview shows a desktop computer icon by default. The open dropdown menu has Mobile, Desktop, and Fullscreen options.](./images/device-preview.png)
 The device preview lets you switch between Desktop and Mobile views of your theme. It also allows you to go full screen if you want to temporarily hide the sidebar settings.
 
 ![The default desktop view is replaced with a smaller version of the website seen through a frame shaped like a mobile device.](./images/mobile-preview.png)
 THe Mobile preview is a quick way to check that your theme looks good on Mobile devices, but it can't fully replace actually testing on mobile devices. So don't skimp there.
 
-#### 5. Undo, Redo, and Save
+### 5. Undo, Redo, and Save
 ![An undo button and redo button are grayed out. To the right of these buttons sits the Save button. The Save button is also grayed out.](./images/undo-redo-save.png)
 
 ![An undo button and redo button sit next to each other. The undo button is highlighted. The redo button is grayed out. To the right of these buttons sits the Save button. The Save button is now green.](./images/undo-highlighted.png)
 Here, you'll find buttons to let you undo your previous changes and redo them if you want to add the changes back in. You can also Save your theme from here. The Save button is grayed out unless you have made changes. If you can save the theme, then it becomes a green button instead and is no longer disabled.
 
-### Sidebar
+## Sidebar
 
 ![A lot of information shows up in this panel including template name, how many pages it's assigned to, a button to change the current page being viewed, a link to preview the page, a list of individual sections on the template (including any header and footer sections). There are blocks inside of one section and you can add a new section.](./images/sections-sidebar.png)
 The sidebar is where we really get into the meat and potatoes of customizing the theme.
 
 
 
-#### 1. Template Information
+### 1. Template Information
 ![](./images/template-information.png)
 Up at the top of this sidebar, you'll see the name of the template you're viewing as well as how many pages it is assigned to. You can work on templates that haven't been assigned to Pages yet.
 
 You'll also see a preview link for the particular page you're viewing. You can press the "Change" button to change the preview to any page on your site. This may even be a page that is currently associated with another template. This gives you a lot of flexibility for trying different layouts and sections on a template.
 
-#### 2. Section Settings
+### 2. Section Settings
 The Section Settings is where you'll find a list of all the sections currently on the template. They are listed in order from top to bottom on the page. For example:
 - Announcement Bar
 - Header
@@ -106,7 +101,7 @@ If you are on a Sections Everywhere-enabled template, you'll be able to add addi
 
 Each section can be clicked into to find the specific section settings available. If your screen is large enough, you'll find these settings show up on a right sidebar on your screen. Otherwise, they'll show up in the left sidebar.
 
-#### 3. Theme Settings
+### 3. Theme Settings
 At the very bottom of the sidebar, you'll find the Theme Settings. This contains the global (or site-wide) settings that affect the entire website.
 
 ![In Theme Settings, there is a Colors settings panel that includes Primary Colors (solid button label, accent 1 and accent 2, each with color pickers next to them) and Secondary Colors. The image gets cut off indicating there may be more settings below.](./images/theme-settings.png)

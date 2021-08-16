@@ -49,8 +49,8 @@
           </svg>
         </div>
         <div class="grid__item medium--6">
-          <h1 class="hero-headline">Thank you!</h1>
-          <p>I'll get in touch as soon as I'm able.</p>
+          <h1 class="hero-headline">Yay!</h1>
+          <p>Thank you for subscribing. <br>I'll see you in your inbox soon!</p>
         </div>
       </div>
     </section>

@@ -614,7 +614,7 @@ form[name="contact"] {
     }
 
     textarea {
-        min-height: 500px;
+        min-height: 200px;
     }
 
     .sender-info > div, .message-wrapper {
@@ -706,8 +706,7 @@ form[name="contact"] {
 }
 
 .page--thank-you {
-    .grid {
-        justify-content: center;
+    .grid--thank-you {
 
         @media (min-width: 641px) {
             .grid__item:first-child {

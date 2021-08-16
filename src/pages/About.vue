@@ -9,7 +9,7 @@
         <div class="grid">
             <div class="grid__item">
                 <p>Hello and welcome!</p>
-                <p>My name is Heather Tovey, and I create all of the content and resources here at heathertovey.com. I'm a self-taught developer (with thanks to the many resources that other developers have created), and I love teaching and sharing resources. I'm currently a Front-End Developer at iamota, a Shopify Plus Design &amp; Development agency.</p>
+                <p>My name is Heather Tovey, and I create all of the content and resources here at heathertovey.com. I'm a self-taught developer (with thanks to the many resources that other developers have created), and I love teaching and sharing resources. I'm currently a Front-End Developer at <a href="https://www.iamota.com/" target="_blank">iamota</a>, a Shopify Plus Design &amp; Development agency.</p>
                 <div>
                     <g-image src="~/assets/images/heather_teaching.jpg" />
                 </div>
