@@ -22,12 +22,12 @@ The Theme Editor doesn't change the content in your product information or blog 
 The Theme Editor can be used to customize each theme separately. Settings changed in one theme will not affect settings in another theme. So you can feel free to duplicate themes and play around with settings and sections without disrupting the live site.
 
 ## Top Bar
-![ The top bar in the Shopify Online Store 2.0 has different buttons and features like the Exit button, theme information, Theme Actions dropdown menu, Template Picker, Device Preview, and Undo, Redo, and Save buttons. ](./images/top-bar.png)
+![ The top bar in the Shopify Online Store 2.0 has different buttons and features like the Exit button, theme information, Theme Actions dropdown menu, Template Picker, Device Preview, and Undo, Redo, and Save buttons. ](./images/tour/tour-theme-editor.png)
 
 The Shopify Theme Editor can be loosely divided into 2 areas: the Top Bar and the Sidebar. The top bar is where you'll find some controls to help you more easily navigate and view the different theme settings.
 
 ### 1. Exit Button
-![ The exit button shows up in the very left-hand side of the top bar. ](./images/exit-theme-status.png)
+![ The exit button shows up in the very left-hand side of the top bar. ](./images/tour/tour-exit.png)
 The Exit button will quickly take you out of the Theme Editor and back to the Themes admin screen.
 
 
