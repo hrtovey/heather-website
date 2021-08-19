@@ -120,7 +120,7 @@ module.exports = {
         maxItems: 25,
         nodeToFeedItem: node => ({
           title: node.title,
-          date: node.date,
+          date: new Date(node.date),
           content: node.excerpt
         })
       }
