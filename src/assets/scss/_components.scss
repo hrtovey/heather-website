@@ -846,3 +846,29 @@ form[name="contact"] {
         }
     }
 }
+
+.newsletter {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    .newsletter__form {
+        width: calc(100% * (6 / 12));
+        
+
+        // Mailerlite Overrides
+        #mlb2-4538002.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+            background: transparent;
+            max-width: unset;
+        }
+
+    }
+
+    svg {
+        width: calc(100% * (3 / 12));
+    }
+}
+
+
+
