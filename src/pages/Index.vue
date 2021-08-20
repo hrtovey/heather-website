@@ -30,7 +30,8 @@
                         <h2>Get started with Shopify development today.</h2>
                         <p>Sign up to receive weekly tips, reviews, and recommendations.</p>
                       </div>
-                      <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/u4i0r7" data-code="u4i0r7" method="post" target="_blank" name="newsletter">
+                      <a class="button" href="https://www.subscribepage.com/shopify-coding">Let's Go!</a>
+                      <!-- <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/u4i0r7" data-code="u4i0r7" method="post" target="_blank" name="newsletter">
                         <div class="ml-form-formContent">
                           <div class="ml-form-fieldRow ml-last-item">
                             <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
@@ -44,7 +45,7 @@
                           <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
                         </div>
                         <input type="hidden" name="anticsrf" value="true">
-                      </form>
+                      </form> -->
                     </div>
                     <div class="ml-form-successBody row-success" style="display:none">
                       <div class="ml-form-successContent">
@@ -97,11 +98,11 @@ export default {
       class: 'page--home'
     }
   },
-  mounted() {
-    let externalScript = document.createElement('script')
-    externalScript.setAttribute('src', 'https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c')
-    document.head.appendChild(externalScript)
-  },
+  // mounted() {
+  //   let externalScript = document.createElement('script')
+  //   externalScript.setAttribute('src', 'https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c')
+  //   document.head.appendChild(externalScript)
+  // },
   methods: {
     ml_webform_success_4538002() {
       var r=ml_jQuery||jQuery;r(".ml-subscribe-form-4538002 .row-success").show(),r(".ml-subscribe-form-4538002 .row-form").hide()
