@@ -6,7 +6,7 @@ pillar: false
 categories: 
   - "shopify"
 coverImage: "./images/getting-started-shopify-theme-editor.png"
-excerpt: "Wondering where to host your store? Choose Shopify!"
+excerpt: "Not sure where to get started with customizing Shopify themes? Need a quick walkthrough so you can dive in? Let's break it down."
 ---
 Not sure where to get started with customizing Shopify themes? Need a quick walkthrough so you can dive in? Let's break it down.
 
