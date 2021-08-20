@@ -23,6 +23,9 @@
               <g-link to="/about/" class="menu__link">About</g-link>
             </li>
             <li class="menu__item">
+              <g-link to="/shop/" class="menu__link">Shop</g-link>
+            </li>
+            <li class="menu__item">
               <g-link to="/contact/" class="menu__link">Contact</g-link>
             </li>
             <li class="menu__item">
@@ -71,6 +74,14 @@
             <g-link v-else to="/blog/" class="menu__link">Blog</g-link>
           </li>
           <li class="mobile-menu__item">
+            <a v-if="$route.path === '/'" href="/about/" class="menu__link">About</a>
+            <g-link v-else to="/about/" class="menu__link">About</g-link>
+          </li>
+          <li class="mobile-menu__item">
+            <a v-if="$route.path === '/'" href="/shop/" class="menu__link">Shop</a>
+            <g-link v-else to="/shop/" class="menu__link">Shop</g-link>
+          </li>
+          <li class="mobile-menu__item">
             <a v-if="$route.path === '/'" href="/contact/" class="menu__link">Contact</a>
             <g-link v-else to="/contact/" class="menu__link">Contact</g-link>
           </li>
@@ -93,6 +104,7 @@
                 <li><g-link to="/" class="footer__link">Home</g-link></li>
                 <li><g-link to="/blog/" class="footer__link">Blog</g-link></li>
                 <li><g-link to="/about/" class="footer__link">About</g-link></li>
+                <li><g-link to="/shop/" class="footer__link">Shop</g-link></li>
                 <li><g-link to="/contact/" class="footer__link">Contact</g-link></li>
               </ul>
             </nav>
