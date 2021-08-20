@@ -44,19 +44,53 @@ html {
   // text-size-adjust: auto;
 
   @media (max-width: 1024px) {
-    font-size: 112%;
+    font-size: 120%;
   }
 
   @media (max-width: 640px) {
     font-size: 100%;
   }
+
+  scroll-behavior: smooth;
 }
 
 /* Copy & Lists */
 p {
   line-height: $leading;
+  margin-top: $leading;
   margin-bottom: $leading;
+}
+
+.content__main > p:first-child {
   margin-top: 0;
+}
+
+article.content__main {
+  h2, h3 {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+
+    &:after {
+      content: '';
+      flex-grow: 1;
+      height: 2px;
+      background: #ffc73f;
+      min-width: 20px;
+      margin: auto;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  & + p {
+    margin-top: 0;
+  }
 }
 
 ul, ol {
@@ -103,19 +137,24 @@ h2, .h2 {
   }
 }
 
-h3, .h3, .page--post .content__main h2 {
+h3, .h3 {
   font-size: 1 * $scale * 1rem;
   @media (max-width: 640px) {
     font-size:1rem;
   }
 }
 
-h4, .page--post .content__main h3 {
+h4  {
   font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 0;
 }
-  .page--post .content__main h3 {
-    margin-bottom: 0;
-  }
+.page--post .content__main h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
 
 h5 {
   font-size: $scale / 3 * 1rem;
@@ -336,13 +375,34 @@ pre[class*="language-"] {
    cursor: help;
  }
  ul {
-   margin-top: 0;
+   margin-top: 0.5rem;
  }
 
  ul p {
-   margin-bottom: 0;
+   margin-top: 0;
+ }
+
+ p + ul {
+   margin-top: -1rem;
+ }
+
+ p:first-child {
+   margin-top: 0;
  }
 
  .content__main > ul > li {
    margin-bottom: 1rem;
  }
+
+ .page--post  .content__main > ul > li {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  li {
+    list-style-image: url(./images/star.svg);
+    li {
+      list-style-image: none;
+    }
+  }
+}

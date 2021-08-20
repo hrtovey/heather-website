@@ -2,6 +2,7 @@
 title: "The Ultimate Pre-Launch Checklist for Your Squarespace Website"
 slug: "pre-launch-checklist"
 date: "2018-09-25"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

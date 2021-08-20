@@ -1,9 +1,10 @@
 ---
-title: "How to Become a Better Entrepreneur with the Pomodoro Technique"
+title: "How to Become a More Efficient Web Developer with the Pomodoro Technique"
 slug: "time-tracking"
 date: "2018-06-26"
+pillar: false
 categories: 
-  - "business"
+  - "productivity"
 tags: 
   - "pomodoro-technique"
   - "resources"
@@ -12,24 +13,19 @@ coverImage: "./images/become-a-better-entrepreneur-using-pomodoro-method.png"
 excerpt: ""
 ---
 
-There simply isn't enough time in the day for everything that we have to do as entrepreneurs.
+There simply isn't enough time in the day for everything that we have to do.
 
-Between writing content, marketing our services, and meeting with potential clients, it sometimes feels like there's not enough time for the actual work that gets us paid.
+Between meetings, website updates, scoping new projects, developing new features, it can sometimes feel like your schedule is out of control.
 
-As entrepreneurs, we wear a lot of hats. So how do you stay focused and make sure that all the work is getting done?
+And if you're learning a new skill, it can be easy to get distracted.
 
-
-I'm a big believer in time tracking. I love looking back on the statistics of the past week or month or year and seeing where I can make my work a bit more efficient.
-
-When I first started tracking my time, I found that my processes were a little all over the place. I'd often have multiple projects going on at once. I spent too much time switching tracks and getting into the right headspace for each project.
-
-Now, I use the Pomodoro Technique to help keep me on track.
+So how do you stay focused and make progress? Try the Pomodoro Technique.
 
 ## What is the Pomodoro Technique?
 
 The Pomodoro Technique was created by [Francesco Cirillo](https://francescocirillo.com/) and is a simple method to track your time.
 
-Cirillo encourages you to use a Pomodoro timer to track your time. The system works like this:
+Cirillo encourages you to use a specific Pomodoro timer to track time, but any timer will do. The system works like this:
 
 1. 25 minutes of focused work
 2. 5-minute break
@@ -50,21 +46,21 @@ You can get more done with these focused bursts of productivity than if you just
 
 ## How I Use the Pomodoro Technique
 
-I don't have a cute Pomodoro timer. I work in a very digital field, so it makes sense that the tools I prefer also happen to be digital. (Plus, I learned the hard way that my daughter would think the timer is a toy and I'd never see it again.)
+I don't have a cute Pomodoro timer. I work in a very digital field, so it makes sense that the tools I prefer also happen to be digital. (Plus, I learned the hard way that kids think cute timers are toys. Little thieves.)
 
-I've tried a number of solutions (including making my own [Pomodoro timer](http://hrtovey.github.io/pomodoro-timer)), but what I'm really enjoying using right now is [Pomodone](https://pomodoneapp.com/).
+I've tried a number of solutions (I even made my own [Pomodoro timer](http://hrtovey.github.io/pomodoro-timer) years ago), but what I'm really enjoying using right now is [Pomodone](https://pomodoneapp.com/).
 
 ![ Pomodone has a ton of different integrations including popular tools like ToDoist, Trello, Asana, and more. ](./images/pomodone.png)
 
 Pomodone allows you track your time in Pomodoro sessions, but also has a lot of extra features I find really useful:
 
-- integration with ToDoist (my to-do list of choice)
-- integration with other 3rd-party tools (Asana, Basecamp, Slack, Trello, Wunderlist, Evernote, etc.)
+- integration with Asana (my to-do list of choice)
+- integration with other 3rd-party tools (ToDoist, Basecamp, Slack, Trello, Wunderlist, Evernote, etc.)
 - daily, weekly, and monthly time tracking reports
 - desktop app that pops up and reminds me when I haven't started a timer in a while
 - a free version with enough basics that make it worth checking out
 
-Every day, I sit down and start up ToDoist and Pomodone. I spend the first 25-minute Pomodoro session getting caught up on what I need to focus on that day and any urgent emails that come in from clients. The following Pomodoros are spent working on the different todos I need to complete that day.
+Every day, I sit down and start up Asana and Pomodone. I spend the first 25-minute Pomodoro session getting caught up on what I need to focus on that day and any urgent emails that come in from clients. The following Pomodoros are spent working on the different todos I need to complete that day.
 
 If I finish a todo item early, I just switch tracks to the next project. Pomodone makes switching to different items within the same Pomodoro session simple, which is a feature I particularly appreciate.
 

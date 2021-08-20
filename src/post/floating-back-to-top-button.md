@@ -2,6 +2,8 @@
 title: "How To Create a Floating Back-to-Top Button"
 slug: "floating-back-to-top-button"
 date: "2018-07-24"
+lastModified: "2019-05-24"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

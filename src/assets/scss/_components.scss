@@ -45,11 +45,24 @@
     }
 }
 
+.menu.primary-menu {
+    .menu__item:last-child {
+        margin-right: 0;
+    }
+}
+
 .menu__link {
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    svg {
+        margin-right: 5px;
+        margin-top: -3px;
+    }
 }
 
 // Cart Icon
@@ -193,6 +206,25 @@
         padding-top: 0;
       }
     }
+
+    &.page-section--large-gap {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &.page-section--narrow {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.page-section--header {
+        text-align: center;
+    }
+
+    img {
+        margin-bottom: 1.5rem;
+    }
 }
 
 // Post Cards
@@ -275,6 +307,7 @@
     .card__meta-item {
         margin-right: 10px;
         line-height: 1;
+        margin-top: 0;
         margin-bottom: 10px;
     }
 
@@ -350,6 +383,7 @@
     }
 
     .content__meta-item {
+        margin-top: 0;
         margin-bottom: 0;
     }
 }
@@ -359,19 +393,48 @@
     margin: auto;
 }
 
+.page--post .content__main img {
+    margin: 1rem 0;
+}
+
 .content__main h2 {
     margin-top: 5rem;
 }
 
 // Menu
 
-@media (min-width: 641px) {
+
+
+@media (min-width: 845px) {
     .menu__item--container {
         display: none;
     }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 845px) and (max-width: 1000px) {
+
+    .header {
+        padding-top: 0;
+    }
+    .navigation {
+        display: grid;
+
+        .logo {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .menu.primary-menu {
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .menu.secondary-menu {
+            grid-row: 1;
+            grid-column: 2;
+        }
+    }
+}
+
+@media (max-width: 844px) {
     .primary-menu {
         display: none;
     }
@@ -413,6 +476,10 @@
 
     @media (min-width: 521px) {
         right: 40px;
+    }
+
+    @media (min-width: 641px) {
+        right: 60px;
     }
 }
 
@@ -574,7 +641,7 @@ button.remove {
 }
 
 // Form
-form[name="contact"] {
+form[name="contact"], form[name="newsletter"] {
 
 
     label, input, textarea {
@@ -587,7 +654,7 @@ form[name="contact"] {
     }
 
     textarea {
-        min-height: 500px;
+        min-height: 200px;
     }
 
     .sender-info > div, .message-wrapper {
@@ -679,8 +746,7 @@ form[name="contact"] {
 }
 
 .page--thank-you {
-    .grid {
-        justify-content: center;
+    .grid--thank-you {
 
         @media (min-width: 641px) {
             .grid__item:first-child {
@@ -693,5 +759,229 @@ form[name="contact"] {
                 text-align: center;
             }
         }
+    }
+}
+
+// Pillar Posts
+.pillar-post {
+    .table-of-contents {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .toc-list {
+        justify-content: flex-start;
+
+        p {
+            margin: 0;
+        }
+
+
+        .card {
+            margin-bottom: 20px;
+        }
+        .grid__item {
+            @media (min-width: $medium) {
+                &.medium--6 {
+
+                    &:nth-child(odd) {
+                        padding-right: 8px;
+                    }
+
+                    &:nth-child(even) {
+                        padding-left: 8px;
+                    }
+                }
+            }
+            
+            @media (min-width: $large) {
+
+                &.large--3 {
+
+                    padding-left: 8px;
+                    padding-right: 8px;
+    
+                    &:nth-child(4n+1) {
+                        padding-left: 20px;
+                    }
+    
+                    &:nth-child(4n+4) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+
+        
+
+        .toc-list__item {
+            .toc-item-number {
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            &:not(:first-child):not(:last-child) {
+                .toc-item-number {
+                    &:before {
+                        content: attr(data-link-number);
+                        font-size: 30px;
+                        font-family: $headlineFontFamily;                    }
+                }
+            }
+
+            &:first-child {
+                .toc-item-number {
+                    background-image: url(./images/waving.svg);
+                    background-position: center;
+                    background-size: 75%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &:last-child {
+                .toc-item-number {
+                    background-image: url(./images/fireworks.svg);
+                    background-position: center;
+                    background-size: 120%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .card__link {
+                padding-top: 2vw;
+                padding-bottom: 2vw;
+            }
+
+            .card__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .card__description {
+                font-size: 14px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .card__title {
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            .toc__info {
+                width: calc(100% - 70px);
+            }
+        }
+    }
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .newsletter__form {
+        width: calc(100% * (7 / 12));
+        @media (max-width: 850px) {
+            width: 100%;
+        }
+        
+
+        // Mailerlite Overrides
+        #mlb2-4538002.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+            background: transparent;
+            max-width: unset;
+        }
+
+        form {
+            border-radius: 27px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            transition: border 0.4s ease;
+
+            .ml-form-formContent {
+                width: 100%;
+            }
+        }
+        .button {
+            width: 100%;
+        }
+
+        .ml-form-embedSubmit {
+            &:before, &:after {
+                content: "";
+            }
+        }
+
+        .form-control {
+            border: none;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    svg {
+        width: calc(100% * (4 / 12));
+        transform-box:fill-box;
+        @media (max-width: 850px) {
+            display: none;
+        }
+        * {
+            transform-box:fill-box;
+        }
+    }
+}
+
+
+.newsletter-icon {
+    transform-box:fill-box;
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transform-origin: center;
+    border: 1px solid black;
+}
+$icons: 10;
+
+@for $i from 1 through $icons {
+    .newsletter-icon:nth-of-type(#{$i}) {
+        animation-delay: calc(-0.5s * #{$i});
+    }
+}
+@keyframes floating {
+    0% {
+        transform: rotate(-5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(5deg) translateY(2px);
+    }
+    100% {
+        transform: rotate(-5deg) translateY(0);
     }
 }

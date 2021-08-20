@@ -2,6 +2,7 @@
 title: "4 Useful Tools to Boost Your Squarespace Design"
 slug: "boost-your-squarespace-design"
 date: "2018-07-17"
+pillar: false
 categories: 
   - "squarespace"
 tags: 

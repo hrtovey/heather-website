@@ -2,6 +2,7 @@
 title: "3 CSS Tweaks to Customize Your Squarespace Website"
 slug: "3-css-tweaks-squarespace"
 date: "2018-11-13"
+pillar: false
 categories: 
   - "squarespace"
 tags: 
@@ -47,8 +48,6 @@ To fix your header to the top of the page, drop this code in **Design > Advanced
 The cover pages offered through Squarespace are amazing, but require that you follow their strict design formula. Sometimes you need more flexibility.
 
 One way to design a page exactly the way you want is to use a regular page and then hide the distracting header, footer, announcement bar and cookie banner on just that page.
-
-For an example of what this might look like, check out my [newsletter sign-up page](/sign-up).
 
 To make your DIY cover pages less distracting, drop this code in that particular page’s **Settings (the cogwheel) > Advanced > Page Header Code Injection**.
 

@@ -1,16 +1,17 @@
 ---
-title: "9 Useful Chrome Extensions for Web Designers"
+title: "9 Useful Chrome Extensions for Web Developers"
 slug: "chrome-extensions"
 date: "2018-09-11"
+pillar: false
 categories: 
-  - "web-design"
+  - "web-development"
 tags: 
   - "resources"
 coverImage: "./images/useful-chrome-extensions-for-web-designers.png"
 excerpt: ""
 ---
 
-Curious to see what kind of tools and resources a Developer uses? Here’s a list of Chrome Extensions I use on a regular basis to speed up my workflow and generally make my online life a little bit better.
+Curious to see what kind of tools and resources a web developer uses? Here’s a list of Chrome Extensions I use on a regular basis to speed up my workflow and generally make my online life a little bit better.
 
 
 ### Loom

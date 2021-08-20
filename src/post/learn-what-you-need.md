@@ -1,9 +1,10 @@
 ---
-title: "9 Tips for Learning What You Need to Grow Your Business"
+title: "9 Tips for Growing Your Business"
 slug: "learn-what-you-need"
 date: "2018-06-05"
+pillar: false
 categories: 
-  - "business"
+  - "productivity"
 tags: 
   - "business-education"
   - "june-2018"
@@ -11,26 +12,22 @@ coverImage: "./images/tips-for-learning-what-you-need-to-grow-your-business.png"
 excerpt: ""
 ---
 
-You don't need that webinar. Put away that ebook. Unsubscribe from that podcast.
-
-We're **inundated** with information. It's no wonder that our attention spans are constantly being disrupted by the next new learning experience.
+We're **inundated** with information. And when you're growing your own business, you are bombarded with courses like "Earn your next 1 million overnight" and "Scaling to 6 Figures", etc.
 
 How many email newsletters have you signed up to? How many courses have you bought? How many ebooks have you downloaded?
 
-And how many of those did you actually complete or get valuable information from?
-
 If you're like most people, you probably have a ton of barely started courses waiting for your return.
 
-But don't get me wrong. I think learning is incredibly valuable. I believe that it's the best way to achieve growth personally and professionally.
+I think learning is incredibly valuable. I believe that it's the best way to achieve growth personally and professionally.
 
-But there's a better way to learn than to hop from course to course as time permits. The biggest key? **Know what you need to know next.**
+But there's a better way to learn to grow your business than to hop from course to course, never really learning anything along the way. The biggest key? **Figure out what you need to know now vs what you need to know later.**
 
 
  
 
 ## Where are you in your business life cycle?
 
-To really benefit from courses, ebooks, and webinars, you need to know what you should be learning.
+To really benefit from courses, ebooks, and webinars, you need to know what you should be learning now.
 
 The typical business life cycle has 6 stages.
 

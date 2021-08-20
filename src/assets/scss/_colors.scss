@@ -71,6 +71,16 @@ footer {
 }
 
 
+.toc-item-number {
+    background: $color-light-accent;
+}
+
+
+.table-of-contents {
+    background: $light-blue;
+}
+
+
 
 .card__meta-item:not(.card__category), .card__description {
     color: $color-light-text--secondary;
@@ -105,7 +115,7 @@ footer {
     border-bottom: 10px solid $color-light-background;
 }
 
-form[name="contact"] {
+form[name="contact"], form[name="newsletter"] {
     input, textarea {
         border: 2px solid $color-light-text;
     }
@@ -116,6 +126,15 @@ a.footer__link {
 
     &:hover {
         color: $color-light-accent;
+    }
+}
+
+.newsletter .newsletter__form form {
+    background: $white;  
+    border: 2px solid #dddddd;
+
+    &:focus-within { 
+        border: 2px solid $yellow;
     }
 }
 
@@ -202,7 +221,7 @@ a.footer__link {
         border-bottom: 10px solid $color-dark-background;
     }
 
-    form[name="contact"] {
+    form[name="contact"], form[name="newsletter"] {
         input, textarea {
             border: 2px solid $color-dark-text;
             background: $color-dark-card;
@@ -227,4 +246,17 @@ a.footer__link {
         border: 2px solid $color-dark-card;
     }
 
+
+    .newsletter .newsletter__form form {
+        background: $black--light;  
+        border: 2px solid #000000;
+
+        &:focus-within { 
+            border: 2px solid $yellow--light;
+        }
+
+        .button:hover {
+            background: $black;
+        }
+    }
 }

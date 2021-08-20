@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section>
+    <section class="page-section page-section--header">
       <div class="grid">
         <div class="grid__item">
           <h1>Digital Downloads</h1>

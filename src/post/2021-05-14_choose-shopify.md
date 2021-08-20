@@ -2,6 +2,7 @@
 title: "6 Reasons You Should Use Shopify For Your Online Store"
 slug: "choose-shopify"
 date: "2021-05-14"
+pillar: false
 categories: 
   - "shopify"
 coverImage: "./images/6-reasons-you-should-use-shopify.png"
