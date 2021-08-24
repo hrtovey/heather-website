@@ -10,6 +10,8 @@ excerpt: "Not sure where to get started with customizing Shopify themes? Need a 
 ---
 Not sure where to get started with customizing Shopify themes? Need a quick walkthrough so you can dive in? Let's break it down.
 
+<div class="callout">Want to save this reference for later? <a href="javascript:;" onclick="ml_webform_4597036('show')">Download your free PDF now.</a></div>
+
 ## What is the Shopify Theme Editor?
 The Shopify Theme Editor is where you and your clients can customize your theme. You'll find:
 - Site-wide theme settings like fonts and colors
@@ -22,7 +24,7 @@ The Theme Editor doesn't change the content in your product information or blog 
 The Theme Editor can be used to customize each theme separately. Settings changed in one theme will not affect settings in another theme. So you can feel free to duplicate themes and play around with settings and sections without disrupting the live site.
 
 ## Top Bar
-![ The top bar in the Shopify Online Store 2.0 has different buttons and features like the Exit button, theme information, Theme Actions dropdown menu, Template Picker, Device Preview, and Undo, Redo, and Save buttons. ](./images/tour/tour-theme-editor.png)
+![ The top bar in the Shopify Online Store 2.0 has different buttons and features like the Exit button, theme information, Theme Actions dropdown menu, Template Picker, Device Preview, and Undo, Redo, and Save buttons. ](./images/tour/tour-top-bar.png)
 
 The Shopify Theme Editor can be loosely divided into 2 areas: the Top Bar and the Sidebar. The top bar is where you'll find some controls to help you more easily navigate and view the different theme settings.
 
@@ -33,7 +35,7 @@ The Exit button will quickly take you out of the Theme Editor and back to the Th
 
 
 ### 2. Theme Information
-![ Theme name, "Dawn", is to the right of the Exit button. Theme status is shown to the right of the theme name. In this theme status, there is a green dot to the left of the word "Live". The green dot and the word "Live" share a lighter green background. Theme Actions is a dropdown menu with a 3 dot icon as the toggle button. It's placed to the right of the Theme name and status. Inside this dropdown menu, you have the Theme Information: "Dawn 2.0.0-alpha.23" and "Design and support by Shopify" directly underneath that. Underneath this information, you will find the Theme Action links (noted below). ](./images/tour/tour-theme-editor.png)
+![ Theme name, "Dawn", is to the right of the Exit button. Theme status is shown to the right of the theme name. In this theme status, there is a green dot to the left of the word "Live". The green dot and the word "Live" share a lighter green background. Theme Actions is a dropdown menu with a 3 dot icon as the toggle button. It's placed to the right of the Theme name and status. Inside this dropdown menu, you have the Theme Information: "Dawn 2.0.0-alpha.23" and "Design and support by Shopify" directly underneath that. Underneath this information, you will find the Theme Action links (noted below). ](./images/tour/tour-theme-information.png)
 Here, you'll find:
 - your theme name
 - the theme status: Live or Draft
@@ -66,13 +68,13 @@ Here, you'll find buttons to let you undo your previous changes and redo them if
 
 ## Sidebar
 
-![A lot of information shows up in this panel including template name, how many pages it's assigned to, a button to change the current page being viewed, a link to preview the page, a list of individual sections on the template (including any header and footer sections). There are blocks inside of one section and you can add a new section.](./images/tour/tour-theme-editor.png)
+![A lot of information shows up in this panel including template name, how many pages it's assigned to, a button to change the current page being viewed, a link to preview the page, a list of individual sections on the template (including any header and footer sections). There are blocks inside of one section and you can add a new section.](./images/tour/tour-sidebar.png)
 The sidebar is where we really get into the meat and potatoes of customizing the theme.
 
 
 
 ### 1. Template Information
-![](./images/tour/tour-theme-information.png)
+![](./images/tour/tour-template-preview.png)
 Up at the top of this sidebar, you'll see the name of the template you're viewing as well as how many pages it is assigned to. You can work on templates that haven't been assigned to Pages yet.
 
 You'll also see a preview link for the particular page you're viewing. You can press the "Change" button to change the preview to any page on your site. This may even be a page that is currently associated with another template. This gives you a lot of flexibility for trying different layouts and sections on a template.
@@ -87,16 +89,13 @@ The Section Settings is where you'll find a list of all the sections currently o
 
 Sections that are site-wide show above and below the Template-specific sections list. So any sections that are listed on theme.liquid, will have a divider to indicate that they are not part of the template-specific sections. If you edit the settings in these global sections, they will be reflected across the entire site.
 
-
-![](./images/tour/tour-theme-information.png)
+![Arrangement of panels in the Theme Editor on a large screen. While the sections are listed in the left bar, specific section settings are listed in the right sidebar. For example, if you choose the Image Banner section in the left sidebar, the right sidebar shows settings associated with the Image Banner section including first image, second image, and focal point.](./images/tour/tour-section-settings.png)
 
 Here, we can see that the Announcement Bar and Header sections are above the template-specific sections and the Footer section is below the template-specific sections.
 
 The template-specific section settings are not global. So if you change a section setting on one template, it is not reflected in that same section on another template. If you have multiple pages that use the same template, however, those sections will be updated across all of those pages.
 
 If you are on a Sections Everywhere-enabled template, you'll be able to add additional sections to the sections list.
-
-![Arrangement of panels in the Theme Editor on a large screen. While the sections are listed in the left bar, specific section settings are listed in the right sidebar. For example, if you choose the Image Banner section in the left sidebar, the right sidebar shows settings associated with the Image Banner section including first image, second image, and focal point.](./images/tour/tour-section-settings.png)
 
 Each section can be clicked into to find the specific section settings available. If your screen is large enough, you'll find these settings show up on a right sidebar on your screen. Otherwise, they'll show up in the left sidebar.
 
@@ -124,3 +123,8 @@ As of July 2021, we have access to Online Store 2.0 Features: Sections Everywher
 I hope that quick tour was helpful in getting familiar with the Shopify Theme Editor. From here, you should definitely take some time to create a Development store if you haven't already done so. Dawn is the theme that you'll find by default when you create a new Development store. Go and explore it and see what all you can do.
 
 If you have any questions or some of the information here needs clarifying, feel free to get in touch with me through my Contact page.
+
+<script>
+    var ml_webform_4597036 = ml_account('webforms', '4597036', 'g7d4t3', 'load');
+    ml_webform_4597036('animation', 'fadeIn');
+</script>
