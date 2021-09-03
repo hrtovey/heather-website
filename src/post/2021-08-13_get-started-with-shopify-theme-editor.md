@@ -10,7 +10,7 @@ excerpt: "Not sure where to get started with customizing Shopify themes? Need a 
 ---
 Not sure where to get started with customizing Shopify themes? Need a quick walkthrough so you can dive in? Let's break it down.
 
-<div class="callout">Want to save this reference for later? <a href="javascript:;" onclick="ml_webform_4597036('show')">Download your free PDF now.</a></div>
+<div class="callout"><div class="callout__info">Want to save this reference for later? <a href="javascript:;" onclick="ml_webform_4597036('show')">Download your free PDF now.</a></div></div>
 
 ## What is the Shopify Theme Editor?
 The Shopify Theme Editor is where you and your clients can customize your theme. You'll find:
@@ -124,7 +124,4 @@ I hope that quick tour was helpful in getting familiar with the Shopify Theme Ed
 
 If you have any questions or some of the information here needs clarifying, feel free to get in touch with me through my Contact page.
 
-<script>
-    var ml_webform_4597036 = ml_account('webforms', '4597036', 'g7d4t3', 'load');
-    ml_webform_4597036('animation', 'fadeIn');
-</script>
+<div class="callout"><div class="callout__info">Want to save this reference for later? <a href="javascript:;" onclick="ml_webform_4597036('show')">Download your free PDF now.</a></div></div>
