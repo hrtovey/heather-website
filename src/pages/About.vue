@@ -71,8 +71,7 @@
                         <h2>Get started with Shopify development today.</h2>
                         <p>Sign up to receive weekly tips, reviews, and recommendations.</p>
                       </div>
-                      <a class="button" href="https://www.subscribepage.com/shopify-coding">Let's Go!</a>
-                      <!-- <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/u4i0r7" data-code="u4i0r7" method="post" target="_blank" name="newsletter">
+                      <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/u4i0r7" data-code="u4i0r7" method="post" target="_blank" name="newsletter">
                         <div class="ml-form-formContent">
                           <div class="ml-form-fieldRow ml-last-item">
                             <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
@@ -86,7 +85,7 @@
                           <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
                         </div>
                         <input type="hidden" name="anticsrf" value="true">
-                      </form> -->
+                      </form>
                     </div>
                     <div class="ml-form-successBody row-success" style="display:none">
                       <div class="ml-form-successContent">
