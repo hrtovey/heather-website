@@ -1,5 +1,5 @@
 ---
-title: "How to Overcome Perfectionism as Web Developer"
+title: "How to Overcome Perfectionism as a Web Developer"
 slug: "overcome-perfectionism-as-an-entrepreneur"
 date: "2018-05-07"
 pillar: false

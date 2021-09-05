@@ -17,7 +17,7 @@
           <p>Available as a <a href="https://chrome.google.com/webstore/detail/squarespace-id-finder/igjamfnifnkmecjidfbdipieoaeghcff">Chrome extension</a> and <a href="https://addons.mozilla.org/en-CA/firefox/addon/squarespace-id-finder/">Firefox addon</a>, too!</p>
         </div>
         <div class="grid__item large--6">
-            <g-image src="~/assets/images/sqs-id-finder-video.gif" />
+            <img src="/assets/images/sqs-id-finder-video.gif" />
         </div>
       </div>
   </Layout>

@@ -887,6 +887,31 @@ form[name="contact"], form[name="newsletter"] {
     }
 }
 
+// Callout
+.callout {
+    background: white;
+    padding: 25px;
+    border: 2px solid #ffc73f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:before {
+        content: "";
+        background-image: url(./images/light-bulb.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        display: block;
+    }
+
+    .callout__info {
+        width: calc(100% - 70px);
+    }
+}
+
 .newsletter {
     display: flex;
     justify-content: space-between;
@@ -967,6 +992,9 @@ form[name="contact"], form[name="newsletter"] {
     transform-origin: center;
     border: 1px solid black;
 }
+
+
+// Animations
 $icons: 10;
 
 @for $i from 1 through $icons {
@@ -985,3 +1013,4 @@ $icons: 10;
         transform: rotate(-5deg) translateY(0);
     }
 }
+

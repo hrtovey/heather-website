@@ -158,9 +158,11 @@ export default {
   mounted() {
     this.theme = localStorage.getItem('theme') || 'theme-light';
     this.linkList = document.querySelectorAll('a[href^="http"]:not([href^="https://www.heathertovey.com"]');
-    this.linkList.forEach(link => {
-      link.addEventListener('click', this.reportToMicro);
-    })
+    if (this.linkList) {
+      this.linkList.forEach(link => {
+        link.addEventListener('click', this.reportToMicro);
+      })
+    }
   },
   data() {
     return {
