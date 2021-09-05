@@ -11,7 +11,7 @@ $mono: Courier, mono;
 $baseFontWeightNormal: 400;
 $baseFontWeightBold: 600;
 $headlineFontWeight: 900;
-$baseFontSize: 22  !default ;// in pixels. This would result in 22px on desktop
+$baseFontSize: 20  !default ;// in pixels. This would result in 22px on desktop
 $baseLineHeight: 1.5  !default; // how large the line height is as a multiple of font size
 $leading: $baseLineHeight * 1rem  !default;
 
@@ -397,7 +397,7 @@ pre[class*="language-"] {
 }
 
 main {
-  li {
+  ul li {
     list-style-image: url(./images/star.svg);
     li {
       list-style-image: none;
