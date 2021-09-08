@@ -19,19 +19,19 @@ In this article, I cover:
 - An example of how Liquid saves us time
 - Why Shopify created Liquid
 
-The code samples featured here assume that you have a basic understanding of HTML.
+
+
+<div class="callout">
+<p class="callout__info">
+The code samples featured here assume that you have a basic understanding of HTML. If you're not feeling confident yet, check out my article “<a href="/blog/frontend-development-resources/">Learn Front-End Development with These Free Resources</a>.”
+</p>
+</div>
 
 ## So what is Liquid anyway?
 
 Liquid is Shopify's template language.
 
 If you've seen other Liquid tutorials around the web, that's a statement you may already be familiar with. But it doesn't really explain much, so let's break this down further.
-
-<div class="callout">
-<p class="callout__info">
-I'm assuming that you already have some knowledge of HTML. What it is, how to write things like a paragraph tag. Not much more than that is needed here, but if you'd like to catch up, check out my article “<a href="/blog/frontend-development-resources/">Learn Front-End Development with These Free Resources</a>.”
-</p>
-</div>
 
 Say you want to create a list of all of your blog excerpts on your website. If you do this in plain HTML, you'll get something that looks a bit like this for 1 blog excerpt:
 
@@ -46,6 +46,7 @@ Say you want to create a list of all of your blog excerpts on your website. If y
 	</li>
 </ul>
 ```
+Here, we have an unordered list element with the class of "blog-list". Inside this unordered list element, we have a list item with the class of "blog-list__item". Inside of that list item, we have a card `div` with a card title, card description, and card link.
 
 For more than one excerpt, it can start to get unwieldy pretty quickly.
 
@@ -82,7 +83,9 @@ For more than one excerpt, it can start to get unwieldy pretty quickly.
 </ul>
 ```
 
-That's a lot more code for what is only 4 items. And then imagine that you want to go back and update the code a bit. Maybe you want to add an image to the top of the blog card. Or a date. That's a lot of different places to edit.
+That's a lot more code for what is only 4 items. 
+
+And then imagine that you want to go back and update the code a bit. Maybe you want to add an image to the top of the blog card. Or a date. That's a lot of different places to edit.
 
 That brings me to the benefits of a template language.
 
@@ -93,7 +96,7 @@ A template language (like Liquid, though there are many others) gives us the abi
 ```html
 <ul class="blog-list">
 	{% for article in blog.articles %}
-  <li class="blog-list__item">
+  	<li class="blog-list__item">
 		<div class="card">
 			<h3 class="card__title">{{ article.title }}</h3>
 			<p class="card__description">{{ article.excerpt }}</p>
@@ -108,9 +111,9 @@ Much shorter!
 
 Here, we're going through all of the articles in our blog using the `for` keyword. And if that statement doesn't make any sense to you, that's okay. It will make more sense as you get to play around with Liquid yourself.
 
-For now, here's a breakdown of what we're doing. As we go through each article in the list, we are:
+For now, here's a breakdown of what's happening. As we go through each article in the list using Liquid, Liquid transforms our code into HTML by:
 
-- taking the HTML for the entire list item
+- taking the Liquid for the list item
 
 ```html
 <li class="blog-list__item">
@@ -119,10 +122,10 @@ For now, here's a breakdown of what we're doing. As we go through each article i
 		<p class="card__description">{{ article.excerpt }}</p>
 		<a class="card__link" href="{{ article.url }}">Read more</a>
 	</div>	
-</li
+</li>
 ```
 
-- replacing the placeholders we created with the Liquid template language (`{{ article.title }}`, for example) with the actual information from the current article we're looking at
+- replacing the placeholders we created with the Liquid template language with the actual information from the current article we're looking at. `{{ article.title }}` is replaced by the actual article title "This is a great blog post!".
 
 ```html
 <li class="blog-list__item">
@@ -134,7 +137,7 @@ For now, here's a breakdown of what we're doing. As we go through each article i
 </li>
 ```
 
-- outputting that HTML with actual article information into the unordered list with class "blog-list"
+- outputting the HTML created (with the real article information) into the unordered list with class "blog-list"
 
 ```html
 <ul class="blog-list">
@@ -199,7 +202,7 @@ The `blog` object (where all of our blog information is stored) has another obje
 
 So if we want to get the information that's inside the articles object inside the blog object, we can do that by writing `blog.articles`.
 
-"But Heather, do you really expect me to memorize all of that?" No. I certainly don't. I use [Shopify's documentation](https://shopify.dev/api/liquid) to read about what objects we have access to and to refresh myself day-to-day when I need to grab some specific information. 
+"But Heather, do you really expect me to memorize all of that?" No. I certainly don't. I use [Shopify's documentation](https://shopify.dev/api/liquid) to read about what objects we have access to and to refresh my memory day-to-day when I need to grab some specific information. 
 
 So when I said Shopify told me where to find that information, they really did. It's in their documentation with code examples to get you started.
 
@@ -209,16 +212,26 @@ So earlier, I went back a bit and explained more about what a template language 
 
 Liquid was created by Shopify co-founder and CEO Tobias Lütke and has been used in production on Shopify sites since 2006. That's a long time! And it's still being improved and is well-maintained.
 
-Liquid was specifically created to make it easier for website owners with no coding experience to edit their sites. Which means that if you do have any web development experience, Liquid is a great first template language to learn. You can do a lot with it without accidentally adding harmful and insecure code to your website. And it was built so that you can use it for emails too (which you may see if you edit Shopify email notifications that are sent to your customers).
+Liquid was specifically created to make it easier for website owners with no coding experience to edit their sites. Which means that Liquid is a great first template language to learn. 
 
-On Shopify, you can use Liquid to access the data stored on the site in a predictable way. Blog articles can always be found in `blog.articles`. The product description on a product page can always be found in `product.description`. This means that as you keep working on the platform, you'll begin to collect a large number of HTML/Liquid recipes that you can use on different sites.
+You can do a lot with it without accidentally adding harmful and insecure code to your website. And it was built so that you can use it for emails too (which you may see if you edit Shopify email notifications that are sent to your customers).
+
+A really great benefit of Liquid is that you can access the data stored on your Shopify site in a predictable way. 
+
+Blog articles can always be found in `blog.articles`. The product description on a product page can always be found in `product.description`. This means that as you keep working on the platform, you'll begin to collect a large number of HTML/Liquid recipes that you can use on different sites.
 
 ## Shopify Liquid is so useful!
 
 From the example above, we can see that a template language like Liquid allows us to write code more efficiently. We can write some code once and use Liquid to build out all of the HTML for us.
 
-If we want to update the HTML and add the article image, we can do that without having to edit an entire page of HTML in multiple places.
-
-And better yet, we don't have to go in and add new HTML whenever we want to add a new blog post to our site. Shopify's Liquid objects allow us to access that data so that we don't have to write it directly in our HTML.
+If we want to update the HTML and add the article image, we can do that without having to edit an entire page of HTML in multiple places. We only have to update it in one snippet and then all the articles will use that code to add the article image.
 
 This is a huge time saver and helps us to maintain our code over time.
+
+## What's next?
+
+Well now that you're a bit more familiar with what Liquid is, I suggest the following resources for getting up to speed on what Liquid features are available to you.
+- [Shopify Liquid Code Examples](https://shopify.github.io/liquid-code-examples/)
+- [Shopify Liquid Cheat Sheet](https://www.shopify.ca/partners/shopify-cheat-sheet)
+
+Have fun and experiment! See what all you can build!
