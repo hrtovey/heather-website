@@ -188,6 +188,15 @@ code {
   vertical-align: bottom;
 }
 
+p, li {
+  code {
+    background: #282a36;
+    color: white;
+    padding: 2px 5px;
+    vertical-align: text-bottom;
+  }
+}
+
 /* Leading paragraph text */
 .lead {
   font-size: $scale * 1rem;
