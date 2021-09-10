@@ -25,7 +25,7 @@ As as web developer, I'm always looking for tools or resources to design website
 
 ### Squarespace ID Finder
 
-![](./images/sqs-id-finder-video.gif)
+![](./images/sqs-id-finder-video.png)
 
 If you've ever needed to know a specific block id so you could add CSS to your website, then you'll understand how useful the [Squarespace ID Finder](https://heathertovey.com/squarespace-id-finder/) is.
 
