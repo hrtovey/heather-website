@@ -11,7 +11,7 @@ excerpt: "Become a Shopify theme developer."
 
 When was the last time that you purchased something online?
 
-If you're a member of the 2.14+ billion digital shoppers worldwide, the answer is that you've probably purchased something online within the last month. Ecommerce is a growing industry, and it's expected that revenue will continue to grow. 
+If you're a member of the [2.14+ billion digital shoppers worldwide](https://www.statista.com/statistics/251666/number-of-digital-buyers-worldwide/), the answer is that you've probably purchased something online within the last month. Ecommerce is a growing industry, and it's expected that [revenue will continue to grow](https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/). 
 
 So what does that mean for you?
 
@@ -27,11 +27,11 @@ In this article, I'll cover all the things you need to know to get started with 
 
 ## Why Shopify?
 
-Supporting over 1.7 million businesses across 175+ countries, [Shopify is an amazing ****and popular platform for online stores](https://www.heathertovey.com/blog/choose-shopify/).
+Supporting over 1.7 million businesses across 175+ countries, [Shopify is a popular platform for online stores](/blog/choose-shopify/).
 
 But what does that mean for you as a developer?
 
-There are a ton of merchants and designers and an entire ecosystem of partners who are looking for developers who specialize in Shopify themes.
+There are merchants, designers, and an entire ecosystem of partners who are looking for developers who specialize in Shopify themes.
 
 As an added bonus, Shopify has a solid Developer Experience team that cares about:
 
@@ -86,8 +86,6 @@ Instead of freelancing, you may choose to join an agency full-time. Here are a f
 
 Those are really only a few of the options. Even within an agency, you may find that you can niche down and focus on specific development skills. 
 
-You'll likely be working with other developers, too, so version control and communication become even more important skills.
-
 ### Shopify Theme Shops
 
 You may also decide to create custom themes that can be sold either on your website or in the marketplace. If you go this route, I highly recommend doing some research on what other themes already exist and get a good feel for what niche may not be fully covered.
@@ -98,13 +96,15 @@ Even in this path, you have some options:
 - create your own themes and sell on a marketplace
 - create your own themes and sell them on your website
 
-So those are some of the paths that you can take as a Shopify theme developer. For my path, I started out as a Freelance Shopify Theme Developer working with designers who wanted to customize themes. I have since moved on to working as one of a handful of developers in an Shopify Plus agency. 
+So those are some of the paths that you can take as a Shopify theme developer. 
 
-There are pros and cons to each of these choices, so spend some time thinking about what you'd like to do. And don't worry about feeling stuck. You can change your mind or see how it feels to go down a different path later.
+For my path, I started out as a Freelance Shopify Theme Developer working with designers who wanted to customize themes. I have since moved on to working as one of a handful of developers in a [Shopify Plus agency](https://www.iamota.com/). 
+
+There are pros and cons to each of these choices, so spend some time thinking about what you'd like to do. And don't worry about feeling stuck. You can change your mind or try out a different path later. The skills you learn on any of these paths are transferrable.
 
 ## How to Get Started with Shopify Theme Development in 10 Steps
 
-There are a lot of moving parts when you're developing themes on the Shopify platform. And while you have access to excellent [Shopify tutorials and resources](https://www.notion.so/Shopify-tutorials-and-resources-02d09efd481d40eca0b3e12d556727c8) across the internet (including documentation written directly by Shopify), it can sometimes be difficult to get a good birds-eye view of all the skills and environment setup that needs to be done.
+There are a lot of moving parts when you're developing themes on the Shopify platform. And while you have access to excellent Shopify tutorials and resources across the internet (including [documentation written directly by Shopify](https://shopify.dev/)), it can sometimes be difficult to get a good birds-eye view of all the skills and environment setup that needs to be done.
 
 So let's talk about the different steps you'll need to complete to become a Shopify Theme Developer.
 
@@ -112,28 +112,17 @@ So let's talk about the different steps you'll need to complete to become a Shop
 
 First things first, since this is an article specifically about theme development, it's important that we cover the skills you're going to need to customize and build themes on the Shopify platform.
 
-For languages, Shopify uses HTML, CSS, and JavaScript. You'll want to get up to speed on those languages before you begin working on Shopify themes.
+For languages, Shopify uses HTML, CSS, and JavaScript. You'll want to [get up to speed on front-end development](/blog/frontend-development-resources/) before you begin working on Shopify themes.
 
 Shopify also created the Liquid templating language that allows you to load dynamic content onto your store pages. With Liquid, you can:
 
-What is dynamic content? It's content that you or the store owner may enter like product details or page titles. This information needs to be stored in a database and we need a templating language like Liquid in order to create placeholders for this information in our HTML. This lets us create one template for all our product pages, for example, and Liquid can handle filling in the placeholders for each product page.
-
-- check to see if a customer is logged in and show specific content if they are
+- check to see if a customer is logged in and show specific content only to them
 - limit the number of products that show up on a collection page at a time and create pagination
-- access product information and automatically output it onto the page (like product.title for the name of the product or product.available to see if a product is out of stock)
+- access product information and automatically output it onto the page
 
-Liquid is the bread and butter of Shopify theme development, but don't worry! Once you understand the basics, you can learn it as you go. 
+Liquid is the bread and butter of Shopify theme development, but don't worry! Once you understand the [basics of Liquid](/blog/what-is-shopify-liquid/), you can learn it as you go. 
 
-Additionally, you'll want to get familiar with the command line (just the basics) and git/GitHub. You don't need these right away. There's a lot that you can do without them. But you will eventually want to use them to get access to better workflows that will make you a more efficient developer. We'll talk more about these workflows later.
-
-Here are some resources that you may find particular valuable.
-
-- [HTML](https://www.notion.so/HTML-Resources-97845d0308934da08490ab6e974be1c7)
-- [CSS](https://www.notion.so/CSS-Resources-800eb54aa92045538f36b195bb4f9bd8)
-- [JavaScript](https://www.notion.so/JavaScript-Resources-a5cac3e9524246028d01b396311b4da0)
-- [Liquid](https://www.notion.so/What-is-Liquid-code-9397ad56000d482b9d0540250b4b357e)
-- [git/GitHub](https://www.notion.so/git-101-3c58affef3b74695994647f2f7d0649d)
-- [Command Line](https://www.notion.so/Command-Line-101-438334de60f544c3ade61011313f8472)
+Additionally, you'll want to get familiar with the command line (just the basics) and git/GitHub.
 
 ### **Step 2: Sign Up for a Partner Account**
 
@@ -164,7 +153,8 @@ Under Sales Channels in your sidebar, you'll see Online Store. This is everythin
 
 The one and only theme that you'll see right now is the new Dawn theme. This theme showcases the new Online 2.0 Store features including Sections Everywhere and has been made with performance in mind.
 
-[Walkthrough of Online 2.0 theme customizer](https://www.notion.so/Walkthrough-of-Online-2-0-theme-customizer-90fbe8fe48e74d9c8bd6136ee5035ae6)
+Go ahead and [get familiar with the Dawn theme and Shopify Theme Editor](/blog/shopify-theme-editor/). You'll spend a lot of time in here as you're developing themes for clients.
+
 
 ### Step 5: Understand the Shopify Theme File Structure
 

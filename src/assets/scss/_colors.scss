@@ -137,7 +137,10 @@ a.footer__link {
         border: 2px solid $yellow;
     }
 }
-
+.page--post .content__main img {
+  margin: 1rem 0;
+  border: 1px solid $black--lightest;
+}
 
 // Theme Dark
 .theme-dark {
@@ -258,5 +261,15 @@ a.footer__link {
         .button:hover {
             background: $black;
         }
+    }
+
+    .toc-list__item {
+        .toc-item-number:before {
+            color: $black;
+        }
+    }
+
+    .table-of-contents {
+        background: $black;
     }
 }
