@@ -1,7 +1,7 @@
 ---
 title: "A Beginner's Guide to the Shopify Theme Structure"
 slug: "guide-to-shopify-theme-structure"
-date: "2021-09-17"
+date: "2021-09-20"
 pillar: false
 categories: 
   - "shopify"
@@ -87,13 +87,13 @@ In Dawn, you'll find that most of the template files are .json, but simple pages
 
 ### Sections
 
-Sections are an incredibly important part of Shopify theme development. Sections are reusable components (or sections, so to speak) that can be added to templates and customized within the Theme Editor. 
+Sections are an incredibly important part of Shopify theme development. Sections are reusable components that can be added to templates and customized within the Theme Editor. 
 
 ![Sections folder open in the sidebar.](./images/shopify-theme-structure/sections.png)
 
 Typical sections you may find on a store include:
 
-- Hero banner
+- hero banner
 - contact form
 - newsletter sign-up
 - product recommendations
@@ -108,10 +108,10 @@ Snippets are generally small reusable bits of code that you'd like to use across
 
 Snippets are often created for heavily reused code like:
 
-- product cards (you may find these in featured product sections, collection pages, product recommendations, etc.)
-- blog cards (you may find these in Recent Article sections, on the main blog listing page, and maybe even the 404 page)
-- svg icons (these are typically used everywhere across the site like for a cart in your header, icons on your product pages, and so many more places)
-- social media links (often found in the footer, header, contact pages, blog posts, etc.)
+- **product cards** (you may find these in featured product sections, collection pages, product recommendations, etc.)
+- **blog cards** (you may find these in Recent Article sections, on the main blog listing page, and maybe even the 404 page)
+- **svg icons** (allows you to use the same icon code everywhere while specifying which icon you want to display)
+- **social media links** (often found in the footer, header, contact pages, blog posts, etc.)
 
 Unlike Sections, snippets do not have their own settings, but they can access the settings of sections they are embedded into.
 
