@@ -5,7 +5,7 @@ date: "2021-10-05"
 pillar: true
 categories: 
   - "shopify"
-coverImage: "./images/become-a-shopify-theme-developer.png"
+coverImage: "./images/how-to-become-a-shopify-theme-developer.png"
 excerpt: "Interested in becoming a Shopify theme developer? Not sure where to start? Here's the ultimate guide to becoming a Shopify theme developer with plenty of resources and useful links to help you find that first job."
 ---
 
