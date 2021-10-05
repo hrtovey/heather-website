@@ -51,27 +51,28 @@ export default {
 		  return `/blog/category/${categoryTitle}`;
 	  },
       formatToC(content) {
-          let frag = document.createRange().createContextualFragment(content);
-          let toc = frag.querySelectorAll('h2');
-          let sectionContainer = ``;
-          toc.forEach((h2, index, array) => {
-            let tocItem = `
-                <div class="card grid__item medium--6 large--4 toc-list__item">
-                    <a class="card__link grid__item toc-link" href="#${h2.id}">
-                        <div class="card__info">
-                            <div class="toc-item-number" data-link-number="${index}"></div>
-                            <div class="toc__info">
-                                <p class="card__description">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[0] : index === 0 ? 'Introduction': index === (array.length - 1) ? 'Conclusion' : `Section ${index}`}</p>
-                                <p class="card__title">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[1] : h2.textContent.split(':')[0]}</p>
+          if (process.isClient) {
+            let frag = document.createRange().createContextualFragment(content);
+            let toc = frag.querySelectorAll('h2');
+            let sectionContainer = ``;
+            toc.forEach((h2, index, array) => {
+                let tocItem = `
+                    <div class="card grid__item medium--6 large--4 toc-list__item">
+                        <a class="card__link grid__item toc-link" href="#${h2.id}">
+                            <div class="card__info">
+                                <div class="toc-item-number" data-link-number="${index}"></div>
+                                <div class="toc__info">
+                                    <p class="card__description">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[0] : index === 0 ? 'Introduction': index === (array.length - 1) ? 'Conclusion' : `Section ${index}`}</p>
+                                    <p class="card__title">${h2.textContent.split(':')[1] ? h2.textContent.split(':')[1] : h2.textContent.split(':')[0]}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>`;
-            sectionContainer += tocItem;
-            
-
-          });
-          return sectionContainer;
+                        </a>
+                    </div>`;
+                sectionContainer += tocItem;
+            });
+            return sectionContainer;
+          }
+          return '';
       }
   }
 }
