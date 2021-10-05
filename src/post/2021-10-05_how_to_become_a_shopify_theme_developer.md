@@ -1,12 +1,12 @@
 ---
-title: "How to Become a Shopify Theme Developer in 2021"
+title: "How to Become a Shopify Theme Developer"
 slug: "become-a-shopify-theme-developer"
 date: "2021-10-05"
 pillar: true
 categories: 
   - "shopify"
 coverImage: "./images/become-a-shopify-theme-developer.png"
-excerpt: "Become a Shopify theme developer."
+excerpt: "Interested in becoming a Shopify theme developer? Not sure where to start? Here's the ultimate guide to becoming a Shopify theme developer with plenty of resources and useful links to help you find that first job."
 ---
 
 When was the last time that you purchased something online?
@@ -141,14 +141,14 @@ Now that you're a Shopify Partner (congratulations and welcome to the club!), it
 
 First, log in to your Shopify Partner account! On the left sidebar, you should see a number of links that you should check out.
 
-![Shopify store dashboard.](images/become-a-shopify-theme-developer/shopify-store-dashboard.png)
+![Shopify store dashboard.](./images/become-a-shopify-theme-developer/shopify-dashboard.png)
 
 Stores is where you'll spend the majority of your time while starting out, but I highly recommend checking out the other links. Go and explore and look at all the settings and options you have available to you.
 
 
 ### Step 4: Learn About the Dawn theme
 
-Under Sales Channels in your sidebar, you'll see Online Store. This is everything related to your particular website including themes. Other Sales Channels exist, as well, including social media channels (link here), but for now, we're just focusing on themes.
+Under Sales Channels in your sidebar, you'll see Online Store. This is everything related to your particular website including themes. Other Sales Channels exist (including Social Media sales channels and the Buy Now button that you can use on any website) but for now, we're just focusing on themes.
 
 The one and only theme that you'll see right now is the new Dawn theme. This theme showcases the new Online 2.0 Store features including Sections Everywhere and has been made with performance in mind.
 
@@ -183,10 +183,12 @@ Before July 2021, metafields existed in Shopify but they were hard to edit witho
 
 You can even use metafield information within the Theme Editor to customize section information per page. For instance, remember those nutritional facts from before? You can use an image section to display it prominently on your product page without having to touch a line of code.
 
+To see how this is done, check out Shopify's documentation on [using metafields in your theme](https://help.shopify.com/en/manual/metafields/displaying-metafields-on-your-online-store).
+
 
 ### Step 7: Use the free Shopify resources
 
-Here are a few additional resources that can help you to get more familiar with Shopify.
+Here are a few resources that can help you to get more familiar with Shopify.
 
 **Shopify Development Documentation**
 
@@ -196,47 +198,30 @@ The Shopify team did a major overhaul of the documentation after the 2021 Shopif
 
 **Partner Education**
 
-You can earn certification in Shopify Theme Development.
+Shopify has quite a few certifications that you can earn including one in Shopify Theme Development. Their [Shopify Partner Academy](https://www.shopify.ca/partners/academy) is one of the first places you should look to get a good understanding of how Shopify works. Additional certifications they have to offer include App Development, Business Fundamentals, and Product Fundamentals.
 
 ### Step 8: Use Shopify tools to create a developer environment
 
-Remember earlier when I mentioned creating more efficient developer workflows? Well hello again! Let's chat about what you need to get set up.
-
-First though, you may wonder why you should bother setting up a development environment. Or maybe you're not sure what a developer environment is.
-
 On the Shopify platform, we have access to a code editor built right into the theme itself. This allows us to update the theme and write custom code including HTML, Liquid, CSS, and JavaScript.
 
-But, it's not the most efficient way of editing code, and using it means that you miss out on useful features. As an alternative, a development environment allows us to edit that theme code directly on our own computers and see updates as we make them on the site.
+But, it's not the most efficient way of editing code, and using it means that you miss out on useful features you may find in a dedicated code editor (like VS Code). As an alternative to Shopify's Code Editor, a development environment allows us to edit that theme code directly on our own computers and see updates as we make them on the site.
 
 Luckily, Shopify cares about the developer experience and has created some [useful tools](https://shopify.dev/themes/tools) to get you started.
 
 ### Step 9: Become an active member of the Shopify community
 
-Now that you know how to build and customize Shopify themes, it's time to get to know the community better. One of the things that I really love about working in the Shopify space is the great community. So many helpful people sharing knowledge and solving problems.
+Now that you know how to build and customize Shopify themes, it's time to get to know the community better. One of the things that I really love about working in the Shopify space is the great ecosphere of forums, Slack channels, Discord servers, and more. So many helpful people sharing knowledge and solving problems.
 
 Here are several links to get you started:
 
-Link to the Slack group
+- [Slack group for Partners](https://shopifypartners.slack.com/join/shared_invite/zt-fadywn35-y~7e2MJkJkQ4caIjmbKRpg#/shared-invite/email)
+- [Shopify Devs Discord Group](https://discord.gg/mdyHp6km2B)
+- [Shopify Devs Twitch Channel](https://www.twitch.tv/ShopifyDevs)
+- [Partner Town Hall](https://events.shopify.com/partnertownhall)
+- [Shopify Devs Youtube Channel](https://www.youtube.com/c/shopifydevs)
+- [Shopify Partners on Twitter](https://twitter.com/ShopifyPartners)
+- [Partners Events](https://events.shopify.com/partners)
 
-Link to the Discord group
-
-[https://www.twitch.tv/ShopifyDevs](https://www.twitch.tv/ShopifyDevs)
-
-[https://events.shopify.com/partnertownhall](https://events.shopify.com/partnertownhall)
-
-[https://www.youtube.com/c/shopifydevs](https://www.youtube.com/c/shopifydevs)
-
-[https://twitter.com/ShopifyPartners](https://twitter.com/ShopifyPartners)
-
-[https://www.instagram.com/shopifypartners/](https://www.instagram.com/shopifypartners/)
-
-[https://www.linkedin.com/company/shopifypartners/](https://www.linkedin.com/company/shopifypartners/)
-
-[https://www.facebook.com/groups/241826302971328/?ref=pages_group_cta](https://www.facebook.com/groups/241826302971328/?ref=pages_group_cta)
-
-[https://events.shopify.com/partners](https://events.shopify.com/partners)
-
-[https://shopifypartners.slack.com/signup#/domain-signup](https://shopifypartners.slack.com/signup#/domain-signup)
 
 ### Step 10: Build a portfolio
 
@@ -254,11 +239,11 @@ Case studies allow for you to both show off different parts of the site and demo
 
 Now, if you're just starting out, you may not have any real Shopify sites to display (or any sites for that matter). That's completely fine. Luckily, you have access to a development site where you can build out custom templates, sections, blocks, and even entire custom themes to showcase the skills that you're learning.
 
-**Starter Projects**
+#### Starter Projects
 
 For starter projects, it's usually best to start with a problem that you want to solve. This helps you if you create case studies, but also helps to demonstrate that you're thinking about potential issues that your clients may want to solve.
 
-- How would you add the ability to add background images (that the show owner can choose) to a section?
+- How would you add the ability to add background images (that the shop owner can choose) to a section?
 - How would you build a Shopify site that features 1 product heavily while letting all the other products share a template?
 - How would you build a mini cart that auto-updates without refreshing the page?
 - How would you build color swatches?
@@ -272,20 +257,22 @@ For starter projects, it's usually best to start with a problem that you want to
 
 Also, when might you use an app instead of developing the feature into the theme? For instance, do you want to add that FAQ section as a theme feature or install an app to handle it? What are the pros and cons.
 
-Doing your research now while you're learning will certainly pay off later. You can even turn this research into reviews or how-to articles on your site to increase you authority on the subject.
+Doing your research now while you're learning will certainly pay off later. You can even turn this research into reviews or how-to articles on your site to increase your authority on the subject.
 
 ## Next Steps
 
-Once you have a few projects in your portfolio (and even before then), I encourage you to connect with others in the community. Finding your first job can be difficult, but it tends to snowball into more and more jobs. Here are some things you can try to find that first job (and more):
+Once you have a few projects in your portfolio (and even before then), I encourage you to connect with others in the community. Finding your first job can be difficult, but that first job tends to snowball into more and more jobs. 
 
-- Consider writing about your learning experience on your personal website.
+Here are some tips to help you find that first job:
+
+- Write about your learning experience on your personal website. This makes you look good to potential employers, and it can also serve as a reference when you need to remember how to do something.
 - Create a GitHub account and keep your code there as examples for potential employers.
 - Join communities and offer your advice for free (if you can and it's not a huge time sink). Look for the easy-to-answer questions that require some development know-how. This is how I got my first web development job and it really did snowball from there. A word of caution though: people love asking you to work for them for free. Make sure to put limits on your time and don't give away too much. You can decide for yourself if the experience is worth it, but small tasks and providing small bits of advice is generally better than doing an entire giant project for free.
-- You can try to apply for a job with Storetasker, though you may want to consider having a strong portfolio with case studies before doing so.
+- You can try to apply for a job with [Storetasker](https://www.storetasker.com/), though you may want to consider having a strong portfolio with case studies before doing so.
 
 ---
 
-In this article, we covered the basics of what you need to do to become a Shopify Theme Developer. I encourage you to read through the different links that you see throughout the article as these will give you even more information.
+In this article, we covered the basics of what you need to do to become a Shopify Theme Developer. I encourage you to read through the different links that you saw throughout this article as these will give you even more information to get started.
 
 As you're working through these steps, it's important that you practice. Before moving on to learning a new thing, make sure to take some time to implement what you've learned or else you may forget it.
 
