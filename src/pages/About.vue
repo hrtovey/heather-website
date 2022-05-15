@@ -69,7 +69,7 @@
                     <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
                       <div class="ml-form-embedContent" style="">
                         <h2>Get started with Shopify development today.</h2>
-                        <p>Sign up to receive weekly tips, reviews, and recommendations.</p>
+                        <p>Sign up to receive an update when I create new content or have tips, resources, and recommendations to share.</p>
                       </div>
                       <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/u4i0r7" data-code="u4i0r7" method="post" target="_blank" name="newsletter">
                         <div class="ml-form-formContent">
