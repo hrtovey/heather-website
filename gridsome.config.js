@@ -34,43 +34,6 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-source-shopify',
-      options: {
-        storeName: process.env.GRIDSOME_SHOPIFY_STOREFRONT,
-        storefrontToken: process.env.GRIDSOME_SHOPIFY_STOREFRONT_TOKEN
-      }
-    },
-    {
-      use: '@noxify/gridsome-plugin-remote-image',
-      options: {
-        typeName: 'ShopifyImage',
-        sourceField: 'originalSrc',
-        targetField: 'downloadedSrc',
-        targetPath: './src/assets/remoteImages'
-      }
-    },
-    {
-      use: 'gridsome-plugin-flexsearch',
-      options: {
-        flexsearch: {
-          profile: 'match'
-        },
-        collections: [
-          {
-            typeName: 'ShopifyProduct',
-            indexName: 'Product',
-            fields: ['title', 'handle', 'description']
-          },
-          {
-            typeName: 'ShopifyCollection',
-            indexName: 'Collection',
-            fields: ['title', 'handle', 'description']
-          }
-        ],
-        searchFields: ['title', 'handle', 'tags']
-      }
-    },
-    {
 			use: "@gridsome/source-filesystem",
 			options: {
 				typeName: "Post",
@@ -129,13 +92,7 @@ module.exports = {
   templates: {
     Post: "/blog/:slug",
     Category: "/blog/category/:title",
-    Tag: "/blog/tag/:title",
-    ShopifyProduct: [
-      {
-        path: '/product/:handle',
-        component: './src/templates/Product.vue'
-      }
-    ]
+    Tag: "/blog/tag/:title"
   },
   transformers: {
   }
