@@ -110,7 +110,7 @@
                 <p>I like building out resources and working on side projects. Here's a few of my most recent ones.</p>
             </div>
       </div>
-      <div class="cards-list grid align-stretch">
+      <div class="cards-list grid align-stretch justify-start">
         <div class="card grid__item medium--6 large--4 card--image">
           <a class="card__link" href="https://getdesignresources.com/">
             <div class="card__image">
@@ -133,19 +133,6 @@
               <h3 class="card__title">Squarespace ID Finder</h3>
               <div class="card__description">
                 <p>Quickly and easily select Squarespace collection, section, index, and block ids. Available on Chrome, Firefox, and as a bookmarklet.</p>
-              </div>
-            </div>
-          </g-link>
-        </div>
-        <div class="card grid__item medium--6 large--4 card--image">
-          <g-link class="card__link" to="/product/squarespace-blog-footer-plugin/">
-            <div class="card__image">
-              <g-image src="~/assets/images/blog-footer-plugin-1.png" />
-            </div>
-            <div class="card__info">
-              <h3 class="card__title">Blog CTA Plugin</h3>
-              <div class="card__description">
-                <p>A Squarespace plugin to add a consistent footer to the blog posts of your choice. Edit the footer in one place instead of editing every post.</p>
               </div>
             </div>
           </g-link>

@@ -8,7 +8,6 @@
         <ul>
           <li><g-link to="/" class="404__link">Home</g-link></li>
           <li><g-link to="/blog/" class="404__link">Blog</g-link></li>
-          <li><g-link to="/shop/" class="404__link">Shop</g-link></li>
           <li><g-link to="/contact/" class="404__link">Contact</g-link></li>
         </ul>
       </div>
